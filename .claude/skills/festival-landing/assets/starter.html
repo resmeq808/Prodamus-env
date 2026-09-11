@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ГРОМКО 2026 — фестиваль уличной музыки</title>
+
+<!-- Гарнитуры: все три с кириллицей, проверено по субсетам Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter+Tight:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* ════════════════════════════════════════════════════════════════
+   ГРОМКО 2026 — демонстрационный скелет, архетип A «Кислотный постер».
+   Громкая вещь: слово ГРОМКО во всю ширину экрана.
+   Приёмы (ровно 5, как требует скилл):
+     7  наклейка-бейдж      20 мета-подписи в углах
+     4  глиф-обои           16 тикер с //
+     10 инверсия карточки
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── HERO ─────────────────────────────────────────────────────── */
+.hero {
+  min-height: 100svh;
+  padding: var(--gutter);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--pad-tight);
+  background: var(--ground-alt);
+  color: var(--ink-invert);
+}
+.hero__top { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
+.hero__mid { display: grid; align-content: center; justify-items: start; gap: 1.5rem; }
+.hero__title { font-size: clamp(4rem, 22vw, 18rem); margin-inline-start: -.05em; }
+.hero__title em { font-style: normal; color: var(--accent); }
+.hero__bot { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: end; justify-content: space-between; }
+.hero__date { font: 400 clamp(1.5rem, 5vw, 4rem)/1 var(--font-display); letter-spacing: var(--tr-display); }
+
+/* Приём 7 — наклейки: три штуки, три угла, три цвета */
+.stickers { display: flex; flex-wrap: wrap; gap: .6rem; }
+.sticker {
+  padding: .45em .9em; border-radius: var(--r-pill);
+  font: 600 var(--fs-meta)/1 var(--font-mono);
+  text-transform: uppercase; letter-spacing: .06em;
+  background: var(--accent); color: var(--ink-invert); rotate: -5deg;
+}
+.sticker:nth-child(2) { background: var(--noise); color: var(--ink); rotate: 3deg; }
+.sticker:nth-child(3) { background: var(--ink-invert); color: var(--ink); rotate: -2deg; }
+
+/* ── Приём 16: тикер ──────────────────────────────────────────── */
+.ticker { overflow: hidden; white-space: nowrap; padding-block: .9rem;
+          background: var(--accent); color: var(--ink-invert); }
+.ticker__track { display: inline-flex; gap: 2.5rem; animation: slide 30s linear infinite;
+                 font: 600 var(--fs-meta)/1 var(--font-mono);
+                 text-transform: uppercase; letter-spacing: var(--tr-meta); }
+@keyframes slide { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker__track { animation: none; } }
+
+/* ── Секция-пауза с глифом-обоями (приём 4) ───────────────────── */
+.about { position: relative; overflow: clip; }
+.about__glyph {
+  position: absolute; inset-block-start: 50%; inset-inline-end: 2vw; translate: 0 -50%;
+  font: 400 38vw/.7 var(--font-display); color: var(--accent);
+  z-index: 0; pointer-events: none; user-select: none;
+}
+/* Текст держится в левой половине, чтобы глиф оставался обоями, а не помехой */
+.about__body { position: relative; z-index: 1; max-width: min(58%, 40rem); }
+@media (max-width: 860px) {
+  .about__glyph { opacity: .14; inset-inline-end: -.08em; }
+  .about__body  { max-width: none; }
+}
+
+/* ── Табло цифр ───────────────────────────────────────────────── */
+.board { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--pad-tight); }
+.board dt { font: 400 clamp(3rem, 8vw, 7rem)/.85 var(--font-display); letter-spacing: var(--tr-display); }
+.board dd { margin-block-start: .6rem; font: 400 var(--fs-meta)/1.4 var(--font-mono);
+            text-transform: uppercase; letter-spacing: var(--tr-meta); color: var(--muted); }
+.section--dark .board dd { color: color-mix(in oklab, var(--ink-invert) 60%, transparent); }
+
+/* ── Карточки + приём 10 (инверсия одной) ─────────────────────── */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px;
+         background: var(--hairline); }
+.card { position: relative; background: var(--ground); padding: var(--pad-tight); min-height: 22rem;
+        display: grid; align-content: start; gap: 1rem; }
+.cards .card:nth-child(2) { background: var(--accent); color: var(--ink-invert); }
+/* Приём 20 — мета-подпись в углу */
+.card::after { content: attr(data-meta); position: absolute; inset-block-end: 1rem; inset-inline-end: 1rem;
+               font: 400 var(--fs-meta)/1 var(--font-mono); text-transform: uppercase;
+               letter-spacing: var(--tr-meta); opacity: .55; }
+
+/* ── Программа: таблица-список ────────────────────────────────── */
+.lineup { border-block-start: 1px solid var(--hairline); }
+.lineup li { display: grid; grid-template-columns: 6rem 1fr auto; gap: 1.5rem; align-items: baseline;
+             padding-block: 1.4rem; border-block-end: 1px solid var(--hairline); }
+.lineup b { font: 400 clamp(1.25rem, 2.6vw, 2rem)/1 var(--font-display); letter-spacing: -.02em; }
+@media (max-width: 640px) { .lineup li { grid-template-columns: 1fr; gap: .35rem; } }
+
+/* ── Бенто партнёров ──────────────────────────────────────────── */
+.bento { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+         gap: 2px; background: color-mix(in oklab, var(--ink-invert) 18%, transparent); }
+.bento li { background: var(--ground-alt); display: grid; place-items: center;
+            aspect-ratio: 16/9; padding: 1.25rem; }
+
+/* ── CTA ──────────────────────────────────────────────────────── */
+.cta { text-align: center; display: grid; gap: 2rem; justify-items: center; }
+.btn { display: inline-flex; align-items: center; gap: .6em; padding: 1.1em 2.4em;
+       border: 0; border-radius: var(--r-pill); background: var(--ink); color: var(--ground);
+       font: 600 1rem/1 var(--font-text); text-decoration: none;
+       transition: transform var(--dur) var(--ease); }
+.section--accent .btn,
+.section--dark .btn,
+.hero .btn { background: var(--ink-invert); color: var(--ink); }
+.btn:hover { transform: translateY(-2px); }
+
+.foot { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
+
+/* ── Мобильный: гасим наклоны ─────────────────────────────────── */
+@media (max-width: 640px) { .sticker { rotate: none; } }
+</style>
+</head>
+<body>
+
+<!-- 1. HERO — мета, заголовок, наклейки, подзаголовок, дата, действие -->
+<header class="hero">
+  <div class="hero__top">
+    <p class="meta">Громко&nbsp;2026 — фестиваль уличной музыки</p>
+    <p class="meta">Нижний Новгород · вход свободный</p>
+  </div>
+
+  <div class="hero__mid">
+    <div class="stickers">
+      <span class="sticker">три сцены</span>
+      <span class="sticker">40 составов</span>
+      <span class="sticker">до&nbsp;последнего трамвая</span>
+    </div>
+    <h1 class="display hero__title">Гром<em>ко</em></h1>
+    <p class="lead">Два дня на набережной: духовые из подземных переходов, гаражный панк и уличные оркестры.</p>
+  </div>
+
+  <div class="hero__bot">
+    <p class="hero__date">18–19 июля</p>
+    <a class="btn" href="#tickets">Смотреть программу</a>
+  </div>
+</header>
+
+<!-- Тикер -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>духовые // панк // фолк // джаз с моста // барабанные круги // хоры // духовые // панк // фолк // джаз с моста // барабанные круги // хоры&nbsp;</span>
+    <span>духовые // панк // фолк // джаз с моста // барабанные круги // хоры // духовые // панк // фолк // джаз с моста // барабанные круги // хоры&nbsp;</span>
+  </div>
+</div>
+
+<!-- 2. ЧТО ЭТО — секция-пауза, много воздуха -->
+<section class="section section--air about">
+  <span class="about__glyph" aria-hidden="true">Г</span>
+  <div class="wrap about__body">
+    <p class="h2 prose">Мы вытаскиваем музыку из переходов на набережную и даём ей нормальный звук. Бесплатно, два дня, без хедлайнеров и без фан-зоны для избранных.</p>
+  </div>
+</section>
+
+<!-- 3. ЦИФРЫ -->
+<section class="section section--dark">
+  <div class="wrap">
+    <dl class="board">
+      <div><dt>40</dt><dd>составов<br>из девяти городов</dd></div>
+      <div><dt>3</dt><dd>сцены<br>на набережной</dd></div>
+      <div><dt>21</dt><dd>час<br>живого звука</dd></div>
+      <div><dt>0 ₽</dt><dd>вход<br>на всё</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 4. ПРОГРАММА -->
+<section class="section" id="tickets">
+  <div class="wrap">
+    <p class="meta">Расписание · суббота</p>
+    <h2 class="h1" style="margin-block:1.5rem 3rem">Кто играет</h2>
+    <ul class="lineup">
+      <li><span class="meta">12:00</span><b>Оркестр Сормовского перехода</b><span class="meta">Главная сцена</span></li>
+      <li><span class="meta">14:30</span><b>Тихий саботаж</b><span class="meta">Сцена у воды</span></li>
+      <li><span class="meta">16:00</span><b>Барабанный круг для всех</b><span class="meta">Пляж</span></li>
+      <li><span class="meta">18:45</span><b>Медные из семнадцатой</b><span class="meta">Главная сцена</span></li>
+      <li><span class="meta">21:00</span><b>Джем до последнего трамвая</b><span class="meta">Сцена у воды</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. КОМУ — инверсия второй карточки -->
+<section class="section section--tight">
+  <div class="wrap">
+    <ul class="cards">
+      <li class="card" data-meta="(01)">
+        <p class="h2">Тем, кто слушает</p>
+        <p>Приходите с пледом и без плана. Расписание свободное, между сценами семь минут пешком.</p>
+      </li>
+      <li class="card" data-meta="(02)">
+        <p class="h2">Тем, кто играет</p>
+        <p>Заявки открыты до 30 мая. Нужна запись на телефон и состав — этого достаточно.</p>
+      </li>
+      <li class="card" data-meta="(03)">
+        <p class="h2">Тем, кто помогает</p>
+        <p>Волонтёрам — смена шесть часов, еда, футболка и проход за сцену.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. ПАРТНЁРЫ — бенто -->
+<section class="section section--dark">
+  <div class="wrap">
+    <p class="meta" style="margin-block-end:2rem">При поддержке</p>
+    <ul class="bento">
+      <li class="meta">Городская филармония</li>
+      <li class="meta">Депо культуры</li>
+      <li class="meta">Радио «Волна»</li>
+      <li class="meta">Мастерская звука</li>
+      <li class="meta">Транспорт города</li>
+      <li class="meta">Школа №17</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. CTA -->
+<section class="section section--accent">
+  <div class="wrap cta">
+    <h2 class="h1">18–19 июля<br>набережная</h2>
+    <a class="btn" href="#">Смотреть программу</a>
+  </div>
+</section>
+
+<!-- 8. ПОДВАЛ -->
+<footer class="section section--tight section--dark">
+  <div class="wrap foot">
+    <p class="meta">#громко2026 #уличнаямузыка #набережная</p>
+    <p class="meta">hello@example.org · телеграм-канал</p>
+  </div>
+</footer>
+
+</body>
+</html>
