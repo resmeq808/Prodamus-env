@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Социальная ответственность Prodamus — технологии, которые работают на страну</title>
+<meta name="description" content="Prodamus участвует в формировании повестки страны: партнёрство с государственными и общественными организациями, награды, благодарственные письма и открытые документы.">
+<meta property="og:title" content="Социальная ответственность Prodamus">
+<meta property="og:description" content="Технологии, которые работают на страну. Миссия, истории предпринимателей, партнёры, награды и открытые документы Prodamus.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   Фирменная система Prodamus
+   Токены сняты с prodamus.ru и prodamus.ru/company (Onest, зелёный→лайм
+   градиент, ink #1A1A1A, pill-кнопки, радиусы 20/40px, контейнер 1200px).
+   ========================================================================== */
+:root{
+  /* ink */
+  --ink:#1A1A1A;
+  --ink-2:#292929;
+  --ink-3:#232323;
+  --on-ink:#FFFFFF;
+  --on-ink-muted:#BBBBBB;
+
+  /* light surfaces */
+  --bg:#FFFFFF;
+  --bg-soft:#F6F6F6;
+  --border:#EDEDED;
+  --border-strong:#E0E0E0;
+
+  /* text */
+  --text:#1A1A1A;
+  --text-muted:#56778F;
+  --text-quiet:#909090;
+
+  /* accents */
+  --accent:#22D48D;
+  --accent-deep:#26C885;
+  --lime:#8FED60;
+  --lime-bright:#DEFF3F;
+  --mint:#E1F8EC;
+  --blue:#50B6FD;
+  --blue-soft:#E1F2FE;
+  --pink:#F04491;
+  --periwinkle:#8590D9;
+
+  /* фирменный градиент — кнопки и акцентные плашки */
+  --grad:linear-gradient(0.125turn,#22D48D 0%,#DEFF3F 100%);
+  --grad-soft:linear-gradient(0.125turn,#26C885 0%,#91DD6F 100%);
+  --grad-alt:linear-gradient(0.125turn,#F04491 40%,#50B6FD 100%);
+
+  /* радиусы */
+  --r-xs:10px;
+  --r:20px;
+  --r-lg:40px;
+  --r-pill:100px;
+
+  /* сетка и ритм */
+  --container:1200px;
+  --gutter:20px;
+  --section-y:clamp(64px,8vw,120px);
+  --header-h:76px;
+
+  /* типографика */
+  --fs-h1:clamp(34px,4.6vw,64px);
+  --fs-h2:clamp(28px,3.4vw,48px);
+  --fs-h3:clamp(20px,1.5vw,24px);
+  --fs-lead:clamp(17px,1.5vw,22px);
+  --fs-body:17px;
+  --fs-sm:15px;
+  --fs-xs:13px;
+
+  --shadow-card:0 2px 8px rgba(26,26,26,.04);
+  --shadow-lift:0 12px 32px rgba(26,26,26,.10);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+body{
+  margin:0;
+  font-family:'Onest',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  font-size:var(--fs-body);
+  line-height:1.55;
+  color:var(--text);
+  background:var(--bg);
+  letter-spacing:0;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+.section{padding:var(--section-y) 0}
+.section--soft{background:var(--bg-soft)}
+[id]{scroll-margin-top:calc(var(--header-h) + 16px)}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- Типографика ---------- */
+.h1{font-size:var(--fs-h1);font-weight:700;line-height:1.06;letter-spacing:-.01em}
+.h2{font-size:var(--fs-h2);font-weight:700;line-height:1.12;letter-spacing:-.01em}
+.h3{font-size:var(--fs-h3);font-weight:600;line-height:1.25}
+.lead{font-size:var(--fs-lead);line-height:1.5;color:var(--text-muted);font-weight:400}
+.lead--on-ink{color:var(--on-ink-muted)}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:var(--fs-xs);font-weight:600;line-height:1;
+  text-transform:uppercase;letter-spacing:.06em;
+  color:var(--accent-deep);
+  padding:9px 14px;border-radius:var(--r-pill);
+  background:var(--mint);
+}
+.eyebrow--on-ink{color:var(--accent);background:rgba(34,212,141,.14)}
+.eyebrow__dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex:0 0 auto}
+
+.section-head{max-width:760px;margin-bottom:clamp(32px,4vw,56px)}
+.section-head .h2{margin-top:18px}
+.section-head .lead{margin-top:16px}
+
+/* ---------- Кнопки ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:16px 32px;
+  font-family:inherit;font-size:16px;font-weight:600;line-height:1.2;
+  border:1px solid transparent;border-radius:var(--r-pill);
+  cursor:pointer;text-align:center;
+  transition:transform .2s cubic-bezier(.2,.8,.3,1),box-shadow .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn--primary{background:var(--grad);color:var(--ink)}
+.btn--primary:hover{box-shadow:0 10px 24px rgba(34,212,141,.32)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--border-strong)}
+.btn--ghost:hover{border-color:var(--ink);box-shadow:var(--shadow-card)}
+.btn--ghost-on-ink{background:transparent;color:var(--on-ink);border-color:rgba(255,255,255,.28)}
+.btn--ghost-on-ink:hover{border-color:var(--on-ink);background:rgba(255,255,255,.06)}
+.btn--sm{min-height:44px;padding:12px 22px;font-size:15px}
+
+.link-arrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:var(--fs-sm);font-weight:600;color:var(--ink);
+}
+.link-arrow svg{transition:transform .2s cubic-bezier(.2,.8,.3,1)}
+.link-arrow:hover svg{transform:translateX(4px)}
+.link-arrow--quiet{color:var(--text-muted)}
+
+/* ---------- Шапка ---------- */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.header__inner{display:flex;align-items:center;gap:28px;min-height:var(--header-h)}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:21px;color:var(--ink);flex:0 0 auto}
+.logo__mark{width:34px;height:34px;border-radius:var(--r-xs);background:var(--grad);display:grid;place-items:center;flex:0 0 auto}
+.logo__mark svg{width:19px;height:19px}
+.nav{display:flex;align-items:center;gap:20px;margin-left:8px}
+.nav a{font-size:var(--fs-sm);font-weight:500;color:var(--ink);white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s ease,color .2s ease}
+.nav a:hover{border-bottom-color:var(--accent)}
+.nav a.is-active{border-bottom-color:var(--accent);font-weight:600}
+.header__actions{display:flex;align-items:center;gap:12px;margin-left:auto}
+.burger{
+  display:none;width:44px;height:44px;margin-left:auto;
+  border:1px solid var(--border-strong);border-radius:var(--r-xs);
+  background:var(--bg);cursor:pointer;color:var(--ink);
+  align-items:center;justify-content:center;
+}
+.mobile-nav{display:none;border-top:1px solid var(--border);background:var(--bg);padding:12px var(--gutter) 22px}
+.mobile-nav[data-open="true"]{display:block}
+.mobile-nav a{display:block;padding:13px 0;font-size:17px;font-weight:500;border-bottom:1px solid var(--border)}
+.mobile-nav .btn{width:100%;margin-top:16px}
+
+/* ---------- Крошки ---------- */
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:var(--fs-xs);color:rgba(255,255,255,.55)}
+.crumbs a:hover{color:var(--accent)}
+.crumbs span[aria-current]{color:rgba(255,255,255,.85)}
+.crumbs__sep{opacity:.45}
+
+/* ---------- Герой ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:var(--ink);color:var(--on-ink);
+  padding-top:32px;padding-bottom:clamp(56px,7vw,104px);
+}
+.hero::before{
+  content:'';position:absolute;z-index:0;pointer-events:none;
+  width:760px;height:760px;right:-240px;top:-320px;
+  background:radial-gradient(circle,rgba(34,212,141,.30) 0%,rgba(34,212,141,0) 66%);
+}
+.hero::after{
+  content:'';position:absolute;z-index:0;pointer-events:none;
+  width:520px;height:520px;left:-220px;bottom:-300px;
+  background:radial-gradient(circle,rgba(133,144,217,.22) 0%,rgba(133,144,217,0) 68%);
+}
+.hero__inner{position:relative;z-index:1}
+.hero__body{max-width:860px;margin-top:clamp(32px,4vw,52px)}
+.hero .eyebrow{margin-bottom:22px}
+.hero .h1 .accent{
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:var(--accent);
+}
+.hero__lead{margin-top:24px;max-width:660px}
+.hero__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.hero__jump{
+  display:flex;flex-wrap:wrap;gap:10px;
+  margin-top:clamp(40px,5vw,64px);padding-top:28px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.hero__jump a{
+  font-size:var(--fs-sm);font-weight:500;color:var(--on-ink-muted);
+  padding:9px 16px;border:1px solid rgba(255,255,255,.16);border-radius:var(--r-pill);
+  transition:border-color .2s ease,color .2s ease,background-color .2s ease;
+}
+.hero__jump a:hover{color:var(--ink);background:var(--accent);border-color:var(--accent)}
+
+/* ---------- Миссия ---------- */
+.mission{
+  position:relative;overflow:hidden;
+  border-radius:var(--r-lg);background:var(--grad);color:var(--ink);
+  padding:clamp(36px,5vw,72px);
+}
+.mission__label{
+  display:inline-block;font-size:var(--fs-xs);font-weight:700;line-height:1;
+  text-transform:uppercase;letter-spacing:.08em;
+  padding:10px 16px;border-radius:var(--r-pill);
+  background:rgba(26,26,26,.10);
+}
+.mission__text{
+  margin-top:26px;max-width:940px;
+  font-size:clamp(23px,3vw,44px);font-weight:700;line-height:1.16;letter-spacing:-.01em;
+}
+.mission__note{margin-top:26px;max-width:620px;font-size:var(--fs-body);color:rgba(26,26,26,.72)}
+
+/* ---------- Сетки ---------- */
+.grid{display:grid;gap:clamp(20px,2vw,28px)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+
+/* ---------- Карточки ---------- */
+.card{
+  display:flex;flex-direction:column;
+  background:var(--bg);border:1px solid var(--border);border-radius:var(--r);
+  overflow:hidden;box-shadow:var(--shadow-card);
+  transition:transform .25s cubic-bezier(.2,.8,.3,1),box-shadow .25s ease,border-color .25s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:var(--border-strong)}
+.card__body{display:flex;flex-direction:column;gap:12px;padding:clamp(22px,2vw,28px);flex:1}
+.card__meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:var(--fs-xs);color:var(--text-quiet)}
+.chip{
+  display:inline-block;font-size:var(--fs-xs);font-weight:600;line-height:1;
+  padding:7px 12px;border-radius:var(--r-pill);background:var(--bg-soft);color:var(--text-muted);
+}
+.chip--mint{background:var(--mint);color:#1B7A54}
+.chip--blue{background:var(--blue-soft);color:#1E6FA8}
+.card__text{font-size:var(--fs-sm);color:var(--text-muted);flex:1}
+.card__foot{margin-top:8px}
+
+/* Слот под фото: осознанная заглушка, а не «битая картинка» */
+.photo{
+  position:relative;display:grid;place-items:center;
+  background:var(--bg-soft);
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+.photo--43{aspect-ratio:4/3}
+.photo--169{aspect-ratio:16/9}
+.photo::after{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(135deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 60%);
+  pointer-events:none;
+}
+.photo--mint{background:linear-gradient(140deg,#E1F8EC 0%,#CFF3E2 100%)}
+.photo--blue{background:linear-gradient(140deg,#E1F2FE 0%,#D2E9FB 100%)}
+.photo--lime{background:linear-gradient(140deg,#EFFBD8 0%,#E2F6C2 100%)}
+.photo--peri{background:linear-gradient(140deg,#EAECF9 0%,#DCDFF4 100%)}
+.photo__hint{
+  position:relative;z-index:1;
+  font-size:var(--fs-xs);font-weight:600;color:rgba(26,26,26,.42);
+  padding:9px 15px;border:1px dashed rgba(26,26,26,.22);border-radius:var(--r-pill);
+  background:rgba(255,255,255,.5);
+}
+
+/* ---------- Партнёры ---------- */
+.logo-card{
+  display:flex;flex-direction:column;gap:20px;
+  background:var(--bg);border:1px solid var(--border);border-radius:var(--r);
+  padding:clamp(24px,2.4vw,34px);
+  transition:border-color .25s ease,box-shadow .25s ease,transform .25s cubic-bezier(.2,.8,.3,1);
+}
+.logo-card:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-lift)}
+.logo-card__frame{--frame-h:120px;display:flex;align-items:center;justify-content:center;height:var(--frame-h)}
+/* max-height в абсолютных единицах: процент внутри grid/flex с auto-строкой
+   не резолвится, и логотипы вылезали за карточку. */
+.logo-card__frame img{max-height:var(--frame-h);max-width:100%;width:auto;height:auto;object-fit:contain}
+.logo-card__name{font-size:var(--fs-body);font-weight:600}
+.logo-card__role{font-size:var(--fs-sm);color:var(--text-muted);margin-top:6px}
+
+/* ---------- Награды ---------- */
+.award{
+  display:flex;flex-direction:column;gap:18px;
+  background:var(--bg);border:1px solid var(--border);border-radius:var(--r);
+  padding:clamp(22px,2.2vw,30px);text-align:left;
+  transition:border-color .25s ease,box-shadow .25s ease,transform .25s cubic-bezier(.2,.8,.3,1);
+}
+.award:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-lift)}
+.award__frame{--frame-h:120px;display:flex;align-items:center;justify-content:center;height:var(--frame-h)}
+.award__frame img{max-height:var(--frame-h);max-width:100%;width:auto;height:auto;object-fit:contain}
+.award__name{font-size:var(--fs-body);font-weight:600;line-height:1.3}
+.award__note{font-size:var(--fs-sm);color:var(--text-muted);margin-top:6px}
+
+/* ---------- Письма ---------- */
+.letter{
+  display:flex;flex-direction:column;
+  background:var(--bg);border:1px solid var(--border);border-radius:var(--r);
+  overflow:hidden;
+  transition:border-color .25s ease,box-shadow .25s ease,transform .25s cubic-bezier(.2,.8,.3,1);
+}
+.letter:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-lift)}
+.letter__scan{--scan-h:340px;background:var(--bg-soft);padding:clamp(20px,2.2vw,30px);display:flex;align-items:center;justify-content:center;height:var(--scan-h)}
+.letter__scan img{
+  max-height:100%;max-width:100%;width:auto;height:auto;
+  border:1px solid var(--border);border-radius:var(--r-xs);
+  box-shadow:0 6px 20px rgba(26,26,26,.10);
+}
+.letter__body{padding:clamp(20px,2vw,26px);border-top:1px solid var(--border)}
+.letter__from{font-size:var(--fs-body);font-weight:600;line-height:1.35}
+.letter__for{font-size:var(--fs-sm);color:var(--text-muted);margin-top:8px}
+.letter__body .link-arrow{margin-top:16px}
+
+/* ---------- Документы ---------- */
+.doc{
+  display:flex;align-items:flex-start;gap:20px;
+  background:var(--bg);border:1px solid var(--border);border-radius:var(--r);
+  padding:clamp(22px,2.2vw,30px);
+  transition:border-color .25s ease,box-shadow .25s ease,transform .25s cubic-bezier(.2,.8,.3,1);
+}
+.doc:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-lift)}
+.doc__icon{flex:0 0 auto;width:52px;height:52px;border-radius:var(--r-xs);background:var(--bg-soft);display:grid;place-items:center}
+.doc__icon svg{width:26px;height:26px}
+.doc__main{flex:1;min-width:0}
+.doc__name{font-size:var(--fs-body);font-weight:600;line-height:1.35}
+.doc__meta{font-size:var(--fs-xs);color:var(--text-quiet);margin-top:8px}
+.doc__main .link-arrow{margin-top:16px}
+
+/* ---------- Финальный CTA ---------- */
+.cta{
+  position:relative;overflow:hidden;
+  background:var(--ink);color:var(--on-ink);
+  border-radius:var(--r-lg);
+  padding:clamp(38px,5vw,76px);
+}
+.cta::before{
+  content:'';position:absolute;z-index:0;pointer-events:none;
+  width:620px;height:620px;right:-200px;bottom:-330px;
+  background:radial-gradient(circle,rgba(34,212,141,.30) 0%,rgba(34,212,141,0) 66%);
+}
+.cta__inner{position:relative;z-index:1;max-width:760px}
+.cta .h2{margin-top:20px}
+.cta__lead{margin-top:18px}
+.cta__actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:34px}
+.cta__mail{font-size:var(--fs-sm);color:var(--on-ink-muted)}
+.cta__mail a{color:var(--accent);font-weight:600;border-bottom:1px solid rgba(34,212,141,.4)}
+.cta__mail a:hover{border-bottom-color:var(--accent)}
+
+/* ---------- Футер ---------- */
+.footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:clamp(48px,5vw,72px) 0 34px}
+.footer__top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(24px,3vw,40px)}
+.footer__col h4{font-size:var(--fs-xs);font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-quiet);margin-bottom:16px}
+.footer__col li+li{margin-top:11px}
+.footer__col a{font-size:var(--fs-sm);color:var(--text)}
+.footer__col a:hover{color:var(--accent-deep)}
+.footer__about{font-size:var(--fs-sm);color:var(--text-muted);margin-top:16px;max-width:320px}
+.footer__contacts{margin-top:18px;font-size:var(--fs-sm)}
+.footer__contacts a{font-weight:600}
+.footer__bottom{
+  display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center;
+  margin-top:clamp(34px,4vw,54px);padding-top:26px;
+  border-top:1px solid var(--border-strong);
+  font-size:var(--fs-xs);color:var(--text-quiet);
+}
+.footer__bottom a:hover{color:var(--accent-deep)}
+.footer__legal{margin-right:auto}
+
+/* ---------- Адаптив ---------- */
+@media (max-width:1100px){
+  .nav{display:none}
+  .header__actions{display:none}
+  .burger{display:inline-flex}
+  .grid--4{grid-template-columns:repeat(2,1fr)}
+  .footer__top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .grid--3{grid-template-columns:repeat(2,1fr)}
+  .grid--3 > :last-child:nth-child(odd){grid-column:1 / -1}
+}
+@media (max-width:640px){
+  :root{--header-h:64px;--gutter:16px}
+  .grid--3,.grid--2,.grid--4{grid-template-columns:1fr}
+  .grid--3 > :last-child:nth-child(odd){grid-column:auto}
+  .hero__actions .btn,.cta__actions .btn{width:100%}
+  .doc{flex-direction:column;gap:16px}
+  .logo-card__frame{--frame-h:96px}
+  .award__frame{--frame-h:104px}
+  .letter__scan{--scan-h:300px}
+  .footer__top{grid-template-columns:1fr;gap:30px}
+  .mission,.cta{border-radius:var(--r)}
+}
+@media (max-width:380px){
+  .logo{font-size:19px}
+  .hero__jump a{font-size:14px;padding:8px 13px}
+}
+@media print{
+  .header,.mobile-nav,.hero__jump,.burger{display:none}
+  .hero,.cta{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== ШАПКА =====================
+     TODO: заменить .logo__mark + текст на официальный SVG-логотип Prodamus. -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="https://prodamus.ru/" aria-label="Prodamus — на главную">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 20V4h6.6a5.2 5.2 0 0 1 0 10.4H9.4" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>Prodamus</span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="https://prodamus.ru/platezhnaya-systema">Приём оплат</a>
+      <a href="https://prodamus.ru/rates">Тарифы</a>
+      <a href="https://prodamus.ru/partnerskaya-programma">Партнёрская программа</a>
+      <a href="https://prodamus.ru/blog">Блог</a>
+      <a class="is-active" href="https://prodamus.ru/company">О компании</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--ghost btn--sm" href="https://id.prodamus.ru/">Войти</a>
+      <a class="btn btn--primary btn--sm" href="mailto:pr@prodamus.ru?subject=Социальные проекты Prodamus">Связаться с PR</a>
+    </div>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M1 1h20M1 8h20M1 15h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Мобильная навигация">
+    <a href="https://prodamus.ru/platezhnaya-systema">Приём оплат</a>
+    <a href="https://prodamus.ru/rates">Тарифы</a>
+    <a href="https://prodamus.ru/partnerskaya-programma">Партнёрская программа</a>
+    <a href="https://prodamus.ru/blog">Блог</a>
+    <a href="https://prodamus.ru/company">О компании</a>
+    <a href="#stories">Истории</a>
+    <a href="#partners">Партнёры</a>
+    <a href="#awards">Награды</a>
+    <a href="#documents">Документы</a>
+    <a class="btn btn--primary" href="mailto:pr@prodamus.ru?subject=Социальные проекты Prodamus">Связаться с PR</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ===================== ГЕРОЙ ===================== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <nav aria-label="Хлебные крошки">
+        <ol class="crumbs">
+          <li><a href="https://prodamus.ru/">Главная</a></li>
+          <li class="crumbs__sep" aria-hidden="true">/</li>
+          <li><a href="https://prodamus.ru/company">О компании</a></li>
+          <li class="crumbs__sep" aria-hidden="true">/</li>
+          <li><span aria-current="page">Социальная ответственность</span></li>
+        </ol>
+      </nav>
+
+      <div class="hero__body">
+        <span class="eyebrow eyebrow--on-ink">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          Социальная ответственность
+        </span>
+        <h1 class="h1">Технологии, которые работают <span class="accent">на страну</span></h1>
+        <p class="lead lead--on-ink hero__lead">
+          Мы верим, что бизнес может быть двигателем перемен. Для этого ему нужны
+          понятные, удобные и надёжные технологии.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="mailto:pr@prodamus.ru?subject=Социальные проекты Prodamus">Присоединиться к инициативам</a>
+          <a class="btn btn--ghost-on-ink" href="#documents">Открытые документы</a>
+        </div>
+
+        <div class="hero__jump">
+          <a href="#mission">Миссия</a>
+          <a href="#stories">Истории предпринимателей</a>
+          <a href="#society">Государство и общество</a>
+          <a href="#partners">Партнёры</a>
+          <a href="#awards">Награды</a>
+          <a href="#letters">Нам доверяют</a>
+          <a href="#documents">Документы</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== МИССИЯ ===================== -->
+  <section class="section" id="mission">
+    <div class="container">
+      <div class="mission">
+        <span class="mission__label">Наша миссия</span>
+        <p class="mission__text">
+          Обеспечение жизнеспособности и технологического суверенитета страны
+          через инновации и технологии
+        </p>
+        <p class="mission__note">
+          Мы разрабатываем платёжную и продуктовую инфраструктуру в России — и открыто
+          рассказываем, как она помогает предпринимателям и экономике.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ИСТОРИИ КЛИЕНТОВ =====================
+       TODO (контент): в каждой карточке заменить
+         1) слот .photo   → реальное фото клиента, 4:3, от 1200px по ширине;
+         2) заголовок и текст → согласованную историю;
+         3) href           → ссылку на конкретный кейс в блоге.
+       Тексты ниже — правдоподобные заглушки, не реальные клиенты. -->
+  <section class="section section--soft" id="stories">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Истории</span>
+        <h2 class="h2">Истории, которые вдохновляют</h2>
+        <p class="lead">
+          Тысячи предпринимателей используют Prodamus, чтобы растить дело,
+          которое меняет жизни людей вокруг них.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <div class="photo photo--43 photo--mint" role="img" aria-label="Фото клиента будет добавлено">
+            <span class="photo__hint">фото 4:3</span>
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="chip chip--mint">Образование</span><span>Иркутск</span></div>
+            <h3 class="h3">Школа керамики: от мастер-классов на кухне до студии на 40 учеников</h3>
+            <p class="card__text">
+              TODO: реальная история. Платёжные формы заменили переводы «на карту» —
+              запись на курсы стала автоматической, а оплата — легальной.
+            </p>
+            <p class="card__foot">
+              <a class="link-arrow" href="https://prodamus.ru/blog/cases">
+                Читать историю
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo photo--43 photo--blue" role="img" aria-label="Фото клиента будет добавлено">
+            <span class="photo__hint">фото 4:3</span>
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="chip chip--blue">Здоровье</span><span>Казань</span></div>
+            <h3 class="h3">Нутрициолог сократила путь клиента до двух касаний</h3>
+            <p class="card__text">
+              TODO: реальная история. Консультации и программы питания продаются
+              в мессенджере — без сайта, вручную заполняемых таблиц и напоминаний об оплате.
+            </p>
+            <p class="card__foot">
+              <a class="link-arrow" href="https://prodamus.ru/blog/cases">
+                Читать историю
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo photo--43 photo--lime" role="img" aria-label="Фото клиента будет добавлено">
+            <span class="photo__hint">фото 4:3</span>
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="chip">Производство</span><span>Ростов-на-Дону</span></div>
+            <h3 class="h3">Семейная пекарня: подписка на хлеб вместо предзаказов в переписке</h3>
+            <p class="card__text">
+              TODO: реальная история. Рекуррентные платежи дали пекарне
+              предсказуемую выручку и понятное планирование закупок.
+            </p>
+            <p class="card__foot">
+              <a class="link-arrow" href="https://prodamus.ru/blog/cases">
+                Читать историю
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ГОСУДАРСТВО И ОБЩЕСТВО =====================
+       Первая карточка — из ТЗ. Вторая и третья опираются на реальные
+       благодарственные письма ниже, но заголовки и даты нужно подтвердить.
+       TODO: фото с мероприятий 16:9 + ссылки на конкретные посты блога. -->
+  <section class="section" id="society">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Диалог</span>
+        <h2 class="h2">Взаимодействие с государством и обществом</h2>
+        <p class="lead">
+          Prodamus участвует в формировании повестки страны и открыто
+          взаимодействует с органами власти.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <div class="photo photo--169 photo--peri" role="img" aria-label="Фото с мероприятия будет добавлено">
+            <span class="photo__hint">фото 16:9</span>
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="chip">Круглый стол</span><span>TODO: дата</span></div>
+            <h3 class="h3">Prodamus выступил на круглом столе МТПП</h3>
+            <p class="card__text">
+              TODO: 2–3 строки о теме выступления и о том, какие вопросы
+              предпринимателей обсуждались.
+            </p>
+            <p class="card__foot">
+              <a class="link-arrow" href="https://prodamus.ru/blog">
+                Читать в блоге
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo photo--169 photo--mint" role="img" aria-label="Фото с мероприятия будет добавлено">
+            <span class="photo__hint">фото 16:9</span>
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="chip">Форум</span><span>TODO: дата</span></div>
+            <h3 class="h3">TODO: заголовок — участие в федеральном форуме «Женщины нового времени»</h3>
+            <p class="card__text">
+              TODO: 2–3 строки о партнёрской поддержке форума и роли Prodamus
+              в программе для участниц.
+            </p>
+            <p class="card__foot">
+              <a class="link-arrow" href="https://prodamus.ru/blog">
+                Читать в блоге
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo photo--169 photo--blue" role="img" aria-label="Фото с мероприятия будет добавлено">
+            <span class="photo__hint">фото 16:9</span>
+          </div>
+          <div class="card__body">
+            <div class="card__meta"><span class="chip">Вебинар</span><span>TODO: дата</span></div>
+            <h3 class="h3">TODO: заголовок — «Уроки для самозанятых» с центром «Моя работа»</h3>
+            <p class="card__text">
+              TODO: 2–3 строки о совместном вебинаре с Центром занятости населения
+              города Москвы и о том, чему учили участников.
+            </p>
+            <p class="card__foot">
+              <a class="link-arrow" href="https://prodamus.ru/blog">
+                Читать в блоге
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ПАРТНЁРЫ =====================
+       Логотипы вырезаны из ТЗ и очищены от артефактов скриншотов.
+       TODO: заменить PNG на официальные SVG — в исходнике ТЗ логотип
+       «Моя работа» обрезан по правому краю ещё до вставки в документ.
+       TODO: подтвердить формулировки роли каждой организации. -->
+  <section class="section section--soft" id="partners">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Партнёрство</span>
+        <h2 class="h2">Наши партнёры</h2>
+        <p class="lead">
+          Мы сотрудничаем с государственными и общественными организациями,
+          которые помогают развитию предпринимательства в России.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="logo-card">
+          <div class="logo-card__frame">
+            <img src="./assets/partner-moya-rabota.png" width="536" height="117" loading="lazy"
+                 alt="Логотип центра «Моя работа» — Центр занятости населения города Москвы">
+          </div>
+          <div>
+            <p class="logo-card__name">«Моя работа»</p>
+            <p class="logo-card__role">Центр занятости населения города Москвы</p>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <div class="logo-card__frame">
+            <img src="./assets/partner-mbm-mos.png" width="504" height="137" loading="lazy"
+                 alt="Логотип МБМ.MOS — Малый бизнес Москвы">
+          </div>
+          <div>
+            <p class="logo-card__name">МБМ.MOS</p>
+            <p class="logo-card__role">Малый бизнес Москвы</p>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <div class="logo-card__frame">
+            <img src="./assets/partner-mtpp.png" width="345" height="432" loading="lazy"
+                 alt="Логотип Московской торгово-промышленной палаты">
+          </div>
+          <div>
+            <p class="logo-card__name">МТПП</p>
+            <p class="logo-card__role">Московская торгово-промышленная палата</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== НАГРАДЫ =====================
+       Бейджи из ТЗ. TODO: подтвердить номинации и годы, добавить ссылки
+       на страницы премий, если они публичные. -->
+  <section class="section" id="awards">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Признание</span>
+        <h2 class="h2">Награды и премии</h2>
+        <p class="lead">
+          Признание со стороны индустрии и общества. Для нас это подтверждение,
+          что мы на верном пути.
+        </p>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="award">
+          <div class="award__frame">
+            <img src="./assets/award-leaders-digital-2026.png" width="440" height="734" loading="lazy"
+                 alt="Бейдж лауреата премии «Лидеры цифровизации 2026»">
+          </div>
+          <div>
+            <p class="award__name">«Лидеры цифровизации»</p>
+            <p class="award__note">Лауреат премии, 2026</p>
+          </div>
+        </div>
+
+        <div class="award">
+          <div class="award__frame">
+            <img src="./assets/award-esg-russia-2026.png" width="440" height="440" loading="lazy"
+                 alt="Бейдж лауреата премии «Лучшие ESG проекты России 2026»">
+          </div>
+          <div>
+            <p class="award__name">«Лучшие ESG проекты России»</p>
+            <p class="award__note">Лауреат, 2026</p>
+          </div>
+        </div>
+
+        <div class="award">
+          <div class="award__frame">
+            <img src="./assets/award-ai-force.png" width="341" height="111" loading="lazy"
+                 alt="Логотип премии AI FORCE Awards">
+          </div>
+          <div>
+            <p class="award__name">AI FORCE Awards</p>
+            <p class="award__note">TODO: номинация и год</p>
+          </div>
+        </div>
+
+        <div class="award">
+          <div class="award__frame">
+            <img src="./assets/award-auditorium.png" width="355" height="118" loading="lazy"
+                 alt="Логотип премии Auditorium Awards">
+          </div>
+          <div>
+            <p class="award__name">Auditorium Awards</p>
+            <p class="award__note">TODO: номинация и год</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ПИСЬМА =====================
+       По комментарию заказчика в ТЗ: в этот раздел попадают ТОЛЬКО
+       публичные письма. Перед публикацией сверить список с PR-отделом. -->
+  <section class="section section--soft" id="letters">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Доверие</span>
+        <h2 class="h2">Нам доверяют</h2>
+        <p class="lead">
+          Благодарственные письма от партнёров и государственных организаций.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <figure class="letter">
+          <div class="letter__scan">
+            <img src="./assets/letter-women-forum.png" width="426" height="609" loading="lazy"
+                 alt="Благодарственное письмо компании Prodamus от оргкомитета федерального форума «Женщины нового времени»">
+          </div>
+          <figcaption class="letter__body">
+            <p class="letter__from">Международное сообщество «Женщины нового времени»</p>
+            <p class="letter__for">За партнёрскую поддержку федерального форума и вклад в его проведение</p>
+            <a class="link-arrow link-arrow--quiet" href="./assets/letter-women-forum.png" target="_blank" rel="noopener">
+              Посмотреть письмо
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 3h7v7M13 3 4 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </figcaption>
+        </figure>
+
+        <figure class="letter">
+          <div class="letter__scan">
+            <img src="./assets/letter-moya-rabota.png" width="900" height="646" loading="lazy"
+                 alt="Благодарность компании Prodamus от Центра занятости населения города Москвы «Моя работа»">
+          </div>
+          <figcaption class="letter__body">
+            <p class="letter__from">Центр занятости населения города Москвы «Моя работа»</p>
+            <p class="letter__for">За участие в вебинаре «Уроки для самозанятых»</p>
+            <a class="link-arrow link-arrow--quiet" href="./assets/letter-moya-rabota.png" target="_blank" rel="noopener">
+              Посмотреть письмо
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 3h7v7M13 3 4 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </figcaption>
+        </figure>
+
+        <figure class="letter">
+          <div class="letter__scan">
+            <img src="./assets/letter-yoshkar-ola.png" width="390" height="552" loading="lazy"
+                 alt="Благодарственное письмо ООО «Продамус» от врио мэра города Йошкар-Олы">
+          </div>
+          <figcaption class="letter__body">
+            <p class="letter__from">Администрация города Йошкар-Олы</p>
+            <p class="letter__for">За помощь в организации зимних городских мероприятий и работе катка на площади им. В. И. Ленина</p>
+            <a class="link-arrow link-arrow--quiet" href="./assets/letter-yoshkar-ola.png" target="_blank" rel="noopener">
+              Посмотреть письмо
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 3h7v7M13 3 4 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ДОКУМЕНТЫ =====================
+       По комментарию в ТЗ: сюда идут все возможные для открытого доступа
+       документы — стратегия, политики, сертификаты.
+       TODO: заменить href на прямые ссылки на PDF и указать реальный вес файла.
+       Пока ссылки ведут на существующий раздел prodamus.ru/documents. -->
+  <section class="section" id="documents">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Открытость</span>
+        <h2 class="h2">Документы</h2>
+        <p class="lead">Все официальные материалы в одном месте — доступны для скачивания.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="doc">
+          <span class="doc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7l-5-5Z" stroke="#1A1A1A" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M14 2v5h5" stroke="#1A1A1A" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M8.5 13.5h7M8.5 17h4.5" stroke="#22D48D" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <div class="doc__main">
+            <h3 class="doc__name">GR-стратегия Prodamus</h3>
+            <p class="doc__meta">PDF · TODO: указать вес файла</p>
+            <a class="link-arrow" href="https://prodamus.ru/documents">
+              Скачать
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="doc">
+          <span class="doc__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7l-5-5Z" stroke="#1A1A1A" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M14 2v5h5" stroke="#1A1A1A" stroke-width="1.7" stroke-linejoin="round"/>
+              <circle cx="12" cy="14.5" r="2.6" stroke="#22D48D" stroke-width="1.7"/>
+              <path d="M10.4 16.7 9.8 20l2.2-1.2 2.2 1.2-.6-3.3" stroke="#22D48D" stroke-width="1.7" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="doc__main">
+            <h3 class="doc__name">Сертификат устойчивой компании</h3>
+            <p class="doc__meta">PDF · TODO: указать вес файла</p>
+            <a class="link-arrow" href="https://prodamus.ru/documents">
+              Скачать
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ФИНАЛЬНЫЙ CTA ===================== -->
+  <section class="section" id="join">
+    <div class="container">
+      <div class="cta">
+        <div class="cta__inner">
+          <span class="eyebrow eyebrow--on-ink"><span class="eyebrow__dot" aria-hidden="true"></span>Открыты к диалогу</span>
+          <h2 class="h2">Присоединяйтесь к нашим инициативам</h2>
+          <p class="lead lead--on-ink cta__lead">
+            Готовы поддержать развитие предпринимательства вместе с нами
+            или хотите узнать больше о наших социальных проектах?
+          </p>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="mailto:pr@prodamus.ru?subject=Социальные проекты Prodamus">Написать в PR-отдел</a>
+            <p class="cta__mail">или напрямую: <a href="mailto:pr@prodamus.ru">pr@prodamus.ru</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== ФУТЕР ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col">
+        <a class="logo" href="https://prodamus.ru/" aria-label="Prodamus — на главную">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 20V4h6.6a5.2 5.2 0 0 1 0 10.4H9.4" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Prodamus</span>
+        </a>
+        <p class="footer__about">
+          Международная ИТ-компания. Разрабатываем решения для онлайн-бизнеса
+          и платёжную инфраструктуру для предпринимателей в России.
+        </p>
+        <p class="footer__contacts">
+          По вопросам социальных проектов: <a href="mailto:pr@prodamus.ru">pr@prodamus.ru</a>
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>О нас</h4>
+        <ul>
+          <li><a href="https://prodamus.ru/company">О компании</a></li>
+          <li><a href="https://prodamus.ru/contacts">Контакты и информация</a></li>
+          <li><a href="https://prodamus.ru/career">Карьера в Prodamus</a></li>
+          <li><a href="https://prodamus.ru/blog">Блог</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Решения</h4>
+        <ul>
+          <li><a href="https://prodamus.ru/platezhnaya-systema">Платежи по России</a></li>
+          <li><a href="https://prodamus.ru/priem-mezhdynarodnyh-platezhey">Международные платежи</a></li>
+          <li><a href="https://prodamus.ru/online-kassa-fz-54">Облачная онлайн-касса</a></li>
+          <li><a href="https://prodamus.ru/app-max">Мини-приложение в MAX</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Полезное</h4>
+        <ul>
+          <li><a href="https://prodamus.ru/blog/cases">Кейсы</a></li>
+          <li><a href="https://prodamus.ru/events">Вебинары</a></li>
+          <li><a href="https://help.prodamus.ru/">База знаний</a></li>
+          <li><a href="https://prodamus.ru/documents">Документы</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__legal">© 2026 Prodamus</span>
+      <a href="https://prodamus.ru/oferta">Публичная оферта</a>
+      <a href="https://prodamus.ru/privacy">Политика конфиденциальности</a>
+      <a href="https://prodamus.ru/sitemap">Карта сайта</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger = document.querySelector('.burger');
+  var panel  = document.getElementById('mobile-nav');
+  if (!burger || !panel) return;
+
+  function setOpen(open){
+    panel.setAttribute('data-open', open ? 'true' : 'false');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  }
+
+  burger.addEventListener('click', function(){
+    setOpen(panel.getAttribute('data-open') !== 'true');
+  });
+
+  panel.addEventListener('click', function(e){
+    if (e.target.closest('a')) setOpen(false);
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && panel.getAttribute('data-open') === 'true'){
+      setOpen(false);
+      burger.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
