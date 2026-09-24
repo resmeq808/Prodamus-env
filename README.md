@@ -28,10 +28,11 @@
 └── scripts/
     ├── moodboard.py          мудборд из любой доски Pinterest
     ├── find-photos.py        свободные фото CC0: поиск, контактный лист, скачивание
+    ├── inline-assets.py      один HTML со встроенными картинками — для показа
     └── measure.js            замер любого сайта тем же методом (Playwright)
 ```
 
-Пример: [`examples/selix/index.html`](examples/selix/index.html) — демо-лендинг платёжного модуля, собранный скиллом.
+Пример: [`examples/selix/`](examples/selix/) — демо-лендинг платёжного модуля, собранный скиллом. Для просмотра одним файлом — `selix-standalone.html` (картинки встроены), рабочая версия — `index.html` + `img/`.
 
 ## `industrial-landing` — коммерция производственных компаний
 
