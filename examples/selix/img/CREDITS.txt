@@ -1,14 +1,13 @@
-Фотографии — свободная лицензия CC0 / Public Domain, подпись не обязательна. Источники:
-[ph4] photo-010.jpg — Silas Köhler, wordpress, CC0 — https://wordpress.org/photos/photo/9696798823/
-[ph4] photo-025.jpg — El Stadnik, wordpress, CC0 — https://wordpress.org/photos/photo/73562499db/
-[ph4] photo-026.jpg — Moses Cursor Ssebunya, wordpress, CC0 — https://wordpress.org/photos/photo/28468b5f3b/
-[ph4] photo-003.jpeg — Arshit Dhameliya, wordpress, CC0 — https://wordpress.org/photos/photo/45564febd4/
-[ph] photo-011.jpg — Burst, stocksnap, CC0 — https://stocksnap.io/photo/woman-holding-LFTEMAVW1O
-[ph] photo-044.jpg — Matt Bango, stocksnap, CC0 — https://stocksnap.io/photo/taxi-city-UEIBDBLQHP
-[ph] photo-033.jpg — автор не указан, rawpixel, CC0 — https://www.rawpixel.com/image/8809250/photo-image-books-hands-social-media
-[ph] photo-008.jpg — JESHOOTS.com, stocksnap, CC0 — https://stocksnap.io/photo/waiting-taxi-VROPE3A39O
-[ph2] photo-003.jpg — автор не указан, rawpixel, CC0 — https://www.rawpixel.com/image/5918450/photo-image-background-public-domain-people
-[ph2] photo-009.jpg — автор не указан, rawpixel, CC0 — https://www.rawpixel.com/image/3302056/free-photo-image-asphalt-neon-advertisement
-[ph3] photo-009.jpg — Matt Moloney, stocksnap, CC0 — https://stocksnap.io/photo/female-monochrome-SYQEFNRYN7
-[ph3] photo-005.jpg — автор не указан, stocksnap, CC0 — https://stocksnap.io/photo/woman-face-UJVXF3GQZT
-[ph3] photo-008.jpg — Matt Moloney, stocksnap, CC0 — https://stocksnap.io/photo/female-monochrome-92OOGBFONP
+Фотографии — свободная лицензия CC0 (подпись не обязательна). Подобраны scripts/find-photos.py.
+
+hero-street.webp     — Silas Köhler, WordPress Photos — https://wordpress.org/photos/photo/9696798823/
+final-square.webp    — Nilo Velez, WordPress Photos — https://wordpress.org/photos/photo/1286790e6f/
+card-split.webp      — iamdipta13, WordPress Photos — https://wordpress.org/photos/photo/46968ee788/
+card-oneclick.webp   — El Stadnik, WordPress Photos — https://wordpress.org/photos/photo/73562499db/
+card-retry.webp      — Rita Robles Loaiza, WordPress Photos — https://wordpress.org/photos/photo/7306a5ee57/
+card-abandon.webp    — StockSnap — https://stocksnap.io/photo/woman-face-UJVXF3GQZT
+integr-tower.webp    — Arshit Dhameliya, WordPress Photos — https://wordpress.org/photos/photo/45564febd4/
+avatar-1.webp        — Matt Moloney, StockSnap — https://stocksnap.io/photo/female-monochrome-92OOGBFONP
+avatar-2.webp        — Matt Moloney, StockSnap — https://stocksnap.io/photo/female-monochrome-SYQEFNRYN7
+avatar-3.webp        — Burst, StockSnap — https://stocksnap.io/photo/woman-holding-LFTEMAVW1O
+og.jpg               — кадр hero-street.webp

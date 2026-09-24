@@ -6,6 +6,10 @@
 <title>Selix — платёжный модуль, который возвращает потерянные оплаты</title>
 <meta name="description" content="Рассрочка, оплата в один клик и умные повторы списаний. Больше оплат с того же трафика — без доработки сайта.">
 <meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="Selix — больше оплат с того же трафика">
+<meta property="og:description" content="Рассрочка, оплата в один клик, умные повторы и напоминания о брошенных оплатах — в вашей форме оплаты.">
+<meta property="og:image" content="img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0b0c'/%3E%3Ccircle cx='11' cy='16' r='5' fill='%23ff6a1f'/%3E%3Ccircle cx='22' cy='16' r='5' fill='%23f3f2ee'/%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,16 +18,16 @@
 
 <style>
 /* ════════════════════════════════════════════════════════════════
-   SELIX v3 — демо airy-landing, направление «Кинематограф».
-   Правки после отзыва: трекинг вдвое мягче, никаких UI-плашек поверх
-   фото, цифры hero — типографикой с выносками, интеграции — гигантскими
-   строками узким капсом. Бренд, цифры и интеграции вымышлены.
+   SELIX v4 — демо airy-landing, направление «Кинематограф».
+   v4 — правки по ревью арт-директора (review/REVIEW.md): шапка и подвал,
+   одна правда о продукте, цена и безопасность, живая форма в финале,
+   новые кадры, мягче трекинг, контраст микро-слоя. Бренд и цифры вымышлены.
    ════════════════════════════════════════════════════════════════ */
 :root {
   --bg: #0b0b0c; --bg-2: #151516;
-  --ink: #f3f2ee; --ink-2: rgb(243 242 238 / .68); --ink-3: rgb(243 242 238 / .44);
+  --ink: #f3f2ee; --ink-2: rgb(243 242 238 / .68); --ink-3: rgb(243 242 238 / .54);
   --line: rgb(243 242 238 / .12); --line-2: rgb(243 242 238 / .24);
-  --paper: #efeee9; --on-paper: #111110; --on-paper-2: rgb(17 17 16 / .66); --on-paper-3: rgb(17 17 16 / .46); --line-paper: rgb(17 17 16 / .12);
+  --paper: #efeee9; --on-paper: #111110; --on-paper-2: rgb(17 17 16 / .66); --on-paper-3: rgb(17 17 16 / .62); --line-paper: rgb(17 17 16 / .12);
   --accent: #ff6a1f;                  /* оранжевый — снят с вывесок hero-кадра */
 
   --font: "Inter Tight", "Inter", system-ui, sans-serif;
@@ -40,7 +44,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 6rem; }
 body { background: var(--bg); color: var(--ink); font: 400 1rem/1.5 var(--font-text); -webkit-font-smoothing: antialiased; overflow-x: clip; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
@@ -48,10 +52,10 @@ ul, ol { list-style: none; padding: 0; }
 ::selection { background: var(--accent); color: #111; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.wrap { padding-inline: var(--gutter); }
+.wrap { padding-inline: calc(var(--edge) + var(--gutter)); }  /* левый край = край текста внутри панелей */
 
 /* ── Микро-слой ────────────────────────────────────────────────── */
-.hud { font: 500 .6875rem/1.35 var(--font-text); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.hud { font: 500 .75rem/1.35 var(--font-text); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
 .hud b { color: var(--ink); font-weight: 500; }
 .hud-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1rem; border-top: 1px solid var(--line); }
 
@@ -73,7 +77,7 @@ ul, ol { list-style: none; padding: 0; }
        display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; }
 .logo { display: inline-flex; align-items: center; gap: .5rem; font: 600 1.25rem/1 var(--font); letter-spacing: -.025em; }
 .logo i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 14px 0 0 var(--ink); margin-right: 14px; }
-.logo-wrap { padding: .5rem .875rem .5rem .75rem; border-radius: 999px; transition: background-color .3s; }
+.logo-wrap { justify-self: start; padding: .5rem .875rem .5rem .75rem; border-radius: 999px; transition: background-color .3s; }
 .capsule { display: flex; gap: .125rem; padding: .25rem; border-radius: 999px; background: rgb(20 20 22 / .45); border: 1px solid rgb(255 255 255 / .12);
            backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); transition: background-color .3s; }
 .capsule a { padding: .5rem .875rem; border-radius: 999px; font-size: .8125rem; color: var(--ink-2); transition: background-color .2s, color .2s; }
@@ -83,7 +87,9 @@ ul, ol { list-style: none; padding: 0; }
 .nav__login:hover { color: var(--ink); }
 .nav .pill { height: 40px; padding-inline: 1.125rem; font-size: .8125rem; }
 .nav .orb { width: 40px; height: 40px; }
-.nav.is-scrolled .capsule, .nav.is-scrolled .logo-wrap { background: rgb(14 14 15 / .8); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.nav__act { padding: .25rem; border-radius: 999px; transition: background-color .3s, padding .3s; }
+.nav.is-scrolled .capsule, .nav.is-scrolled .logo-wrap, .nav.is-scrolled .nav__act { background: rgb(14 14 15 / .82); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.nav.is-scrolled .nav__act { padding-left: 1rem; }
 @media (max-width: 900px) { .capsule, .nav__login { display: none; } .nav { grid-template-columns: 1fr auto; } }
 
 /* ── 1. HERO ───────────────────────────────────────────────────── */
@@ -99,14 +105,14 @@ ul, ol { list-style: none; padding: 0; }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 .hero__top { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; }
 .hero__main { align-self: end; display: grid; gap: clamp(1.75rem, 3vw, 2.75rem); }
-.display { font: 500 clamp(3.1rem, 1rem + 7.3vw, 9rem)/.92 var(--font); letter-spacing: -.025em; white-space: nowrap; }
+.display { font: 500 clamp(3.1rem, 1rem + 7.3vw, 9rem)/.92 var(--font); letter-spacing: -.015em; white-space: nowrap; }
 .display > span { display: block; }
 .display .l2 { padding-left: clamp(0rem, 14vw, 17rem); }
-.display .l3 { padding-left: clamp(0rem, 4vw, 5rem); }
+.display .l3 { padding-left: 0; }
 .display em { font-style: normal; color: var(--accent); }
 .inline-shot { display: inline-block; width: 1.5em; height: .7em; border-radius: 999px; vertical-align: .06em; margin-inline: .12em .1em;
   background: url(img/hero-street.webp) 44% 12% / 420% auto; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .25); }
-.hero__lead { color: var(--ink-2); font-size: 1.0625rem; line-height: 1.55; max-width: 36ch; }
+.hero__lead { color: var(--ink-2); font-size: 1.0625rem; line-height: 1.55; max-width: 40ch; }
 .hero__lead b { color: var(--ink); font-weight: 500; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
 .hero__foot { display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
@@ -117,8 +123,8 @@ ul, ol { list-style: none; padding: 0; }
 .facts { position: absolute; right: var(--gutter); top: 20%; bottom: 26%; width: min(30vw, 380px); pointer-events: none; }
 .fact { position: absolute; display: grid; gap: .375rem; padding-left: 4.25rem; text-shadow: 0 1px 18px rgb(0 0 0 / .45); }
 .fact::before { content: ""; position: absolute; left: 0; top: 1.75rem; width: 3.25rem; height: 1px; background: var(--line-2); }
-.fact::after { content: ""; position: absolute; left: -3px; top: calc(1.75rem - 3px); width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
-.fact b { font: 500 clamp(2.25rem, 1.4rem + 1.8vw, 3.5rem)/1 var(--font); letter-spacing: -.03em; }
+.fact::after { content: ""; position: absolute; left: -3px; top: calc(1.75rem - 3px); width: 7px; height: 7px; border-radius: 50%; background: var(--ink-2); }
+.fact b { font: 500 clamp(2.25rem, 1.4rem + 1.8vw, 3.5rem)/1 var(--font); letter-spacing: -.015em; }
 .fact b sup { font-size: .42em; color: var(--accent); vertical-align: .95em; margin-left: .06em; }
 .fact span { font-size: .8125rem; line-height: 1.4; color: var(--ink-2); max-width: 20ch; }
 .fact:nth-child(1) { top: 0; right: 0; }
@@ -142,11 +148,12 @@ ul, ol { list-style: none; padding: 0; }
 
 /* ── 2. Манифест ───────────────────────────────────────────────── */
 .manifesto { padding-block: clamp(6rem, 4rem + 8vw, 12rem); }
-.manifesto__text { font: 500 clamp(1.75rem, 1rem + 2.5vw, 3.4rem)/1.12 var(--font); letter-spacing: -.02em; max-width: 25ch; margin: clamp(3rem, 6vw, 6rem) auto 0; text-align: center; text-wrap: balance; }
+.manifesto__text { font: 500 clamp(1.75rem, 1rem + 2.5vw, 3.4rem)/1.12 var(--font); letter-spacing: -.01em; max-width: 25ch; margin: clamp(3rem, 6vw, 6rem) auto 0; text-align: center; text-wrap: balance; }
 .manifesto__text .dim { color: rgb(243 242 238 / .36); }
 .faces { display: inline-flex; vertical-align: .06em; margin-inline: .12em; }
 .faces img { width: .92em; height: .92em; border-radius: 50%; object-fit: cover; filter: grayscale(1); border: 3px solid var(--bg); margin-left: -.3em; }
 .faces img:first-child { margin-left: 0; }
+.manifesto__case { text-align: center; margin-top: 2rem; }
 .manifesto__sign { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem 2rem; margin-top: 2.5rem; }
 
 /* ── 3. Светлый лист: механики ─────────────────────────────────── */
@@ -155,7 +162,7 @@ ul, ol { list-style: none; padding: 0; }
 .sheet .hud { color: var(--on-paper-3); }
 .sheet .hud-row { border-color: var(--line-paper); }
 .sec-head { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1.5rem; align-items: end; margin: clamp(2rem, 4vw, 3.5rem) 0 clamp(2.5rem, 5vw, 4.5rem); }
-.h2 { grid-column: 1 / span 8; font: 500 clamp(2.4rem, 1rem + 4vw, 5rem)/.98 var(--font); letter-spacing: -.03em; text-wrap: balance; }
+.h2 { grid-column: 1 / span 8; font: 500 clamp(2.4rem, 1rem + 4vw, 5rem)/.98 var(--font); letter-spacing: -.015em; text-wrap: balance; }
 .h2 .dim { color: var(--on-paper-3); }
 .sec-head__side { grid-column: 10 / -1; display: grid; gap: 1.25rem; justify-items: start; font-size: .9375rem; color: var(--on-paper-2); max-width: 30ch; }
 .link-u { display: inline-flex; align-items: center; gap: .5rem; font-weight: 500; color: var(--on-paper); padding-bottom: .25rem; border-bottom: 1px solid currentColor; }
@@ -170,8 +177,8 @@ ul, ol { list-style: none; padding: 0; }
 .card__top { display: flex; justify-content: space-between; align-items: center; }
 .card__top .hud { color: rgb(255 255 255 / .75); }
 .card .orb { width: 40px; height: 40px; background: #fff; }
-.card__title { grid-row: 3; font: 500 clamp(1.625rem, 1.1rem + 1.1vw, 2.5rem)/1 var(--font); letter-spacing: -.02em; }
-.card__title small { display: block; margin-top: .75rem; font: 400 .875rem/1.45 var(--font-text); letter-spacing: 0; color: rgb(255 255 255 / .74); max-width: 30ch; }
+.card__title { grid-row: 3; font: 500 clamp(1.625rem, 1.1rem + 1.1vw, 2.5rem)/1 var(--font); letter-spacing: -.01em; }
+.card__title small { display: block; margin-top: .75rem; font: 400 .875rem/1.45 var(--font-text); letter-spacing: 0; color: rgb(255 255 255 / .74); max-width: 30ch; text-wrap: pretty; }
 .card--wide .card__title { font-size: clamp(2rem, 1.2rem + 2vw, 3.5rem); }
 @media (max-width: 1100px) { .cards { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 620px) { .cards { grid-template-columns: 1fr; } .card { min-height: 460px; } }
@@ -179,7 +186,10 @@ ul, ol { list-style: none; padding: 0; }
 /* ── 4. Подключение ────────────────────────────────────────────── */
 .connect { padding-block: clamp(6rem, 4rem + 8vw, 12rem) clamp(4rem, 3rem + 4vw, 7rem); }
 .connect__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(2.5rem, 6vw, 7rem); align-items: end; margin-top: clamp(2.5rem, 5vw, 4.5rem); }
-.connect__media img { width: 100%; aspect-ratio: 4 / 3.5; object-fit: cover; border-radius: var(--r-panel); filter: grayscale(1) contrast(1.1) brightness(.8); }
+.connect__media { display: grid; align-content: space-between; gap: 3rem; min-height: clamp(360px, 34vw, 520px); padding: clamp(1.5rem, 3vw, 2.75rem); border-radius: var(--r-panel); background: var(--bg-2); }
+.code-line { font: 400 clamp(1rem, .55rem + 1.2vw, 1.75rem)/1.45 var(--font-mono); letter-spacing: -.01em; color: var(--ink); overflow-wrap: anywhere; }
+.code-line i { font-style: normal; color: var(--accent); }
+.code-line span { color: var(--ink-3); }
 .connect__text { display: grid; gap: 2rem; }
 .connect__text .h2 { grid-column: auto; font-size: clamp(2.2rem, 1rem + 3.2vw, 4.25rem); }
 .connect__text .h2 .dim { color: var(--ink-3); }
@@ -199,8 +209,8 @@ ul, ol { list-style: none; padding: 0; }
 .row:nth-child(even) .row__word { order: 2; text-align: right; }
 .row__word { font: 800 clamp(3.75rem, 1rem + 10vw, 11.5rem)/.82 var(--font-narrow); letter-spacing: -.005em; text-transform: uppercase; }
 .row__word sup { font: 500 .6875rem/1 var(--font-text); letter-spacing: .06em; color: var(--accent); vertical-align: 3.2em; margin-left: .5rem; }
-.row__note { max-width: 24ch; font-size: .875rem; line-height: 1.45; color: var(--ink-2); padding-bottom: .75rem; }
-.integr__shot { position: absolute; left: 31%; top: 27%; width: clamp(150px, 13vw, 210px); aspect-ratio: 3 / 4; object-fit: cover;
+.row__note { text-wrap: pretty; max-width: 24ch; font-size: .875rem; line-height: 1.45; color: var(--ink-2); padding-bottom: .75rem; }
+.integr__shot { position: absolute; left: 38%; top: 9%; width: clamp(140px, 11vw, 190px); aspect-ratio: 3 / 4; object-fit: cover;
                 border-radius: var(--r-card); filter: grayscale(1) contrast(1.1); z-index: 2; box-shadow: 0 30px 60px -20px rgb(0 0 0 / .6); }
 @media (max-width: 900px) {
   .row, .row:nth-child(even) { grid-template-columns: 1fr; gap: .5rem; }
@@ -212,23 +222,38 @@ ul, ol { list-style: none; padding: 0; }
 .final { padding: 0 var(--edge); }
 .final__panel { position: relative; isolation: isolate; overflow: hidden; border-radius: var(--r-panel); min-height: min(92svh, 860px);
   display: grid; align-content: center; justify-items: center; text-align: center; gap: 2rem; padding: 6rem var(--gutter); }
-.final__panel > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; filter: saturate(.85) contrast(1.05) brightness(.62); }
+.final__panel > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; filter: saturate(.9) contrast(1.06) brightness(.66); }
 .final__panel::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(70% 70% at 50% 50%, rgb(8 8 9 / .55), rgb(8 8 9 / .82)); }
-.final__title { font: 500 clamp(2.8rem, 1rem + 5.8vw, 7.25rem)/.95 var(--font); letter-spacing: -.03em; max-width: 14ch; text-wrap: balance; }
+.final__title { font: 500 clamp(2.8rem, 1rem + 5.8vw, 7.25rem)/.95 var(--font); letter-spacing: -.015em; max-width: 14ch; text-wrap: balance; }
 .final__title em { font-style: normal; color: var(--accent); }
 .final .hud-row { position: absolute; left: var(--gutter); right: var(--gutter); top: 1rem; border: 0; }
 
-.foot { padding: clamp(4rem, 6vw, 6rem) var(--gutter) 0; overflow: clip; }
+.foot { padding: clamp(4rem, 6vw, 6rem) calc(var(--edge) + var(--gutter)) 0; overflow: clip; }
+.foot .hud-row { position: relative; background: var(--bg); }
 .foot__cols { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 1.5rem; }
 .foot__cols nav { display: grid; gap: .625rem; align-content: start; font-size: .875rem; color: var(--ink-2); }
 .foot__cols nav a:hover { color: var(--ink); }
 .foot__cols nav .hud { margin-bottom: .5rem; }
 .foot__about { display: grid; gap: 1.25rem; align-content: start; justify-items: start; }
 .foot__about p { font-size: .875rem; color: var(--ink-2); max-width: 28ch; }
-.foot__word { font: 600 clamp(6rem, 29vw, 30rem)/.74 var(--font); letter-spacing: -.05em; text-align: center; margin-top: clamp(3rem, 6vw, 6rem);
+.foot__word { font: 600 clamp(6rem, 28vw, 29rem)/.9 var(--font); letter-spacing: -.025em; padding-top: .04em; text-align: center; margin-top: clamp(2rem, 4vw, 4rem); margin-bottom: -.12em;
   background: linear-gradient(180deg, rgb(243 242 238 / .9), rgb(243 242 238 / .06)); -webkit-background-clip: text; background-clip: text; color: transparent; user-select: none; }
 .foot .hud-row { flex-wrap: wrap; }
 @media (max-width: 760px) { .foot__cols { grid-template-columns: 1fr 1fr; } .foot__about { grid-column: 1 / -1; } }
+
+@media (max-width: 600px) { .hud-row > span:nth-child(2):not(:last-child) { display: none; } }
+
+/* ── Форма в финале ─────────────────────────────────────────────── */
+.lead-form { display: flex; gap: .375rem; width: min(100%, 30rem); padding: .375rem; border-radius: 999px; background: rgb(255 255 255 / .1); border: 1px solid var(--line-2); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.lead-form input { flex: 1; min-width: 0; height: 48px; padding-inline: 1.125rem; border: 0; background: transparent; color: var(--ink); font: 400 1rem var(--font-text); }
+.lead-form input::placeholder { color: var(--ink-3); }
+.lead-form input:focus-visible { outline: none; }
+.lead-form:focus-within { border-color: var(--accent); }
+.lead-form button { border: 0; padding: 0; background: none; cursor: pointer; font: inherit; }
+.final__alt { font-size: .875rem; color: var(--ink-2); }
+.final__alt a { color: var(--ink); border-bottom: 1px solid var(--line-2); }
+.final__alt a:hover { border-color: var(--ink); }
+@media (max-width: 480px) { .lead-form { flex-direction: column; border-radius: var(--r-card); } .lead-form .pill { justify-content: center; } }
 
 /* ── Движение: один поставленный момент — появление hero ──────── */
 @media (prefers-reduced-motion: no-preference) {
@@ -267,7 +292,7 @@ ul, ol { list-style: none; padding: 0; }
     <img class="hero__img" src="img/hero-street.webp" alt="" width="2000" height="1333" fetchpriority="high">
 
     <div class="hero__top">
-      <p class="hud">(01) &nbsp;Платёжный модуль для&nbsp;онлайн-продаж</p>
+      <p class="hud">(01)&nbsp;&nbsp;Платёжный модуль для&nbsp;онлайн-школ и&nbsp;магазинов</p>
       <p class="hud">Работает <b>24/7</b> · аптайм <b>99,98%</b></p>
     </div>
 
@@ -280,14 +305,14 @@ ul, ol { list-style: none; padding: 0; }
     <div class="hero__main">
       <h1 class="display"><span class="l1">Больше оплат</span><span class="l2">с&nbsp;того&nbsp;же<span class="inline-shot" aria-hidden="true"></span></span><span class="l3">трафика<em>.</em></span></h1>
       <div>
-        <p class="hero__lead"><b>Selix встаёт в&nbsp;вашу форму оплаты</b> и&nbsp;добавляет рассрочку, оплату в&nbsp;один клик и&nbsp;повторные списания. Сайт дорабатывать не&nbsp;нужно.</p>
+        <p class="hero__lead"><b>Selix встаёт в&nbsp;вашу форму оплаты</b> и&nbsp;добавляет рассрочку, оплату в&nbsp;один клик, умные повторы списаний и&nbsp;напоминания о&nbsp;брошенных оплатах. Без&nbsp;переделки сайта.</p>
         <div class="hero__cta">
           <a class="cta-pair" href="#start"><span class="pill pill--light">Подключить Selix</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></a>
           <a class="pill pill--ghost" href="#features">Как это работает</a>
         </div>
       </div>
       <div class="hero__foot hud">
-        <span>Без абонентской платы</span><span>Подключение за&nbsp;1&nbsp;день</span><span>Чеки по&nbsp;54-ФЗ</span>
+        <span>Комиссия 2,9%&nbsp;— только с&nbsp;успешных оплат</span><span>PCI&nbsp;DSS · 3-D&nbsp;Secure</span><span>Чеки по&nbsp;54-ФЗ</span>
         <span class="scroll">Листайте <span class="orb orb--line" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3.5 8.5L8 13l4.5-4.5" stroke="currentColor" stroke-width="1.5"/></svg></span></span>
       </div>
     </div>
@@ -296,14 +321,15 @@ ul, ol { list-style: none; padding: 0; }
 
 <!-- 2. МАНИФЕСТ -->
 <section class="manifesto wrap">
-  <div class="hud-row hud"><span>(02) &nbsp;Почему Selix</span><span>Потерянные оплаты</span><span>2026</span></div>
-  <p class="manifesto__text">Каждый пятый покупатель <span class="faces" aria-hidden="true"><img src="img/avatar-2.webp" alt=""><img src="img/avatar-1.webp" alt=""><img src="img/avatar-3.webp" alt=""></span> доходит до&nbsp;оплаты и&nbsp;уходит. <span class="dim">Не&nbsp;хватило денег, неудобная форма, нет рассрочки. Selix возвращает эти деньги&nbsp;— без&nbsp;доработки сайта.</span></p>
-  <div class="manifesto__sign hud"><span>Частями</span><span>В&nbsp;один клик</span><span>Умные повторы</span><span>Брошенные оплаты</span></div>
+  <div class="hud-row hud"><span>(02)&nbsp;&nbsp;Почему Selix</span><span>Потерянные оплаты</span><span>1 из&nbsp;5 уходит на&nbsp;оплате</span></div>
+  <p class="manifesto__text">Каждый пятый покупатель <span class="faces" aria-hidden="true"><img src="img/avatar-2.webp" alt="" width="240" height="240"><img src="img/avatar-1.webp" alt="" width="240" height="240"><img src="img/avatar-3.webp" alt="" width="240" height="240"></span> доходит до&nbsp;оплаты и&nbsp;уходит. <span class="dim">Не&nbsp;хватило денег, неудобная форма, нет рассрочки. Selix возвращает эти оплаты&nbsp;— без&nbsp;переделки сайта.</span></p>
+  <p class="manifesto__case hud">Онлайн-школа «Пример»&nbsp;— <b>+21% оплат за&nbsp;2&nbsp;месяца</b> · демо</p>
+  <div class="manifesto__sign hud"><span>Оплата частями</span><span>В&nbsp;один клик</span><span>Умные повторы</span><span>Брошенные оплаты</span></div>
 </section>
 
 <!-- 3. СВЕТЛЫЙ ЛИСТ: МЕХАНИКИ -->
 <section class="sheet" id="features">
-  <div class="hud-row hud"><span>(03) &nbsp;Возможности</span><span>4 механики</span><span>Включаются одним переключателем</span></div>
+  <div class="hud-row hud"><span>(03)&nbsp;&nbsp;Возможности</span><span>4 механики</span><span>Включаются одним переключателем</span></div>
   <div class="sec-head">
     <h2 class="h2">Четыре способа не&nbsp;потерять покупателя <span class="dim">на&nbsp;последнем шаге</span></h2>
     <div class="sec-head__side">
@@ -314,39 +340,39 @@ ul, ol { list-style: none; padding: 0; }
 
   <div class="cards">
     <a class="card card--wide" href="#connect">
-      <img src="img/card-split.webp" alt="" loading="lazy" width="1100" height="733">
-      <div class="card__top"><span class="hud">(01) Рассрочка</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+      <img src="img/card-split.webp" alt="" loading="lazy" width="1200" height="900">
+      <div class="card__top"><span class="hud">Рассрочка</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
       <h3 class="card__title">Оплата частями<small>Покупатель платит четверть сегодня&nbsp;— вы&nbsp;получаете всю сумму сразу.</small></h3>
     </a>
     <a class="card" href="#connect">
       <img src="img/card-oneclick.webp" alt="" loading="lazy" width="1100" height="733" style="object-position: 35% 50%">
-      <div class="card__top"><span class="hud">(02) Повторные</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+      <div class="card__top"><span class="hud">Сохранённая карта</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
       <h3 class="card__title">В&nbsp;один клик<small>Карта сохраняется после первой покупки.</small></h3>
     </a>
     <a class="card" href="#connect">
-      <img src="img/card-retry.webp" alt="" loading="lazy" width="900" height="1200">
-      <div class="card__top"><span class="hud">(03) Подписки</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
-      <h3 class="card__title">Умные повторы<small>Не&nbsp;хватило денег&nbsp;— спишем, когда пройдёт.</small></h3>
+      <img src="img/card-retry.webp" alt="" loading="lazy" width="900" height="1200" style="object-position: 60% 50%">
+      <div class="card__top"><span class="hud">Повтор списания</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+      <h3 class="card__title">Умные повторы<small>Если на&nbsp;карте не&nbsp;хватило денег, повторим списание, когда они появятся.</small></h3>
     </a>
     <a class="card" href="#connect">
       <img src="img/card-abandon.webp" alt="" loading="lazy" width="900" height="1350" style="object-position: 50% 30%">
-      <div class="card__top"><span class="hud">(04) Возврат</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
-      <h3 class="card__title">Брошенная оплата<small>Через час покупатель получит письмо со&nbsp;ссылкой.</small></h3>
+      <div class="card__top"><span class="hud">Письмо со&nbsp;ссылкой</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+      <h3 class="card__title">Брошенные оплаты<small>Через час покупатель получит письмо со&nbsp;ссылкой.</small></h3>
     </a>
   </div>
 </section>
 
 <!-- 4. ПОДКЛЮЧЕНИЕ -->
 <section class="connect wrap" id="connect">
-  <div class="hud-row hud"><span>(04) &nbsp;Подключение</span><span>Виджет · модуль · API</span><span>Тестовый режим без&nbsp;договора</span></div>
+  <div class="hud-row hud"><span>(04)&nbsp;&nbsp;Подключение</span><span>Виджет · модуль · API</span><span>Тестовый режим без&nbsp;договора</span></div>
   <div class="connect__grid">
-    <div class="connect__media"><img src="img/connect-hands.webp" alt="" loading="lazy" width="1024" height="683"></div>
+    <div class="connect__media"><p class="hud">checkout.html</p><p class="code-line"><span>&lt;</span><i>script</i> src="js.selix.ru/v1"<span>&gt;</span><br><span>&lt;/</span><i>script</i><span>&gt;</span></p><p class="hud">Или готовый модуль: Tilda · GetCourse · WordPress</p></div>
     <div class="connect__text">
       <h2 class="h2">Одна строка кода&nbsp;— <span class="dim">и&nbsp;форма уже продаёт</span></h2>
       <ol class="steps">
-        <li><span class="hud">01</span><div><b>Заявка и&nbsp;договор онлайн</b><span>ИП, ООО или самозанятый&nbsp;— проверка за&nbsp;несколько часов</span></div></li>
-        <li><span class="hud">02</span><div><b>Строка на&nbsp;сайт или модуль</b><span><code>&lt;<i>script</i> src="js.selix.ru/v1"&gt;</code> — или готовый модуль для&nbsp;вашей платформы</span></div></li>
-        <li><span class="hud">03</span><div><b>Первая оплата</b><span>Деньги на&nbsp;счёте на&nbsp;следующий рабочий день</span></div></li>
+        <li><span class="hud">01</span><div><b>Заявка и&nbsp;договор онлайн</b><span>Заявка&nbsp;— 5 минут, проверка&nbsp;— до&nbsp;4 часов. ИП, ООО или самозанятый.</span></div></li>
+        <li><span class="hud">02</span><div><b>Строка на&nbsp;сайт или модуль</b><span>Одна строка кода слева&nbsp;— или готовый модуль для&nbsp;вашей платформы</span></div></li>
+        <li><span class="hud">03</span><div><b>Первая оплата</b><span>Принимаете в&nbsp;тот же день. Деньги на&nbsp;счёте&nbsp;— на&nbsp;следующий рабочий.</span></div></li>
       </ol>
       <a class="cta-pair" href="#start"><span class="pill pill--light">Подключить Selix</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></a>
     </div>
@@ -355,26 +381,28 @@ ul, ol { list-style: none; padding: 0; }
 
 <!-- 5. ИНТЕГРАЦИИ -->
 <section class="integr wrap" id="integrations">
-  <div class="hud-row hud"><span>(05) &nbsp;Интеграции</span><span>Готовые модули</span><span>Ещё 40+ через&nbsp;API</span></div>
+  <div class="hud-row hud"><span>(05)&nbsp;&nbsp;Интеграции</span><span>Готовые модули</span><span>Любая платформа&nbsp;— через API</span></div>
   <img class="integr__shot" src="img/integr-tower.webp" alt="" loading="lazy" width="620" height="750">
   <div class="rows">
-    <div class="row"><p class="row__word">Tilda<sup>01</sup></p><p class="row__note">Блок оплаты в&nbsp;библиотеке&nbsp;— без&nbsp;кода и&nbsp;настроек.</p></div>
-    <div class="row"><p class="row__word">GetCourse<sup>02</sup></p><p class="row__note">Рассрочка и&nbsp;повторы прямо в&nbsp;заказах школы.</p></div>
-    <div class="row"><p class="row__word">WordPress<sup>03</sup></p><p class="row__note">Плагин для&nbsp;WooCommerce за&nbsp;пять минут.</p></div>
-    <div class="row"><p class="row__word">API<sup>04</sup></p><p class="row__note">Для&nbsp;своей платформы: документация и&nbsp;тестовый режим.</p></div>
+    <div class="row"><p class="row__word">Tilda</p><p class="row__note">Блок оплаты в&nbsp;библиотеке&nbsp;— без&nbsp;кода и&nbsp;настроек.</p></div>
+    <div class="row"><p class="row__word">GetCourse</p><p class="row__note">Рассрочка и&nbsp;повторы прямо в&nbsp;заказах школы.</p></div>
+    <div class="row"><p class="row__word">WordPress</p><p class="row__note">Плагин для&nbsp;WooCommerce за&nbsp;пять минут.</p></div>
+    <div class="row"><p class="row__word">API</p><p class="row__note">Для&nbsp;своей платформы: документация и&nbsp;тестовый режим без&nbsp;договора.</p></div>
   </div>
 </section>
 
 <!-- 6. ФИНАЛ -->
 <section class="final" id="start">
   <div class="final__panel">
-    <img src="img/cta-crowd.webp" alt="" loading="lazy" width="1024" height="683">
-    <div class="hud-row hud"><span>(06) &nbsp;Старт</span><span>Регистрация — 5 минут</span></div>
+    <img src="img/final-square.webp" alt="" loading="lazy" width="2048" height="1365">
+    <div class="hud-row hud"><span>(06)&nbsp;&nbsp;Старт</span><span>Заявка&nbsp;— 5 минут</span></div>
     <h2 class="final__title">Верните оплаты, которые сейчас теряются<em>.</em></h2>
-    <div class="hero__cta">
-      <a class="cta-pair" href="#"><span class="pill pill--light">Подключить Selix</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></a>
-      <a class="pill pill--ghost" href="#">Поговорить с&nbsp;менеджером</a>
-    </div>
+    <form class="lead-form" action="mailto:hello@selix.example" method="post" enctype="text/plain">
+      <label class="sr-only" for="lead">Email или телефон</label>
+      <input id="lead" name="contact" type="text" autocomplete="email" placeholder="Email или телефон" required>
+      <button class="cta-pair" type="submit"><span class="pill pill--light">Подключить Selix</span><span class="orb" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></span></button>
+    </form>
+    <p class="final__alt">Или <a href="https://t.me/selix_demo">напишите менеджеру в&nbsp;Telegram</a>&nbsp;— ответим за&nbsp;15&nbsp;минут</p>
   </div>
 </section>
 
@@ -385,10 +413,10 @@ ul, ol { list-style: none; padding: 0; }
     <div class="foot__about"><span class="logo"><i aria-hidden="true"></i>Selix</span><p>Платёжный модуль, который возвращает потерянные оплаты.</p></div>
     <nav aria-label="Продукт"><p class="hud">Продукт</p><a href="#features">Возможности</a><a href="#connect">Подключение</a><a href="#integrations">Интеграции</a></nav>
     <nav aria-label="Разработчикам"><p class="hud">Разработчикам</p><a href="#">Документация</a><a href="#">API</a><a href="#">Статус</a></nav>
-    <nav aria-label="Связь"><p class="hud">Связь</p><a href="mailto:hello@selix.example">hello@selix.example</a><a href="#">Telegram</a><a href="#">Москва</a></nav>
+    <nav aria-label="Связь"><p class="hud">Связь</p><a href="mailto:hello@selix.example">hello@selix.example</a><a href="https://t.me/selix_demo">Telegram</a><span>Москва</span></nav>
   </div>
   <p class="foot__word" aria-hidden="true">Selix</p>
-  <div class="hud-row hud"><span>© <span data-year>2026</span> Selix · демо-страница: бренд, цифры и&nbsp;интеграции вымышлены</span><a href="img/CREDITS.txt">Фото: CC0 — StockSnap, rawpixel, WordPress Photos</a></div>
+  <div class="hud-row hud"><span>© <span data-year>2026</span> Selix · демо-страница: бренд, цифры и&nbsp;интеграции вымышлены</span><a href="img/CREDITS.txt">Фото: CC0&nbsp;— WordPress Photos, StockSnap</a></div>
 </footer>
 
 <script>

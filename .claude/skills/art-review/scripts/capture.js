@@ -10,6 +10,7 @@
 //   shots/1440-NN.png            вся страница кусками по 1400px (читаемо при просмотре)
 //   shots/768-NN.png, 390-NN.png планшет и телефон кусками
 //   shots/sections-1440/NN.png   каждая секция отдельно
+//   shots/nav-<ширина>/NN.png     шапка в прокрученном состоянии над каждой секцией
 //   checks.json                  все механические находки по ширинам
 //   checks.md                    то же, коротко, для чтения
 //
@@ -109,7 +110,7 @@ function audit() {
   const menuTargets = {}; for (const a of document.querySelectorAll('header a[href^="#"], [data-nav] a[href^="#"]')) { const h = a.getAttribute('href'); if (h === '#') continue; (menuTargets[h] = menuTargets[h] || []).push(a.innerText.trim()); }
   for (const [h, names] of Object.entries(menuTargets)) if (new Set(names).size > 1) add('важно', 'пункты меню в одно место', null, `${names.join(' / ')} → ${h}`);
   const btns = [...document.querySelectorAll('a, button')].filter(vis).filter(b => { const cs = getComputedStyle(b); return (rgb(cs.backgroundColor)?.a > .5 || parseFloat(cs.borderTopWidth) > 0) && b.innerText.trim(); });
-  for (const b of btns) { const cs = getComputedStyle(b), lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.2; if (b.getBoundingClientRect().height > lh * 2.2 && b.getBoundingClientRect().height < 120 && b.innerText.trim().length < 40) { const rg = document.createRange(); rg.selectNodeContents(b); const tops = new Set([...rg.getClientRects()].map(r => Math.round(r.top))); if (tops.size > 1) add('важно', 'кнопка в две строки', b, ''); } }
+  for (const b of btns) { const cs = getComputedStyle(b), lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.2; if (b.getBoundingClientRect().height > lh * 2.2 && b.getBoundingClientRect().height < 120 && b.innerText.trim().length < 40) { const tops = new Set(); const tw = document.createTreeWalker(b, NodeFilter.SHOW_TEXT); let tn; while ((tn = tw.nextNode())) { if (!tn.textContent.trim()) continue; const rg = document.createRange(); rg.selectNodeContents(tn); for (const r of rg.getClientRects()) if (r.width > 2) tops.add(Math.round(r.top / 4)); } if (tops.size > 1) add('важно', 'кнопка в две строки', b, ''); } }
   if (iw < 500) for (const b of links.concat([...document.querySelectorAll('button')])) { const r = b.getBoundingClientRect(); if (vis(b) && r.width < 40 && r.height < 40 && r.width > 0) add('полировка', 'маленькая тап-зона', b, `${Math.round(r.width)}×${Math.round(r.height)}px, нужно ≥44`); }
   const painted = [...document.querySelectorAll('a, button, a *, button *')].filter(vis).filter(b => { const cs = getComputedStyle(b), h = b.getBoundingClientRect().height; return (rgb(cs.backgroundColor)?.a > .5 || parseFloat(cs.borderTopWidth) > 0) && h >= 28 && h <= 80 && b.innerText.trim(); });
   const ctaTexts = [...new Set(painted.map(b => b.closest('a, button')))].filter(b => !b.closest('header, [data-nav]') || true).map(b => b.innerText.trim().toLowerCase()).filter(t => t.length > 3);
@@ -149,6 +150,7 @@ function audit() {
   for (const w of [1440, 768, 390]) {
     const p = await browser.newPage({ viewport: { width: w, height: 900 }, deviceScaleFactor: 1 });
     await p.goto(url, { waitUntil: 'networkidle', timeout: 60000 }).catch(() => {});
+    await p.addStyleTag({ content: 'html{scroll-behavior:auto!important}' }).catch(() => {});   // иначе снимки ловят середину плавной прокрутки
     await p.evaluate(() => document.querySelectorAll('img[loading=lazy]').forEach(i => i.loading = 'eager'));
     const H = await p.evaluate(() => document.documentElement.scrollHeight);
     for (let y = 0; y < H; y += 700) { await p.evaluate(v => scrollTo(0, v), y); await p.waitForTimeout(60); }
@@ -170,6 +172,12 @@ function audit() {
     for (let i = 0, y = 0; y < all.docH; i++, y += chunk) {
       await p.screenshot({ path: path.join(OUT, 'shots', `${w}-${String(i).padStart(2, '0')}.png`), clip: { x: 0, y, width: w, height: Math.min(chunk, all.docH - y) }, fullPage: true });
     }
+    // шапка в прокрученном состоянии над каждой секцией: липкие шапки ломаются именно так
+    fs.mkdirSync(path.join(OUT, 'shots', `nav-${w}`), { recursive: true });
+    { let k = 0; for (const s of all.sections.filter((s, i, arr) => i === 0 || s.y - arr[i - 1].y > 300).slice(0, 12)) {
+        await p.evaluate(v => scrollTo(0, v), Math.max(0, s.y + 40)); await p.waitForTimeout(350);
+        await p.screenshot({ path: path.join(OUT, 'shots', `nav-${w}`, `${String(k++).padStart(2, '0')}.png`), clip: { x: 0, y: 0, width: w, height: 150 } });
+      } await p.evaluate(() => scrollTo(0, 0)); await p.waitForTimeout(300); }
     if (w === 1440) {
       let n = 0;
       for (const s of all.sections) { if (s.h > 3000) continue; await p.screenshot({ path: path.join(OUT, 'shots', 'sections-1440', `${String(n++).padStart(2, '0')}.png`), clip: { x: 0, y: s.y, width: w, height: Math.min(s.h, 2400) }, fullPage: true }).catch(() => {}); }
