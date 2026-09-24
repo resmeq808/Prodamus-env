@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ясно — приём платежей для онлайн-школ</title>
+<meta name="description" content="Подключение за день, выплаты каждый день, онлайн-касса внутри. Для онлайн-школ, экспертов и студий.">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* ════════════════════════════════════════════════════════════════
+   ЯСНО — скелет воздушного премиального лендинга.
+   «Ясно» и все тексты — плейсхолдеры: замените на бренд и факты клиента.
+   Блоки взяты из references/blocks.md, номера блоков — в комментариях.
+   Картинки — честные плейсхолдеры .ph: ищите [квадратные скобки].
+   Семейства компоновки на странице: A центр · D сетка · B/E липкая фича ·
+   F цифры и цитата · E FAQ · C inset-панель.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── 1. Шапка ─────────────────────────────────────────────────── */
+.nav { position: sticky; top: 0; z-index: 50; height: var(--nav-h);
+       background: color-mix(in oklab, var(--bg) 80%, transparent);
+       backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px);
+       border-bottom: 1px solid transparent; transition: border-color var(--dur-2); }
+.nav.is-scrolled { border-bottom-color: var(--line); }
+.nav__in { height: 100%; display: flex; align-items: center; gap: clamp(1.5rem, 3vw, 3rem); }
+.nav__logo { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font); font-weight: var(--w-semi);
+             font-size: 1.125rem; letter-spacing: -.02em; text-decoration: none; }
+.nav__mark { width: 22px; height: 22px; border-radius: 7px; background: var(--ink); position: relative; }
+.nav__mark::after { content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--bg); }
+.nav__menu { display: flex; gap: clamp(1rem, 2vw, 2rem); font-size: var(--fs-small); }
+.nav__menu a { text-decoration: none; color: var(--ink-2); }
+.nav__menu a:hover { color: var(--ink); }
+.nav__act { margin-inline-start: auto; display: flex; align-items: center; gap: 1.25rem; font-size: var(--fs-small); }
+.nav__login { text-decoration: none; }
+@media (max-width: 860px) { .nav__menu, .nav__login { display: none; } }
+
+/* ── 2. Hero: центр + продукт во всю ширину (блок 2) ──────────── */
+.hero-c { padding-block: clamp(4rem, 3rem + 5vw, 8rem) 0; text-align: center; overflow: clip; }
+.hero-c__text { display: grid; justify-items: center; gap: var(--space-5); }
+.hero-c__text .t-hero { max-width: 15ch; margin-inline: auto; }
+.hero-c__text .t-lead { max-width: 44ch; }
+.hero-c__cta { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-2); }
+.hero-c__shot { margin-top: clamp(3rem, 2rem + 4vw, 6rem); }
+.hero-c__shot .media { aspect-ratio: 16 / 9; border-radius: var(--r-lg) var(--r-lg) 0 0; box-shadow: var(--shadow-3);
+  -webkit-mask-image: linear-gradient(#000 72%, transparent); mask-image: linear-gradient(#000 72%, transparent); }
+.hero-c__badge { display: inline-flex; align-items: center; gap: .5rem; height: 32px; padding: 0 .875rem 0 .375rem;
+                 border-radius: var(--r-pill); background: var(--bg-2); font-size: var(--fs-meta); color: var(--ink-2); text-decoration: none; }
+.hero-c__badge b { height: 22px; padding: 0 .5rem; display: inline-grid; place-items: center; border-radius: var(--r-pill);
+                   background: var(--bg); color: var(--ink); font-weight: var(--w-medium); box-shadow: var(--shadow-1); }
+
+/* ── 3. Логотипы (блок 7) ─────────────────────────────────────── */
+.logos__in { display: grid; gap: var(--space-6); justify-items: center; text-align: center; }
+.logos__row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: clamp(1.5rem, 4vw, 4.5rem); }
+.logos__row li { font-family: var(--font); font-weight: var(--w-semi); font-size: 1.25rem; letter-spacing: -.03em; color: var(--ink-3); }
+
+/* ── 4. Фича с липким заголовком (блок 9) ─────────────────────── */
+.feat__in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 7rem); align-items: start; }
+.feat__side { position: sticky; top: calc(var(--nav-h) + 3rem); display: grid; gap: var(--space-5); justify-items: start; }
+.feat__list { display: grid; gap: clamp(3rem, 6vw, 6rem); }
+.feat__item { display: grid; gap: var(--space-4); }
+.feat__item .media { aspect-ratio: 4 / 3; }
+.feat__item figcaption { color: var(--ink-2); max-width: 48ch; }
+.feat__item figcaption b { color: var(--ink); font-weight: var(--w-medium); }
+@media (max-width: 900px) { .feat__in { grid-template-columns: 1fr; } .feat__side { position: static; } }
+
+/* ── 5. Бенто (блок 10) ───────────────────────────────────────── */
+.bento__title { margin-bottom: clamp(2rem, 4vw, 4rem); }
+.bento { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: minmax(220px, auto); gap: var(--space-3); }
+.bento__card { grid-column: span 2; display: grid; align-content: space-between; gap: var(--space-5);
+               padding: clamp(1.25rem, 2vw, 2rem); border-radius: var(--r-md); background: var(--bg-2); overflow: hidden; }
+.bento__card--xl { grid-column: span 4; grid-row: span 2; }
+.bento__card--tall { grid-row: span 2; }
+.bento__card--dark { background: var(--dark); color: var(--on-dark); }
+.bento__card--dark .t-small { color: var(--on-dark-2); }
+.bento__card .media { border-radius: calc(var(--r-md) - 8px); min-height: 180px; }
+.bento__card--xl .media { min-height: 320px; }
+.bento__card .t-small { margin-top: var(--space-2); max-width: 36ch; }
+.bento__big { font-family: var(--font); font-size: clamp(3rem, 2rem + 3vw, 5rem); letter-spacing: -.04em; line-height: 1; }
+@media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bento__card, .bento__card--xl { grid-column: span 2; grid-row: auto; } }
+
+/* ── 6. Цифры (блок 12) ───────────────────────────────────────── */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--col-gap); border-top: 1px solid var(--line); }
+.stat { display: grid; gap: var(--space-2); padding-top: var(--space-5); }
+.stat__value { font-family: var(--font); font-size: clamp(2.5rem, 1.6rem + 3vw, 4.5rem); font-weight: var(--w-regular); line-height: 1; letter-spacing: -.035em; }
+@media (max-width: 760px) { .stats { grid-template-columns: 1fr 1fr; row-gap: var(--space-7); } }
+
+/* ── 7. Цитата (блок 13) ──────────────────────────────────────── */
+.quote { display: grid; gap: var(--space-7); }
+.quote__text { font-family: var(--font); font-size: clamp(1.75rem, 1.1rem + 2.2vw, 3rem); line-height: 1.15; letter-spacing: -.025em;
+               font-weight: var(--w-regular); max-width: 28ch; text-indent: -.4em; }
+.quote__who { display: flex; gap: var(--space-4); align-items: center; font-size: var(--fs-small); }
+.quote__face { width: 48px; height: 48px; border-radius: 50%; background: var(--bg-3); }
+
+/* ── 8. Тарифы (блок 16) ──────────────────────────────────────── */
+.price__head { display: grid; gap: var(--space-4); margin-bottom: clamp(2rem, 4vw, 4rem); }
+.prices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.price { display: grid; gap: var(--space-4); align-content: start; padding: clamp(1.5rem, 2.5vw, 2.5rem); border-radius: var(--r-md); background: var(--bg-2); }
+.price--main { background: var(--dark); color: var(--on-dark); }
+.price--main .t-small { color: var(--on-dark-2); }
+.price__value { font-family: var(--font); font-size: clamp(2.25rem, 1.8rem + 1.5vw, 3.25rem); letter-spacing: -.03em; line-height: 1; }
+.price__value span { font-family: var(--font-text); font-size: var(--fs-small); letter-spacing: 0; color: var(--ink-3); }
+.price--main .price__value span { color: var(--on-dark-2); }
+.price__list { display: grid; gap: var(--space-2); padding-top: var(--space-4); border-top: 1px solid var(--line); font-size: var(--fs-small); }
+.price--main .price__list { border-color: var(--line-dark); }
+.price .btn { margin-top: var(--space-4); justify-self: start; }
+.price__corp { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-4);
+               margin-top: var(--space-3); padding: clamp(1.25rem, 2vw, 1.75rem) clamp(1.5rem, 2.5vw, 2.5rem);
+               border-radius: var(--r-md); border: 1px solid var(--line); }
+@media (max-width: 900px) { .prices { grid-template-columns: 1fr; } }
+
+/* ── 9. FAQ (блок 17) ─────────────────────────────────────────── */
+.faq { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 7rem); }
+.faq__list { border-top: 1px solid var(--line); }
+.faq__item { border-bottom: 1px solid var(--line); }
+.faq__item summary { display: flex; justify-content: space-between; gap: var(--space-5); padding-block: 1.375rem;
+                     cursor: pointer; list-style: none; font-weight: var(--w-medium); font-size: 1.0625rem; }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after { content: "+"; font-weight: 300; font-size: 1.5rem; line-height: 1; color: var(--ink-3); transition: transform var(--dur-2) var(--ease-out); }
+.faq__item[open] summary::after { transform: rotate(45deg); }
+.faq__item p { padding-bottom: 1.5rem; }
+@media (max-width: 900px) { .faq { grid-template-columns: 1fr; } }
+
+/* ── 10. Финальный CTA (блок 18) ──────────────────────────────── */
+.cta { padding: calc(var(--section) / 2) clamp(.5rem, 1vw, 1rem) clamp(.5rem, 1vw, 1rem); }
+.cta__panel { display: grid; justify-items: center; text-align: center; gap: var(--space-5);
+              padding: clamp(4rem, 3rem + 7vw, 10rem) var(--gutter); border-radius: var(--r-lg);
+              background: var(--dark); color: var(--on-dark); }
+.cta__panel .t-lead { color: var(--on-dark-2); }
+.cta__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-3); }
+.cta__ghost { border-color: var(--line-dark); color: var(--on-dark); }
+.cta__ghost:hover { border-color: rgb(255 255 255 / .3); }
+
+/* ── 11. Подвал (блок 19) ─────────────────────────────────────── */
+.foot { padding-top: var(--section-s); overflow: clip; }
+.foot__cols { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: var(--col-gap); }
+.foot__cols nav { display: grid; gap: var(--space-2); align-content: start; font-size: var(--fs-small); }
+.foot__cols nav a { text-decoration: none; color: var(--ink-2); }
+.foot__cols nav a:hover { color: var(--ink); }
+.foot__cols .t-meta { margin-bottom: var(--space-2); }
+.foot__word { font-family: var(--font); font-weight: var(--w-semi); font-size: 30vw; line-height: .8; letter-spacing: -.06em;
+              text-align: center; color: var(--bg-2); margin-block: var(--space-8) -3vw; user-select: none; }
+.foot__legal { position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-3) var(--space-5);
+               padding-block: var(--space-5); border-top: 1px solid var(--line); }
+.foot__legal a { text-decoration: none; }
+@media (max-width: 760px) { .foot__cols { grid-template-columns: 1fr 1fr; } .foot__cols > div:first-child { grid-column: 1 / -1; } }
+
+/* ── Появление hero: единственный поставленный момент ─────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-c__text > *, .hero-c__shot { animation: rise var(--dur-3) var(--ease-out) both; }
+  .hero-c__text > :nth-child(2) { animation-delay: 60ms; }
+  .hero-c__text > :nth-child(3) { animation-delay: 120ms; }
+  .hero-c__text > :nth-child(4) { animation-delay: 180ms; }
+  .hero-c__shot { animation-delay: 260ms; animation-duration: 1000ms; }
+  @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+}
+</style>
+</head>
+<body>
+
+<a class="sr-only" href="#main">К содержанию</a>
+
+<!-- 1. Шапка -->
+<header class="nav" data-nav>
+  <div class="wrap nav__in">
+    <a class="nav__logo" href="/" aria-label="Ясно — на главную"><span class="nav__mark" aria-hidden="true"></span>Ясно</a>
+    <nav class="nav__menu" aria-label="Основное">
+      <a href="#product">Продукт</a><a href="#pricing">Тарифы</a><a href="#customers">Клиенты</a><a href="#faq">Вопросы</a>
+    </nav>
+    <div class="nav__act">
+      <a class="nav__login" href="/login">Войти</a>
+      <a class="btn btn--primary btn--sm" href="/signup">Начать бесплатно</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 2. Hero — семейство A -->
+<section class="hero-c">
+  <div class="wrap hero-c__text">
+    <a class="hero-c__badge" href="/changelog"><b>Новое</b>Рассрочка без&nbsp;банка</a>
+    <h1 class="t-hero">Приём платежей для&nbsp;онлайн-школ</h1>
+    <p class="t-lead">Подключение за&nbsp;день, выплаты каждый день, онлайн‑касса внутри. Работает с&nbsp;вашей платформой курсов.</p>
+    <div class="hero-c__cta">
+      <a class="btn btn--primary btn--lg" href="/signup">Начать бесплатно</a>
+      <a class="btn btn--ghost btn--lg" href="/demo">Записаться на&nbsp;демо</a>
+    </div>
+  </div>
+  <div class="wrap hero-c__shot">
+    <div class="media media--edge ph">[скриншот: дашборд платежей, 2400×1350]</div>
+  </div>
+</section>
+
+<!-- 3. Логотипы — семейство D -->
+<section class="section--s" id="customers" aria-label="Клиенты">
+  <div class="wrap logos__in">
+    <p class="t-meta">[число] школ и&nbsp;экспертов принимают оплату через&nbsp;Ясно</p>
+    <ul class="logos__row" role="list">
+      <li>[лого]</li><li>[лого]</li><li>[лого]</li><li>[лого]</li><li>[лого]</li><li>[лого]</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. Фича с липким заголовком — семейство B/E -->
+<section class="section" id="product">
+  <div class="wrap feat__in">
+    <div class="feat__side">
+      <h2 class="t-h2">Всё для&nbsp;продаж, без&nbsp;программиста</h2>
+      <p class="t-body">Страницы оплаты, подписки, рассрочка и&nbsp;чеки подключаются за&nbsp;минуты и&nbsp;работают с&nbsp;первого дня.</p>
+      <a class="link-arrow" href="/features">Все возможности <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <div class="feat__list">
+      <figure class="feat__item">
+        <div class="media ph">[экран: страница оплаты]</div>
+        <figcaption><b>Страница оплаты за&nbsp;минуту.</b> Без&nbsp;сайта: ссылка готова сразу, её можно отправить в&nbsp;любой мессенджер.</figcaption>
+      </figure>
+      <figure class="feat__item">
+        <div class="media ph">[экран: подписки]</div>
+        <figcaption><b>Подписки и&nbsp;клубы.</b> Автосписания, пробный период и&nbsp;напоминания без&nbsp;ручной работы.</figcaption>
+      </figure>
+      <figure class="feat__item">
+        <div class="media ph">[экран: чеки]</div>
+        <figcaption><b>Чеки по&nbsp;54-ФЗ.</b> Онлайн-касса встроена, чек уходит покупателю автоматически.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Бенто — семейство D -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="t-h2 bento__title">Работает с&nbsp;тем, что&nbsp;у&nbsp;вас уже есть</h2>
+    <div class="bento">
+      <article class="bento__card bento__card--xl">
+        <div><h3 class="t-h3">[число]+ интеграций</h3><p class="t-small">Платформы курсов, CRM, конструкторы сайтов и&nbsp;мессенджеры.</p></div>
+        <div class="media ph">[сетка логотипов интеграций]</div>
+      </article>
+      <article class="bento__card bento__card--tall bento__card--dark">
+        <div><h3 class="t-h3">API за&nbsp;вечер</h3><p class="t-small">Документация с&nbsp;примерами и&nbsp;тестовый режим без&nbsp;договора.</p></div>
+        <div class="media ph" style="background: var(--dark-2); color: var(--on-dark-2)">[фрагмент кода]</div>
+      </article>
+      <article class="bento__card">
+        <p class="bento__big">1 день</p>
+        <div><h3 class="t-h4">Выплаты</h3><p class="t-small">Деньги на&nbsp;счёте на&nbsp;следующий рабочий день.</p></div>
+      </article>
+      <article class="bento__card">
+        <div><h3 class="t-h4">Рассрочка</h3><p class="t-small">Покупатель платит частями, вы получаете всю сумму сразу.</p></div>
+        <div class="media ph">[виджет рассрочки]</div>
+      </article>
+      <article class="bento__card">
+        <div><h3 class="t-h4">Поддержка 24/7</h3><p class="t-small">Живые люди в&nbsp;чате, среднее время ответа — [минут].</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Цифры — семейство F -->
+<section class="section--s">
+  <div class="wrap stats">
+    <div class="stat"><p class="stat__value">[12&nbsp;000]</p><p class="t-small">школ и&nbsp;экспертов</p></div>
+    <div class="stat"><p class="stat__value">1 день</p><p class="t-small">от&nbsp;заявки до&nbsp;первой оплаты</p></div>
+    <div class="stat"><p class="stat__value">[99,98%]</p><p class="t-small">доступность за&nbsp;год</p></div>
+    <div class="stat"><p class="stat__value">24/7</p><p class="t-small">поддержка живыми людьми</p></div>
+  </div>
+</section>
+
+<!-- 7. Цитата — семейство F -->
+<section class="section">
+  <figure class="wrap quote">
+    <blockquote class="quote__text">«[Отзыв клиента до&nbsp;трёх строк: конкретный результат, а&nbsp;не&nbsp;„всё отлично“]»</blockquote>
+    <figcaption class="quote__who">
+      <span class="quote__face" aria-hidden="true"></span>
+      <span><b>[Имя Фамилия]</b><br><span class="tone-3">[Должность, компания]</span></span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- 8. Тарифы — семейство D -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="price__head">
+      <h2 class="t-h2">Платите только за&nbsp;продажи</h2>
+      <p class="t-lead">Без&nbsp;абонентской платы и&nbsp;платы за&nbsp;подключение.</p>
+    </div>
+    <div class="prices">
+      <article class="price">
+        <h3 class="t-h4">Старт</h3>
+        <p class="price__value">[3,5%] <span>с&nbsp;оплаты</span></p>
+        <p class="t-small">Для&nbsp;тех, кто&nbsp;только начинает продавать.</p>
+        <ul class="price__list" role="list"><li>Страницы оплаты</li><li>Онлайн-касса</li><li>Выплаты раз в&nbsp;неделю</li></ul>
+        <a class="btn btn--ghost" href="/signup?plan=start">Начать бесплатно</a>
+      </article>
+      <article class="price price--main">
+        <h3 class="t-h4">Школа</h3>
+        <p class="price__value">[2,9%] <span>с&nbsp;оплаты</span></p>
+        <p class="t-small">Для&nbsp;школ с&nbsp;регулярными продажами.</p>
+        <ul class="price__list" role="list"><li>Всё из&nbsp;«Старта»</li><li>Подписки и&nbsp;рассрочка</li><li>Выплаты каждый день</li><li>Интеграции и&nbsp;API</li></ul>
+        <a class="btn btn--on-dark" href="/signup?plan=school">Начать бесплатно</a>
+      </article>
+      <article class="price">
+        <h3 class="t-h4">Сеть</h3>
+        <p class="price__value">[2,4%] <span>с&nbsp;оплаты</span></p>
+        <p class="t-small">Для&nbsp;нескольких проектов и&nbsp;команд.</p>
+        <ul class="price__list" role="list"><li>Всё из&nbsp;«Школы»</li><li>Несколько юрлиц</li><li>Персональный менеджер</li></ul>
+        <a class="btn btn--ghost" href="/signup?plan=network">Начать бесплатно</a>
+      </article>
+    </div>
+    <div class="price__corp">
+      <p><b>Оборот больше [10&nbsp;млн&nbsp;₽] в&nbsp;месяц?</b> <span class="tone-2">Индивидуальная комиссия и&nbsp;SLA.</span></p>
+      <a class="link-arrow" href="/demo">Записаться на&nbsp;демо <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ — семейство E -->
+<section class="section" id="faq">
+  <div class="wrap faq">
+    <h2 class="t-h2">Частые вопросы</h2>
+    <div class="faq__list">
+      <details class="faq__item"><summary>Сколько стоит подключение?</summary><p class="t-body">Бесплатно. Вы платите только комиссию с&nbsp;каждой успешной оплаты.</p></details>
+      <details class="faq__item"><summary>Какие документы нужны?</summary><p class="t-body">[Список документов для&nbsp;ИП, ООО и&nbsp;самозанятых.]</p></details>
+      <details class="faq__item"><summary>Когда приходят деньги?</summary><p class="t-body">[Срок выплат по&nbsp;тарифам.]</p></details>
+      <details class="faq__item"><summary>Нужна ли своя онлайн-касса?</summary><p class="t-body">Нет, касса встроена и&nbsp;включена в&nbsp;комиссию.</p></details>
+      <details class="faq__item"><summary>Можно ли принимать оплату из&nbsp;других стран?</summary><p class="t-body">[Условия приёма зарубежных карт.]</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Финальный CTA — семейство C -->
+<section class="cta">
+  <div class="cta__panel">
+    <h2 class="t-h2">Первая оплата&nbsp;— уже сегодня</h2>
+    <p class="t-lead">Регистрация за&nbsp;пять минут. Без&nbsp;абонентской платы.</p>
+    <div class="cta__btns">
+      <a class="btn btn--on-dark btn--lg" href="/signup">Начать бесплатно</a>
+      <a class="btn btn--lg cta__ghost" href="/demo">Записаться на&nbsp;демо</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 11. Подвал -->
+<footer class="foot">
+  <div class="wrap foot__cols">
+    <div><p class="t-h4">Ясно</p><p class="t-small">[ООО «Название», ИНН 0000000000]</p></div>
+    <nav aria-label="Продукт"><p class="t-meta">Продукт</p><a href="#product">Возможности</a><a href="#pricing">Тарифы</a><a href="/api">API</a></nav>
+    <nav aria-label="Компания"><p class="t-meta">Компания</p><a href="/about">О&nbsp;нас</a><a href="/blog">Блог</a><a href="/jobs">Вакансии</a></nav>
+    <nav aria-label="Помощь"><p class="t-meta">Помощь</p><a href="/docs">Документация</a><a href="mailto:hi@example.ru">[hi@example.ru]</a><a href="tel:+70000000000">[+7 000 000-00-00]</a></nav>
+  </div>
+  <p class="foot__word" aria-hidden="true">Ясно</p>
+  <div class="wrap foot__legal t-meta"><span>© <span data-year>2026</span> Ясно</span><a href="/privacy">Политика конфиденциальности</a></div>
+</footer>
+
+<script>
+  const nav = document.querySelector('[data-nav]');
+  const onScroll = () => nav.classList.toggle('is-scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  document.querySelector('[data-year]').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

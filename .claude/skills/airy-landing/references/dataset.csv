@@ -1,0 +1,267 @@
+domain,category,theme,bg,text,accent,font_1,font_2,hero_px,hero_weight,hero_lh,hero_ls_em,hero_words,hero_align,h2_px,body_px,body_lh,gutter_px,fullbleed_media,video,btn_radius,btn_h,page_screens,hero_text
+analogue.co,product,light,#ffffff,#ffffff,,circularXx,,,,,,,,53,,,29,5,0,pill,41,5.3,
+apple.com,product,light,#ffffff,#000000,#0071e3,SF Pro Text,SF Pro Display,56,600,1.07,-0.005,3,center,40,12,1.33,230,6,0,pill,44,6.7,iPhone 18 Pro
+bang-olufsen.com,product,light,#ffffff,#222222,,BeoSupreme,,,,,,,,24,16,1.63,189,2,1,3,48,1.0,
+bose.com,product,light,#f9f9f9,#131317,,Bose Text,Bose Headline,96,900,0.96,0.015,3,center,32,16,1.5,40,1,1,2,48,7.9,Open audio. Reimagined.
+bragg.com,product,light,#f8dede,#ffffff,#ffe100,Season Mix-TRIAL,ITC Franklin Gothic Std,,,,,,,24,24,1.1,257,7,1,pill,40,11.6,
+braun.com,product,light,#ffffff,#ffffff,#04857f,Braun Linear,BraunLinearRegular,,,,,,,32,16,1.5,80,3,1,5,30,7.3,
+byredo.com,product,light,#ffffff,#000000,,byredoSans,,,,,,,,,14,1.43,28,6,1,2,40,1.6,
+cowboy.com,product,light,#f5f5f5,#1d1d1d,,SuisseIntl,,100,400,0.9,-0.025,4,left,52,16,1.47,60,27,1,pill,38,20.9,Cowboy Cruiser Riding reinvented
+dyson.com,product,light,#ffffff,#555555,#79b928,DysonFutura,,32,300,1.25,0,6,left,24,14,1.5,,2,1,0,32,5.0,The dryer brush for less breakage¹
+eightsleep.com,product,light,#ffffff,#ffffff,,NeueMontreal,Bethany Elingston,,,,,,,22,15,1.3,75,7,1,,,17.7,
+everlane.com,product,light,#ffffff,#000000,,Maison Neue Book,Maison Neue,31,400,1.29,0.041,3,left,,16,1.5,16,2,0,0,47,1.0,POWER OF SOFTNESS
+fellowproducts.com,product,light,#ffffff,#ffffff,,Sohne,Fellow Solar,40,500,1.1,0,2,left,40,14,1.4,30,4,0,pill,40,7.9,"Espresso, evolved."
+fujifilm-x.com,product,light,#ffffff,#ffffff,,Noto Sans JP,Fjalla One,30,400,3.73,0,2,left,30,,,16,0,0,0,42,4.1,FUJIFILM X-E5
+glossier.com,product,light,#ffffff,#000000,,Apercu,Arial,32,500,1.09,0,4,left,,14,1.4,16,1,1,0,40,5.4,GLOSSIER YOU LOOK GOOD.
+hay.com,product,light,#f2f2f2,#000000,,NeueHelvetica55Roman,Meta W05 Light,,,,,,,,,,100,0,0,0,46,1.3,
+hermanmiller.com,product,light,#ffffff,#252525,#e22d00,Meta,,40,700,1.3,-0.013,3,center,,16,1.63,160,0,0,2,40,1.1,Designed for everybody
+leica-camera.com,product,light,#ffffff,#222222,,Outfit,,76,400,1.12,0,2,left,54,18,1.56,,6,0,pill,40,16.1,Leica Camera
+lelabofragrances.com,product,light,#f6f8f6,#424242,,Helvetica,Bell Gothic Std,30,700,1.3,0,2,left,,,,56,0,1,0,56,1.0,Le Labo
+lucidmotors.com,product,dark,#0f0f0f,#7f7f7f,#d7be96,Lucid Sans VF,,72,400,1.11,-0.007,2,left,48,12,1.5,24,2,0,4,48,7.6,Lucid Gravity
+molo.com,product,light,#fbfbfb,#181818,,simon,display,,,,,,,40,40,1,60,3,1,,,14.4,
+nothing.tech,product,light,#f4f4f4,#000000,,Arial,NType82-Regular,32,100,1.1,0,2,center,24,15,1.6,445,6,0,8,40,8.1,UNITED STATES
+on.com,product,light,#ffffff,#000000,,On,,50,700,1.1,-0.01,3,left,50,24,1.3,48,2,0,pill,48,8.1,"Dream On, Soccer"
+ouraring.com,product,light,#ffffff,#f7f1e8,#2a72de,AkkuratLL,Editorial New,110,300,1.1,-0.05,2,center,40,24,1.25,64,1,1,pill,48,7.3,Subtle. Power.
+play.date,product,light,#ffffff,null,,Roobert,,57,700,1.1,0,19,center,68,28,1.3,205,0,1,,,17.1,"It's a new, tiny handheld game system with a bunch of brand-new games. We made Playdate just for fun."
+polestar.com,product,light,#ffffff,#000000,,Polestar Unica,,,,,,,,30,16,1.13,112,7,1,,,6.8,
+rabbit.tech,product,dark,#000000,#ebe8e2,,__powerGroteskFont_859336,__archivoFont_931059,128,200,0.9,0,2,center,72,22,1.5,18,5,0,,,11.5,rabbit OS3
+rivian.com,product,light,#ffffff,#ffffff,#ffaa00,Adventure,,,,,,,,72,16,1.25,96,29,1,pill,32,18.9,
+sonos.com,product,light,#ffffff,#bfbfbf,,aktiv-grotesk,,96,500,1.2,0,6,center,64,21,1.3,107,3,1,pill,59,14.5,Love the sound. Feel the system.
+usm.com,product,light,#fafafa,#000000,,Helvetica,,50,400,1,0,3,center,28,14,1.31,40,2,1,,,6.6,USM Soft Panel
+vanmoof.com,product,light,#ffffff,#222222,,Unica77LLWeb,Unica77Mono,,,,,,,48,16,1.43,127,3,1,4,32,6.9,
+adyen.com,fintech,light,#ffffff,#001222,#00d16a,Adyen,AdyenMono,32,484,1.18,0,5,center,32,16,1.34,24,3,1,6,48,13.6,Fintech you can bank on
+betterment.com,fintech,light,#f5f5f5,#ffffff,#ffc729,GT America,,,,,,,,44,12,1.35,29,5,0,0,42,11.0,
+brex.com,fintech,light,#ffffff,#b9bbc6,#ff3d00,inter,,72,500,1,-0.02,6,left,36,14,1.5,72,2,0,6,31,10.1,Finance built for speed and control.
+capital.xyz,fintech,dark,#040503,#bfbcb7,#ed5145,__muoto_7e5c91,GT America Mono,,,,,,,90,,,144,1,1,pill,41,7.9,
+cash.app,fintech,light,#ffffff,#000000,,Cash Sans,,56,400,0.95,-0.03,5,left,40,18,1.4,20,0,1,pill,46,1.6,The way money should work
+checkout.com,fintech,dark,#000000,#000000,#186aff,Inter,Checkout Apercu SemiMono,,,,,,,32,16,1.5,80,3,1,6,45,14.6,
+cloudpayments.ru,fintech,light,#ffffff,#000000,#2e71fc,cpTextBook,cpTextRegular,36,500,1.11,0,6,center,36,14,1.43,168,0,0,12,56,5.8,Сервисы для реализации бизнес-идей от Cloud
+feyapp.com,fintech,light,#fafafa,#595959,,-apple-system,,,,,,,,,21,1.55,460,0,0,,,1.0,
+imprint.co,fintech,light,#efefef,#000000,,UniversalSans-500 Regular,,32,400,1.2,-0.034,5,center,58,18,1.2,24,2,1,5,41,7.2,Perfectly configured co-branded financial products.
+klarna.com,fintech,light,#ffffff,#0b051d,#ffa8cd,Klarna Text,,84,700,0.9,0,4,left,64,16,1.5,,0,1,pill,44,12.2,Get your money sorted
+kraken.com,fintech,light,#f6f5f9,#686b82,#7132f5,Kraken-Product,Kraken-Brand,48,400,1.17,0,6,center,36,12,1.33,54,0,0,12,36,7.4,Own the power of your money
+mercury.com,fintech,light,#ffffff,#ededf3,#5266eb,arcadia,arcadiaDisplay,49,480,1.1,0,3,center,28,12,1.4,208,5,1,pill,40,13.0,Radically different banking
+monzo.com,fintech,light,#ffffff,#091723,#091723,MonzoSansText,MonzoSansDisplay,49,800,1.2,0,10,left,25,16,1.4,80,0,1,pill,51,15.4,"Spend your money on life, not your life on money"
+n26.com,fintech,light,#ffffff,#1b1b1b,#003b39,N26,N26-Extended,80,400,1.1,0,5,center,58,16,1.5,80,1,0,pill,48,1.0,The first bank you'll love
+paddle.com,fintech,light,#f9f8f7,#1c1a15,#e4e1d1,Inter,serrifCondensed,64,400,1,-0.01,2,center,40,20,1.5,96,0,0,0,54,7.1,Sell globally.
+pipe.com,fintech,dark,#000000,#ffffff,#e2572c,__suisseFont_3f347b,,,,,,,,24,12,1.4,48,2,0,,,1.0,
+prodamus.ru,fintech,light,#ffffff,#ffffff,,Onest,,46,600,1.11,0,6,left,36,,,90,17,0,pill,46,14.3,ИТ-сервис для автоматизации онлайн-бизнеса с кешбэком
+public.com,fintech,light,#ffffff,#516880,,Inter,,80,300,1,0,7,left,24,12,1.5,32,0,1,pill,42,14.0,Investing for those who take it seriously
+razorpay.com,fintech,light,#ffffff,#192839,#305eff,Inter,TASA Orbiter Display SemiBold,,,,,,,48,13,1.43,128,2,0,4,36,13.9,
+robinhood.com,fintech,dark,#000000,#110e08,#ccff00,Phonic,,64,400,1,-0.016,6,left,40,16,,24,9,1,pill,44,10.4,HOOD Summit ‘26 Engines of Creation
+slash.com,fintech,dark,#040406,#5e616e,,__Inter_f367f3,__ivyPresto_6eafe2,64,400,1.05,0.01,13,left,52,18,1.38,144,2,1,pill,32,13.4,"Slash the fees, the friction, the fine print Slash the friction fine print"
+tempo.xyz,fintech,light,#f3f3f3,#4d4d4d,,Pilat,HB Set,,,,,,,32,16,1.6,60,1,1,0,39,10.5,
+wealthfront.com,fintech,light,#ffffff,#b7b7c0,#4840bb,Calibre,,62,700,0.9,-0.03,5,left,32,12,1.33,48,2,0,6,48,8.9,Earn up to 4.45% APY
+wise.com,fintech,light,#ffffff,#454745,#9fe870,Inter,,300,400,0.09,0,1,left,45,18,1.44,100,1,1,pill,32,12.5,giItT1WQy@!-/#
+xapobank.com,fintech,dark,#090402,#c2c2c2,#c34813,HelveticaNowDisplay,,62,400,1.13,-0.02,15,center,23,16,1.33,58,5,1,pill,49,11.8,"A private bank for Bitcoin believers. Earn 4.6%* on USD Savings, paid daily in BTC."
+yookassa.ru,fintech,light,#ffffff,#0a2540,#0a2540,Factor IO,,32,700,,0,3,center,24,18,1.33,120,0,0,8,36,8.0,ЮKassa — сервис
+108.supply,gallery,dark,#0a0a0c,#eff1f0,,Season Sans,Gt Alpina Condensed,56,500,0.93,-0.036,75,left,40,,,8,0,1,,,5.6,A growing set of 48 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+aave.com,gallery,light,#ffffff,null,,Aave Repro,,72,550,1.1,-0.05,4,center,24,16,1.45,251,0,0,pill,32,9.0,The World's Savings App
+acctual.com,gallery,light,#f7fafc,#8d8d8d,,Open Runde,,64,600,1.13,-0.03,7,center,,16,1.5,208,2,0,pill,40,13.5,Small business invoices: Get paid on time
+adaline.ai,gallery,light,#fbfdf6,#2e3b28,#203b14,akkurat,GT America Mono,53,400,1.21,-0.04,3,left,30,18,1.44,100,2,0,pill,32,14.4,Never stop learning
+arc.tech,gallery,light,#ffffff,#53524b,#206d69,gt-america,Arial,64,300,1.1,-0.015,6,center,30,12,1.5,151,0,0,4,44,8.3,Intelligent cash management for technology companies
+blueyard.com,gallery,light,#fff6f4,#090b11,,Instrument Sans,Geist Mono,48,400,1,-0.03,6,center,48,,,106,1,0,0,48,1.0,"Will it be Utopia, or Oblivion?"
+buffer.com,gallery,dark,#000000,#213130,#b0ec9c,Figtree,Stolzl,76,400,1.1,-0.02,4,center,24,18,1.4,63,0,0,,,8.8,Your social media workspace
+busy.bar,gallery,light,#ffffff,#000000,#ea5212,Pragmatica Next Vf,,54,700,1,-0.03,2,center,54,13,1.5,83,9,1,5,54,19.9,Productivity multi-tool
+causal.app,gallery,light,#ffffff,#002a42,#002a42,Lucanet Light,Lucanet Regular,60,300,1.2,0,12,left,38,18,1.4,118,0,0,0,60,13.8,Make smarter planning and faster decisions with Extended Planning and Analysis (xP&A)
+checkr.com,gallery,light,#ffffff,#d8dee5,,National 2,National 2 Narrow,50,500,1.15,-0.02,18,center,30,18,1.3,108,0,0,6,34,5.0,Verify candidates with confidence Verify candidates borrowers tenants drivers caregivers contractors credentials your pr
+clay.run,gallery,light,#ffffff,#000000,#f4f3f0,Roobertvf,,88,575,1,-0.04,5,left,48,12,1.3,128,3,1,12,39,11.4,Build systems to grow revenue
+conductor.build,gallery,light,#ffffff,#756f6c,,ui-sans-serif,ui-monospace,36,600,1.11,-0.025,6,center,24,16,1.5,139,1,0,6,32,7.4,Run a team of coding agents
+crafted.is,gallery,dark,#121212,#7e7e7e,,Inter,GT Walsheim Pro Regular,54,400,1.1,-0.05,8,center,40,18,1.6,320,0,1,pill,44,9.7,"Your new SaaS website, live in 2 weeks"
+cushion.so,gallery,light,#f5f5f5,#1f1f1f,#00a6f4,ui-sans-serif,Inter Tight,60,600,1,0,7,center,36,18,1.56,89,0,0,8,40,9.3,Work messaging that keeps your team organised
+deepjudge.ai,gallery,dark,#000000,#1a1a1a,#ede9e5,Suisse intl,Suisse works,96,400,1,-0.05,8,center,64,16,1.3,88,0,0,,,13.6,Legal AI that starts with everything you know
+diabrowser.com,gallery,light,#f8f8f8,#000000,,ABC Oracle,ABC Oracle Triple,,,,,,,54,14,1.43,,1,1,pill,50,7.9,
+dovetailapp.com,gallery,dark,#0a0a0a,#ffffff,,Inter,JetBrains Mono,48,600,1.17,-0.021,3,left,64,16,1.5,124,2,0,8,40,19.7,Introducing Digital Twins
+equals.app,gallery,light,#faf9f5,#000000,#b074ce,Unica77,Serrif Condensed,110,400,1,-0.02,8,center,48,18,1.33,87,2,1,pill,44,10.8,AI for the numbers that can’t be wrong.
+fizzy.do,gallery,light,#ffffff,null,,Inter,Scorekard,64,700,1.1,-0.015,10,center,64,19,1.5,195,0,0,,,6.0,Kanban as it should be. Not as it has been.
+fold.money,gallery,light,#ffffff,#20294c,#f0f1f5,GT Walsheim Pro,,100,700,0.85,-0.03,4,center,64,24,1.5,222,1,1,8,40,14.3,Be 😜 painfully aware.
+fora-concept.com,gallery,light,#ffffff,#000000,,Theinhardt,,,,,,,,,,,457,0,1,,,1.0,
+frames.so,gallery,light,#ffffff,null,,Manrope,,72,400,1,0,6,center,24,,,132,0,0,,,4.9,Supercharge your design workflow with AI
+futureagi.com,gallery,dark,#0a0a0a,#71717a,,Inter,JetBrains Mono,96,300,1.1,-0.025,6,center,60,13,1.63,270,0,0,pill,36,17.0,"AI Agents hallucinate, fix it faster."
+gettakecontrol.app,gallery,light,#eaeae7,#7f7f7e,,Figtree,,62,500,1.06,-0.01,9,center,36,16,1.25,252,0,1,pill,38,10.9,TakeControl: app para dividir despesas de casal e viagem
+grain.co,gallery,light,#fafafa,#707070,#009959,Inter Variablefont Slnt Wght,Poppins,60,600,1.04,-0.017,7,left,38,14,1.5,86,2,0,8,46,10.8,The AI notetaker for agents and teams
+hasko.com,gallery,light,#fbfbfb,#fbfbfb,,TWKEverett,,72,400,1.05,0,6,left,50,18,1.5,40,2,1,,,7.4,Tillväxt byggt på ambition och förtroende
+headroom.com,gallery,light,#ffffff,#ffffff,,twkLaussanneFont,interFont,88,700,1,-0.02,6,center,24,18,1.44,232,0,0,6,48,4.2,You built your business by hand.
+heartaerospace.com,gallery,light,#ffffff,#767676,,nhgText,,,,,,,,50,18,1.5,48,3,1,,,7.1,
+hopin.com,gallery,light,#ffffff,#000000,#007db8,Matter,,72,600,1.05,-0.02,5,left,48,20,1.71,108,0,0,pill,39,4.5,Hopin is now RingCentral Events
+housemait.com,gallery,light,#ffffff,#000000,,Times New Roman,,32,700,,0,5,left,24,16,,8,2,0,,,13.3,"Family life, organized with AI."
+humblytics.com,gallery,light,#ffffff,null,,Inter,,42,500,1.1,-0.04,8,center,36,16,1.6,259,0,0,7,44,8.5,See what drives revenue. Test what grows it.
+interfere.com,gallery,light,#ffffff,#000000,,InterVariable,BerkeleyMono,56,500,1,-0.01,5,left,28,13,1.54,120,0,0,8,36,8.3,Ship software that never breaks
+jasper.ai,gallery,light,#ffffff,#00063d,,ABC ROM,Feature,80,450,1,-0.03,7,center,28,16,1.2,40,4,0,,,12.0,Put AI agents to work for marketing
+jonite.com,gallery,light,#e6e7e8,#0e0e0e,,PP Neue Montreal,Silka Mono,,,,,,,24,16,1.5,24,16,0,pill,32,16.9,
+kosmik.app,gallery,light,#fff8f5,#3c3c3c,#f57127,SuperBlue Regular,SuperBlue Light,90,700,1,0,4,left,32,20,1.55,152,1,0,15,52,6.2,Kosmik is winding down…
+kyoso.com,gallery,light,#ffffff,null,,ui-sans-serif,Manrope,104,500,1.02,-0.05,6,center,24,20,1.63,60,3,1,,,19.2,"Brief, design, animate, edit. One canvas."
+milanote.com,gallery,dark,#303b4b,#5d6673,#f4511c,Inter,Tiempos,64,600,1.33,0,4,center,40,24,1.25,220,1,0,6,41,9.7,Get organized. Stay creative.
+mobbin.com,gallery,light,#ffffff,#141414,,M Saans 456,M Saans Variable Light,80,652,1,-0.007,4,center,56,16,1.38,169,0,1,pill,44,12.1,Discover real-world design inspiration.
+monologue.to,gallery,dark,#121212,#ffffff,,geistMono,monologueSerifBook,80,400,0.9,-0.04,4,center,24,16,1.45,161,0,0,8,45,16.5,Builders think out loud.
+motion.dev,gallery,dark,#0e1312,null,,TASA Orbiter,Geist Mono,44,700,1.05,-0.04,7,left,34,15,1.55,72,0,1,,,11.9,Motion. Production-grade animation library for the web.
+neuemontreal.com,gallery,dark,#1a1a1a,#252525,,PP Neue Montreal Text Regular,PP Neue Montreal Text Variable Variable Regular,74,700,0.9,0,3,left,48,16,1,24,7,1,,,25.2,Official Travel Guide
+nucleoapp.com,gallery,light,#fafafa,#1b2023,,Inter,PPNikkeiMaru,76,600,1,-0.025,4,center,60,20,1.4,80,0,0,8,42,7.3,The ultimate icon bundle
+opennode.com,gallery,light,#ffffff,#3e485b,#4996f0,Roboto,,58,700,1.1,0,7,left,38,18,1.78,144,0,1,pill,48,8.3,Bitcoin payments at the speed of now
+otter.ai,gallery,light,#ffffff,#000000,#346e4a,Circular,,58,300,1.1,-0.02,10,left,55,14,1.4,72,2,1,15,53,12.4,Your AI notetaker is now also your Conversational Knowledge Engine
+oxiinstruments.com,gallery,dark,#010101,#f1f1f1,,Work Sans Variable,Fragment Mono,,,,,,,55,,,28,4,1,4,44,15.3,
+paper.design,gallery,light,#ffffff,null,,Matter,Inter,48,360,1,-0.02,2,center,48,18,1.56,189,5,0,,,11.6,design incredible
+pasteapp.io,gallery,light,#ffffff,#101010,#0a84ff,system-ui,,60,700,1.03,0.01,6,center,54,18,1.44,220,1,1,pill,36,9.0,Everything you copy on every device
+perspective.co,gallery,light,#ffffff,#4a4a4a,#0071eb,Inter F,,72,700,1.1,-0.01,6,center,32,16,1.5,77,3,1,6,48,11.7,Double Your Business with Perspective Funnels™
+phantom.app,gallery,light,#f5f2ff,#3c315b,#e2dffe,Phantom,,96,400,1.1,-0.025,4,center,24,20,1.2,100,0,1,pill,52,8.9,Trading tools for everyone
+podium.global,gallery,dark,#000000,#000000,,Futura,Univers Condensed,,,,,,,62,16,0.9,23,0,0,,,6.8,
+ponder.ai,gallery,dark,#020202,#f1f1f1,,Lay Grotesk,,58,500,1,-0.01,2,center,58,,,,1,1,5,38,16.9,"Video Editing,"
+press.stripe.com,gallery,dark,#201819,#000000,,Ivar Text,Ivar Headline,,,,,,,,18,1.5,202,1,1,,,7.6,
+relume.ai,gallery,light,#f1f0ee,#101010,#ff00f4,Geist Variable,Helvetica Now Display,56,400,1.2,-0.03,7,center,32,18,1.5,170,2,1,6,34,8.5,Build a marketing site you’d actually publish
+sandbar.com,gallery,light,#faf8f0,#6f6e6e,,Messina Sans,,76,300,1.2,-0.06,3,left,30,18,1.4,48,4,1,pill,41,9.7,"Your Voice, Anywhere"
+sort.to,gallery,light,#ffffff,null,,Inter,,40,400,1.2,-0.003,3,center,40,16,1.6,235,0,1,,,5.0,Your distraction-free reader
+supercut.ai,gallery,dark,#100e0e,#969692,,InterVariable,,60,500,1.1,-0.018,7,left,32,18,1.44,151,0,1,10,32,9.4,Supercut is how teams explain work better.
+topology.vc,gallery,dark,#151515,#9b9b9b,,Space Mono,LazareGrotesk,135,300,0.9,-0.01,5,left,48,14,1.4,193,1,0,,,1.0,Meet us at the edge.
+tranched.fi,gallery,dark,#020617,#ffffff,,Inter,Inter-Medium,96,500,1.1,0,3,center,,18,1.4,208,2,0,pill,52,9.5,The Real Economy.
+untillabs.com,gallery,light,#f7f3ec,#121212,,neueHaasText,neueHaasDisplay,,,,,,,24,16,1.5,,2,0,,,40.0,
+usedropshot.com,gallery,dark,#0a0a0c,#ffffff,#0066ff,Switzer,Roboto Mono,48,400,1.1,-0.01,6,center,40,28,1.4,90,1,1,pill,36,9.6,Cinematic product shots in your browser.
+valar.com,gallery,light,#fbfbfb,#000000,,HelveticaNeue LT 55 Roman,,63,400,1,-0.01,10,left,50,,,41,0,1,,,10.5,"We invest in high-margin, fast-growing technology companies across the globe."
+waabi.ai,gallery,light,#ffffff,null,#ff2c6b,Zagma,NeueHaas,150,400,0.85,-0.048,3,left,40,16,1.4,103,4,1,,,12.5,Built to think.
+wisprflow.ai,gallery,light,#ffffeb,#1a1a1a,#f0d7ff,Figtree,Eb garamond,96,400,0.95,-0.03,4,center,75,20,0.95,,3,0,pill,32,19.9,"Don’t type, just speak."
+wist.chat,gallery,light,#ffffff,null,,InterVariable,LyonText,74,400,1.05,-0.041,6,center,38,16,1.5,104,0,0,,,13.4,AI Live Chat With a Brain.
+withremark.com,gallery,light,#fdfbfb,#141414,#eb684e,Circular,Gelica,45,400,1.1,-0.015,7,center,38,17,1.5,90,0,1,pill,44,10.6,The only agent built for elevated brands
+wwake.com,gallery,light,#ffffff,#777576,,Unica,,40,300,,0.003,2,center,22,14,1.15,570,3,1,0,51,6.1,Plinth Continued
+brooklinen.com,health,light,#fdfaf8,#283455,#283455,BrandonTextWeb-Regular,BrandonTextWeb-Bold,36,400,1.15,0,2,left,30,20,,,2,1,20,56,6.7,Offer Terms
+calm.com,health,light,#ffffff,#1c1c1c,,Figtree,,50,700,1.5,0,6,center,32,22,1.5,136,3,0,0,35,7.1,Calm your mind. Change your life.
+endel.io,health,dark,#000000,#bfbfbf,,apercuPro,,,,,,,,44,22,1.27,168,6,1,12,44,13.6,
+functionhealth.com,health,light,#fef9ef,#515151,#b05a36,FT Base,Financier Display,80,300,0.9,0,3,left,45,14,1.5,96,2,1,pill,40,13.6,Check your health.
+headspace.com,health,light,#ffffff,#2d2c2b,#0061ef,Headspace Apercu,,52,700,1.1,-0.03,2,center,40,16,1.5,138,0,0,pill,48,9.7,Sleep better
+levels.com,health,light,#f5f7f7,#585a59,,ttHoves,,102,500,0.95,-0.05,6,left,32,16,1.78,120,1,1,8,36,14.4,See how food affects your health.
+lovi.care,health,light,#ffffff,#000000,,Geist,Inter,48,400,0.92,-0.042,6,center,44,16,1.38,304,3,1,10,34,13.2,Science-backed AI Cosmetologist you can trust
+mejuri.com,health,light,#ffffff,#000000,,SyndicatGrotesk,SimonMono,,,,,,,32,12,1.33,32,1,0,,,4.6,
+parachutehome.com,health,light,#ffffff,#3b3b3b,,Suisse Intl,Petrona,80,400,1.15,0,3,center,32,14,1.36,56,4,1,2,32,8.4,You've Got An
+ritual.com,health,light,#ffffff,#142b6f,#142b6f,CircularXX,Dutch801 Rm BT,48,450,1.2,-0.01,5,left,40,16,1.5,,0,1,pill,45,8.5,Good habits come in sets
+ro.co,health,light,#ffffff,#1a1a1a,,Ro Sans,,46,400,1.2,-0.03,3,left,23,14,1.38,144,6,1,,,9.3,Healthier on Ro
+seed.com,health,dark,#1c3a13,#fcfcf7,#1c3a13,Seed Sans,,48,350,1.1,-0.025,8,left,48,16,1.3,32,1,1,8,38,8.4,"A life-changing health routine, built for your microbiome."
+superpower.com,health,light,#ffffff,#18181b,,Nb international pro webfont,,56,400,1,-0.02,4,left,45,17,1.44,52,9,1,pill,38,16.9,Your new health membership
+warbyparker.com,health,light,#ffffff,#121212,#1050d0,fontAbcSocial,sans-serif,,,,,,,24,,,74,4,1,pill,50,12.7,
+acehotel.com,hospitality,dark,#000000,#231f20,#ff944c,Bianco Sans,Toronto Gothic,140,300,0.95,-0.01,4,center,28,14,1.5,52,1,0,0,48,5.6,Welcome to Ace Hotel
+airbnb.com,hospitality,light,#ffffff,#6c6c6c,,Airbnb Cereal VF,,28,700,1.43,0,2,left,,,,82,0,0,0,28,1.0,Airbnb homepage
+aman.com,hospitality,light,#f3eee7,#313131,,Lyon Display Web,WhitneySSm,,,,,,,31,14,1.45,25,0,0,0,42,6.5,
+anuchome.com,hospitality,light,#ffffff,#1a1a1e,,Instrument Serif,Instrument Sans,52,400,1.1,0,4,left,52,18,1.2,364,2,0,0,64,10.0,"Transformamos espacios, conectamos emociones"
+atlason.com,hospitality,light,#ffffff,#000000,,haas-grotesk-tx-pro,haas-grotesk-ds-pro,,,,,,,,,,189,1,1,0,42,1.0,
+editionhotels.com,hospitality,light,#ffffff,#757575,,HelveticaNeueLTStd-Lt,helveticaltstd-bold-webfont,,,,,,,48,14,1.64,,2,1,0,45,7.5,
+fosterandpartners.com,hospitality,dark,#1a1a1a,#ffffff,,open sans,,,,,,,,,19,1.5,56,11,1,pill,33,5.1,
+heatherwick.com,hospitality,light,#f4f3ef,#48594a,,Plantin W01 Light,Relative-Book-Web,52,400,1.2,0,9,center,27,18,1.44,,1,1,,,5.0,"Designing joyful, engaging, human places all over the world"
+mock.nyc,hospitality,light,#fdfaeb,#000000,,neue-haas-grotesk-text,,,,,,,,32,,,40,1,1,0,30,8.1,
+sixsenses.com,hospitality,light,#ffffff,#666666,#4d1443,Avenir Next,Avenir Next Condensed,58,400,1.1,-0.02,17,left,32,16,1.6,,7,1,pill,50,8.0,"Some places you visit. Others, you feel, by reconnecting with yourself, others, and the world around you."
+snohetta.com,hospitality,light,#ffffff,#000000,,Dovre,,60,300,1.03,0,12,left,22,22,1.45,40,0,0,,,6.3,"Snøhetta is a global transdisciplinary practice, working on projects of all scales."
+sohohouse.com,hospitality,light,#fffef7,#000000,,HK Grotesk,Cardo,56,400,1.25,0,7,center,48,16,1.13,16,0,1,pill,40,3.6,Membership unlocks the world of Soho House
+standardhotels.com,hospitality,light,#ffffff,#ffffff,#ee2324,TradeGothicBoldCondTwenty,GT Zirkon,50,400,0.85,-0.03,3,left,39,15,1.3,15,4,0,0,75,1.0,"High Line, NYC"
+studiochen.co,hospitality,light,#ffffff,#000000,,edition,,,,,,,,,12,1.5,10,0,0,,,10.8,
+unstudio.com,hospitality,dark,#000000,#000000,#e6cbef,helvetica,sans-serif,48,500,1.1,0,24,left,48,16,1.5,9,0,1,,,18.1,We’ve always thrived on thinking differently — because that’s where true progress lies. We look beyond architecture. We 
+zaha-hadid.com,hospitality,dark,#000000,#ffffff,,Neue Haas Unica W1G,ui-sans-serif,36,400,1.11,-0.025,6,left,36,24,1.17,,3,0,,,8.4,"Over 40 years designing, building, innovating"
+artlebedev.ru,russia,light,#ffffff,#ffffff,#414eea,ALSArtemiusSans,,,,,,,,,,,21,1,1,,,19.2,
+coffeemania.ru,russia,light,#ffffff,#ffffff,#ec4c41,Suisse Intl,,36,500,1.39,0,2,left,,,,436,0,0,14,40,5.3,Рестораны «Кофемании»
+donstroy.com,russia,light,#f2f3f7,#36187d,#35b8fc,Gilroy,,64,600,1.06,0,2,left,,16,1.17,72,1,0,12,64,11.9,Татарская 35
+go.yandex,russia,light,#ffffff,#000000,,YS Text,,40,500,1,0,3,left,40,14,1.43,113,1,0,pill,70,8.8,"Ехать, отправлять, встречать"
+kode.ru,russia,dark,#000000,#ffffff,,Montserrat,Gilroy,58,700,1,0,2,left,35,14,1.2,16,1,1,0,43,3.6,Мы разрабатываем
+level.ru,russia,dark,#283c4b,#2d2f33,,Stolzl,,800,400,1,0,6,left,28,12,1.3,76,0,0,pill,40,7.7,Level Group - лидер московского девелопмента
+plus.yandex.ru,russia,light,#f1f3f5,#171a24,#3e68ff,YS Text,,40,500,1.1,-0.025,4,left,,,,120,0,0,pill,32,1.0,"Скорее всего, включён VPN"
+practicum.yandex.ru,russia,light,#ffffff,#ffffff,,YS Text,,48,400,1.04,-0.01,8,center,48,16,1.25,60,0,1,4,35,11.6,Курсы для востребованных специалистов — сразу с нейросетями
+readymag.com,russia,dark,#444444,#ffffff,#ec520b,custom_190030,custom_157067,40,400,0.95,-0.022,4,left,,10,1.2,70,0,1,pill,40,7.1,What you can publish
+redcollar.ru,russia,light,#fafafa,#fafafa,,TTCommons,,,,,,,,130,18,1.6,108,2,1,pill,52,13.3,
+selectel.ru,russia,light,#ffffff,#092433,#092433,Manrope,,54,500,1.1,-0.03,3,left,44,18,1.4,36,0,0,6,36,13.4,Серверы. Облако. Дата-центры.
+surf.ru,russia,light,#ffffff,#000000,,Roboto Mono,TT Commons Pro Trial,48,600,1,-0.02,8,left,24,18,1.33,24,1,1,8,40,6.0,Создаем цифровые продукты любой сложности за 90 дней
+t2.ru,russia,light,#ffffff,#000000,#a7fc00,T2 Rooftop,T2 Halvar Breit,38,800,1.05,-0.01,3,left,24,15,1.47,152,0,0,8,32,3.2,СКОРО IPHONE 18
+tilda.cc,russia,light,#ffffff,#000000,#fa8669,TildaSans,,46,300,1.13,0,6,left,48,16,1.55,140,0,1,0,31,24.3,Create beautiful websites on Tilda with
+ushatava.ru,russia,light,#ffffff,#000000,,Helvetica World,,,,,,,,,,,15,8,1,,,4.1,
+yandex.cloud,russia,light,#ffffff,#000000,,YS Text,YS Display,72,900,0.9,-0.01,2,left,32,32,1.25,104,2,0,pill,48,9.9,Yandex Scale'26
+1password.com,saas,light,#ffffff,#ffffff,,agileSans,,88,300,1.1,-0.02,8,center,64,16,1.5,96,0,0,pill,46,8.3,Secure access for every human and AI agent
+airtable.com,saas,light,#ffffff,#040e20,#181d26,Haas,,40,400,1.2,0,9,center,24,16,1.35,73,0,1,12,55,8.7,"All your teams, all their workflows—connected in one workspace"
+amie.so,saas,light,#fafafa,#5c5c5c,#11a8ff,Inter,,56,700,1.14,-0.012,8,center,,16,1.75,232,0,0,8,32,15.7,Run your workday on autopilot with AI agents
+amplitude.com,saas,light,#ffffff,#ffffff,#1e61f0,Twemoji Country Flags,,72,600,1,-0.014,6,left,28,16,1.38,24,0,0,pill,46,8.4,A new era for product teams
+arc.net,saas,light,#fffcec,#3139fb,#2702c2,Marlin Soft SQ,InterVariable,46,700,0.93,-0.04,9,center,,20,0.97,120,4,1,8,36,6.8,Arc is the Chrome replacement I've been waiting for.
+asana.com,saas,light,#ffffff,#0d0d0d,#ffc9ff,TWK Lausanne,,102,300,0.9,-0.025,5,center,54,16,1.5,76,1,0,pill,44,9.4,Supercharge your teams with AI
+attio.com,saas,light,#ffffff,null,,inter,interDisplay,64,600,0.95,-0.02,4,center,40,14,1.38,95,0,0,10,36,19.6,Welcome to agentic revenue.
+bear.app,saas,light,#ffffff,#444444,,bearsans,bearsansheadline,51,400,1.1,0,4,center,42,16,1.6,272,1,1,,,11.7,Markdown notes you’ll love
+beehiiv.com,saas,light,#ffffff,#ffffff,#131125,SatoshiFont,,60,700,1,0,5,left,48,20,1.4,128,0,0,6,36,13.0,NEWSLETTERS. PODCASTS. COMMUNITY. ONE PLATFORM.
+cal.com,saas,light,#f4f4f4,#898989,,Cal Sans UI Variable Light,Cal Sans,64,600,1.1,0,7,left,48,16,1.5,196,0,0,,,9.2,The better way to schedule your meetings
+coda.io,saas,light,#ffffff,#73716d,#346e4a,Inter,Calibre-R,72,700,1,-0.045,4,left,38,16,1.5,152,1,1,8,40,18.8,Your all-in-one collaborative workspace.
+cohere.com,saas,light,#ffffff,#17171c,,Unica77 Cohere Web,ui-sans-serif,96,400,1,-0.02,4,center,48,18,1.4,40,1,0,pill,36,9.9,Your AI. Your rules.
+composio.dev,saas,light,#f6f6f6,null,#0007cd,geistSans,JetBrains Mono,64,400,1.08,-0.025,5,center,28,14,1.5,,1,0,0,35,10.2,Give your AI secure access
+deel.com,saas,light,#ffffff,#1b1b1b,#5938b7,Inter,BagossCondensedFont,60,500,1.05,-0.003,7,left,24,18,1.6,64,0,1,pill,32,8.6,"Hire, manage, pay, & equip anyone, anywhere."
+descript.com,saas,light,#fff7fa,#390a1a,#f73b3b,booton,,88,400,,0,6,center,56,18,1.4,170,0,1,12,54,10.6,AI-editing for every kind of video
+dovetail.com,saas,dark,#0a0a0a,#ffffff,,Inter,JetBrains Mono,48,600,1.17,-0.021,3,left,64,16,1.5,124,2,0,8,40,20.1,Introducing Digital Twins
+dropbox.com,saas,light,#ffffff,#f7f5f2,#0061fe,Atlas Grotesk Web,Sharp Grotesk,40,500,1.2,0,10,left,32,16,1.5,100,0,1,0,40,10.6,"Find, organize, and share your work, all in one place"
+elevenlabs.io,saas,light,#fdfcfc,#000000,,Inter,Geist Mono,48,300,1.08,-0.02,4,left,36,15,1.47,181,0,0,pill,40,12.0,Bringing technology to life
+essential.com,saas,light,#f2f2f2,#000000,#ffc700,ndot,Geist Mono,,,,,,,24,14,1.43,128,0,1,,,10.4,
+family.co,saas,light,#ffffff,#474645,#f6f4ef,Inter,,68,500,1.1,-0.02,4,center,,17,1.53,,1,1,6,33,12.6,Your favorite crypto wallet.
+fibery.io,saas,light,#faebd6,#251d1a,#faebd6,Suisse Intl,Fraunces,64,800,1,0,7,left,48,16,1.2,83,0,1,6,40,13.5,Operating system for orgs run by nerds
+figma.com,saas,light,#ffffff,#000000,,figmaSans,,56,400,1,-0.022,4,left,44,30,1.2,91,0,0,8,46,10.0,The full-stack creative canvas
+fly.io,saas,light,#ffffff,#686082,#7c3aed,Fricolage Grotesque,Mackinac,72,500,0.95,-0.02,3,center,36,17,1.5,91,1,0,8,40,8.7,Computers for agents
+folk.app,saas,light,#ffffff,#030200,,Inter,Uxumgrotesque,64,500,1,0,7,center,40,15,1.6,144,1,0,,,9.4,The CRM that works for your team
+framer.com,saas,dark,#000000,#ffffff,,Inter,Inter Variable,54,500,1,-0.04,12,left,44,13,1.35,145,0,1,8,30,11.9,Framer is the design agent for every step from idea to launch
+github.com,saas,dark,#0d1117,#ffffff,#08872b,Mona Sans,Mona Sans VF,,,,,,,22,18,1.5,124,0,1,,,12.4,
+granola.ai,saas,light,#ffffff,#292929,#f7f7f2,melange,quadrant,86,400,0.93,-0.02,6,left,32,22,1.35,120,1,1,pill,38,15.9,The AI notepad for back-to-back meetings
+heptabase.com,saas,light,#f7f7f7,#000000,,__Inter_611a59,,48,500,1.3,-0.033,10,center,26,16,1.5,330,0,1,pill,36,12.7,Master anything you learn. Do your best research with AI.
+increase.com,saas,light,#ffffff,#1d2a36,#31f2bf,TT Interphases Pro-c98a05336328a01f,,40,600,1.2,-0.02,13,left,24,16,1.43,165,0,0,8,36,9.2,Banking for ambitious technology companies. Build great financial products with an API-first bank.
+intercom.com,saas,light,#ffffff,#111111,,Saans,Serrif,80,400,1,-0.03,9,center,54,16,1.4,135,2,0,4,40,10.4,A complete system for human and AI customer service
+lemonsqueezy.com,saas,light,#ffffff,#121217,,Inter,Circularpro book,80,400,1,-0.04,7,left,38,18,1.7,143,0,0,pill,40,21.3,"Payments, tax & subscriptions for software companies"
+letta.com,saas,light,#c9cdd1,#202020,,Fira Code,,,,,,,,,12,1.76,154,1,0,,,3.7,
+linear.app,saas,dark,#08090a,#8a8f98,,Inter Variable,Berkeley Mono,64,510,1,-0.022,8,center,48,15,1.54,85,1,0,pill,32,11.1,The product development system for teams and agents
+liveblocks.io,saas,dark,#000000,#918d8d,,suisse,,60,500,1.1,-0.02,3,center,32,16,1.38,112,2,0,6,36,10.3,Realtime sync for
+loom.com,saas,light,#ffffff,#101214,#1868db,Charlie Text,Charlie Display,63,700,1.03,0,7,center,32,19,1.65,151,0,1,pill,48,14.0,One video is worth a thousand words
+maze.co,saas,dark,#000000,null,,Phonic,,130,300,1.05,-0.09,3,left,58,22,1.4,,3,0,2,44,10.8,Research at the
+miro.com,saas,light,#f0f0f0,#ffffff,#3859ff,Noto Sans,sans-serif,56,500,1,-0.03,7,center,24,18,1.45,119,2,1,8,42,9.6,Human collaboration at the speed of AI
+mistral.ai,saas,light,#fbfbf8,null,,ALTMistral,Inter,96,500,1,-0.02,5,left,,20,1.4,146,1,0,,,12.9,Frontier AI. In your hands.
+mixpanel.com,saas,light,#fafafa,#ffffff,,Garnett Regular,Apercu Pro,48,400,1.2,-0.02,8,left,28,14,1.5,59,1,0,pill,28,12.6,Build like your customers are right beside you
+moderntreasury.com,saas,light,#f8f7f5,#151515,#bae0cf,mt-sans,,71,450,1.1,0,5,center,32,16,1.5,144,0,1,2,33,6.7,Build Products That Move Money
+nextjs.org,saas,light,#ffffff,#666666,,GeistSans,,72,600,1,-0.05,6,center,32,18,1.78,145,0,0,6,32,5.7,The React Framework for the Web
+notion.com,saas,light,#ffffff,#000000,#0075de,NotionInter,Lyon Text,96,600,1.04,-0.048,6,center,22,20,1.4,106,0,1,8,36,5.1,Where teams and agents Scale together.
+obsidian.md,saas,dark,#0f0f0f,#bcbcbc,#7c3aed,ui-sans-serif,,60,600,1,-0.02,3,left,60,16,1.4,164,0,0,8,60,7.7,Sharpen your thinking.
+parallel.ai,saas,light,#ffffff,#858483,#fb631b,gerstnerProgramm,ftSystemMono,36,500,1.11,0,4,center,32,16,1.4,124,0,1,4,34,14.7,Where agents find answers
+pitch.com,saas,light,#ffffff,#ffffff,#c4ee87,Eina 03 Regular,Mark Pro Bold,,,,,,,48,16,1.6,64,7,0,pill,44,15.9,
+plaid.com,saas,light,#ffffff,#02294b,#05565c,Cern,Plaid Sans,76,500,1.12,-0.045,6,left,36,20,1.4,,2,0,2,32,9.9,Turn data into revolutionary financial products
+planetscale.com,saas,light,#fbca00,#414141,#f35815,ui-monospace,,,,,,,,,16,1.5,176,0,0,0,32,9.1,
+posthog.com,saas,light,#eeefe9,#374151,#cd8407,RoundHog,,36,800,1.11,-0.025,4,left,30,18,1.5,230,0,0,6,32,1.0,Make your product self-driving
+railway.com,saas,dark,#13111c,#ffffff,#553f83,Inter,,54,500,1.12,-0.036,3,center,36,18,1.6,263,4,0,8,58,13.0,Ship software peacefully
+raycast.com,saas,dark,#07080a,#ffffff,,Inter,GeistMono,64,600,1.1,0,4,center,32,16,1.6,226,1,0,8,36,17.8,Your shortcut to everything.
+readwise.io,saas,light,#fbf9f3,#333333,,Inter,Source Serif 4,64,600,1.1,-0.02,8,center,40,14,1.17,,0,0,0,76,8.2,Get the most out of what you read
+reflect.app,saas,dark,#030014,#efedfd,,Inter V,,72,500,1.11,0,4,center,56,16,1.5,,4,1,,,15.0,Think better with Reflect
+render.com,saas,light,#ffffff,#0d0d0d,,PPNeueMontreal,Roobert,80,300,1,-0.03,10,left,40,18,1.44,178,0,0,0,66,9.7,Your fastest path to production for APIs & web apps
+resend.com,saas,dark,#000000,#a1a4a5,#00a3ff,inter,commitMono,96,400,1,-0.01,3,left,56,14,1.6,122,2,1,16,40,13.7,Email for developers
+retool.com,saas,dark,#151515,#e9ebdf,#e9ebdf,saansFont,pxGroteskFont,72,300,1.05,-0.022,4,center,48,16,1.5,33,1,1,pill,40,10.8,Secure your vibe-coded apps
+rippling.com,saas,light,#ffffff,#000000,#ffa81d,__basel_e55247,,48,500,1.08,-0.031,9,left,42,18,1.44,60,0,0,4,38,11.8,"AI that knows your company, and acts like it"
+rive.app,saas,dark,#000000,#ffffff,,Inter Display,Inter,40,900,1.2,0.01,4,left,24,14,1.5,232,0,1,4,40,5.9,THE INTERACTIVE EXPERIENCE ENGINE
+shopify.com,saas,dark,#000000,#ffffff,,Shopify-Inter,,,,,,,,56,18,1.4,90,10,1,pill,44,12.5,
+sketch.com,saas,light,#f5f5f5,#212123,,InterVariable,,76,500,1,-0.02,3,left,22,16,1.5,88,1,1,pill,47,9.3,"Designers, welcome home."
+slack.com,saas,dark,#730394,#000000,#730394,Salesforce-Sans,Salesforce-Avant-Garde,64,700,1.06,-0.012,8,center,24,16,1.55,121,0,1,4,39,12.3,All your people and AI agents working together
+spline.design,saas,dark,#000000,#ffffff,#0062ff,Spline Sans,ui-monospace,38,500,1.25,0,3,center,36,16,1.5,213,1,1,pill,42,13.8,Make anything 3D
+squarespace.com,saas,light,#ffffff,#ffffff,,Clarkson,,64,300,1.04,-0.06,5,center,26,15,1.4,,11,1,4,48,8.7,A website makes it real
+stripe.com,saas,light,#ffffff,#061b31,#533afd,sohne-var,,48,300,1.15,-0.02,21,center,26,18,1.4,104,0,0,4,40,16.8,"Financial infrastructure to grow your revenue. Accept payments, offer financial services, and implement custom revenue m"
+substack.com,saas,light,#ffffff,#363737,#ff6719,system-ui,,32,500,1.24,0,8,center,,15,1.4,68,0,1,12,48,4.2,Make money doing the work you believe in
+sunsama.com,saas,light,#ffffff,#202228,#ff891c,DM Sans,,51,600,1.16,-0.01,6,left,,14,1.48,129,0,0,pill,44,13.4,Start Calm. Stay Focused. End Confident.
+supabase.com,saas,light,#ffffff,null,,Inter,Manrope,46,500,1,0,4,left,34,15,1.5,176,0,0,8,64,8.6,Build in a weekend
+superhuman.com,saas,light,#ffffff,null,#714cb6,Super Sans VF,,49,460,1.2,-0.027,8,left,28,18,1.5,112,2,1,8,36,8.2,Save 4+ hours each week with Superhuman Mail
+tailscale.com,saas,light,#f9f7f6,null,,inter,,64,500,1.1,-0.01,9,center,64,16,1.5,149,0,0,0,40,6.4,The best secure connectivity platform for the AI era
+things.app,saas,light,#f2f5f7,#303336,,ui-sans-serif,,,,,,,,36,20,1.3,297,0,1,,,9.0,
+tines.com,saas,light,#fcf9f5,null,,Roobert,Reckless,64,400,1.05,-0.03,6,left,24,16,1.3,40,3,0,,,8.2,You told everyone to use AI.
+vercel.com,saas,light,#fafafa,#4d4d4d,,GeistSans,Geist Mono,64,400,1,-0.06,2,left,56,24,1.33,24,0,0,6,32,6.6,Agentic Infrastructure
+warp.dev,saas,light,#ffffff,#5d5966,#1a1522,matterMono,,56,500,1.05,-0.036,6,left,34,13,1.65,154,1,0,0,40,8.5,Open infrastructure for cloud software factories
+webflow.com,saas,light,#ffffff,#080808,#146ef5,WF Visual Sans Variable,,80,600,1.04,-0.01,4,left,40,16,1.6,71,0,1,4,51,8.1,Build for what’s next
+whimsical.com,saas,light,#ffffff,null,,Manrope-79d1da00e5f47c83,Agrandir-0cfc125464d8d15e,64,700,1.1,-0.01,5,center,24,16,1.4,136,0,0,,,8.5,The whiteboard for product builders
+wix.com,saas,light,#ffffff,#000000,#166aea,wix-madefor-text-v2,wix-madefor-display-v2,82,400,1.2,-0.02,8,center,54,14,1.44,68,1,1,pill,40,19.7,Create your future on the leading website builder
+workos.com,saas,light,#ffffff,#29363d,#6363f1,Untitled Sans,,80,500,1.05,-0.07,4,left,28,19,1.6,,0,0,pill,35,8.6,"Your app, ‍Enterprise Ready."
+zed.dev,saas,light,#ffffff,null,,writer,zedMono,48,340,1.2,-0.02,4,center,26,13,1.5,208,0,1,4,32,9.1,Your last next editor
+area17.com,studio,light,#ffffff,#1a1a1a,,SuisseIntl,,55,500,1.1,-0.015,17,left,32,,,,6,1,8,54,9.2,We partner with the world’s most influential organizations to realize their vision and achieve their greatest impact.
+basicagency.com,studio,light,#f4f4f4,#f9cdcd,,SctoGroteskA,,,,,,,,,14,1.4,80,2,1,pill,32,11.0,
+cuberto.com,studio,light,#ffffff,null,,Suisse Intl,,81,500,1,-0.01,5,center,38,16,1.5,216,1,1,pill,52,14.4,Digital design & development agency
+displace.agency,studio,dark,#000000,#f5f5f7,#f3350c,-apple-system,,55,760,0.92,-0.065,5,left,32,16,1.5,,0,0,7,32,1.0,Shopify stores with everything wired.
+dogstudio.co,studio,light,#fff8ea,#ffffff,#5ab400,Heebo,Calibri,,,,,,,22,20,1.35,43,10,0,4,33,4.3,
+genius.design,studio,light,#ffffff,#111111,,gdsherpa,,60,850,0.88,0,1,left,,,,174,0,0,6,40,1.0,genius.design
+instrument.com,studio,light,#ffffff,#070708,,Instrument-Sans,,,,,,,,28,18,1.56,48,0,0,0,50,7.5,
+locomotive.ca,studio,light,#ffffff,#000000,,HelveticaNowDisplay,LocomotiveNew,70,400,1.1,0,5,left,26,14,1.2,40,1,1,0,42,7.3,🔶 Locomotive® Digital-first Design Agency🍺🔞
+manualcreative.com,studio,light,#f9f8f8,#1c1c1c,,ABCOtto-478c268553af3f8b,ABCOracle-797018b588059137,60,400,1,-0.03,26,left,30,,,32,0,1,,,4.9,"Manual is the brand studio for ambitious ideas. We help organizations tell the biggest story they can credibly claim, an"
+obys.agency,studio,light,#ffffff,#000000,,Obys,,,,,,,,,11,1.2,10,1,0,,,1.0,
+opx.studio,studio,dark,#000000,#ffffff,,Helvetica,OPX-Medium,80,400,1.21,0,6,center,,,,50,0,1,,,11.3,"We invent, reinvigorate and transform brands."
+order.design,studio,dark,#141414,#ffffff,,Pitch Sans,,,,,,,,,12,1.45,112,0,0,,,64.0,
+pentagram.com,studio,dark,#000000,#ffffff,,Plain,,52,400,1.05,-0.02,5,left,52,16,1.25,24,24,1,,,28.2,The Secret Life of Things
+portorocha.com,studio,light,#ffffff,#000000,,sf-pro-text,sf-pro-display,,,,,,,,14,1.25,151,0,0,,,51.6,
+raggededge.com,studio,light,#ffffff,#181f1f,#dcf2eb,ABCDiatypeExpanded-Bold,Grit-Regular,,,,,,,40,10,1.2,32,2,1,pill,40,13.1,
+ramotion.com,studio,light,#fafafa,#262626,,Graphik Web,,92,600,1.1,-0.035,5,center,40,18,1.5,80,0,1,pill,38,8.0,Product & brand design agency
+reboot.studio,studio,light,#ffffff,#232323,,__inter_d4f92f,,40,500,1.6,0,21,center,,,,316,0,1,pill,36,2.6,We build world-class marketing sites for software startups. Framer We are a tight-knit team Ivan|Design Director Toni|Sr
+springsummer.dk,studio,light,#dedcd3,#ffffff,,Supply,Montreal,,,,,,,40,18,1.4,514,0,0,3,31,4.7,
+twomuch.studio,studio,light,#f7f7f7,#000000,,ABCMonumentGrotesk,,,,,,,,,,,610,1,1,0,34,1.0,
+wearecollins.com,studio,dark,#140700,#f8f8f7,,Graphik,Portrait Text,72,400,1,-0.02,3,center,,36,1.05,98,1,0,,,6.0,Rewrite your worth.
+work.co,studio,light,#ffffff,#000000,,HelveticaNowDisplay,adobe-garamond-pro,56,500,1,-0.02,8,left,,20,1.5,190,0,0,2,42,4.3,We solve complex problems through design & technology
