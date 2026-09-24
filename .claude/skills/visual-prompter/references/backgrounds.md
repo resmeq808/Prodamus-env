@@ -1,6 +1,6 @@
 # Фоны, подложки, текстуры, орнаменты, объекты
 
-Всё, что не является «фото сцены»: подложки hero и секций, фактуры, декоративные формы, 3D-объекты, паттерны. Встречаются почти на каждом втором референсе: переливающаяся капля Securify, фиолетовый свет Oxaley, синие формы Yolo и Boulevard, камень Stone, металл METTECH, хромированные фигуры OLV.
+Всё, что не является «фото сцены»: подложки hero и секций, шумные градиенты и световые формы, фактуры, декоративные формы, 3D-объекты, паттерны. Встречаются почти на каждом втором референсе: переливающаяся капля Securify, фиолетовый свет Oxaley, синие формы Yolo и Boulevard, камень Stone, металл METTECH, хромированные фигуры OLV.
 
 Главное правило: **фон работает на текст, а не спорит с ним**. Большая спокойная зона, один центр внимания, цвет из палитры сайта.
 
@@ -61,6 +61,45 @@
 Цветное поле с фактурой вместо плоской заливки (Future of Private Equity, Boulevard).
 
 > An abstract background, vertical 3:4, saturated cobalt blue (#1f3fd6) with soft flowing folds like silk fabric catching light, subtle highlights and deep shadows in the same hue, no other colours, very smooth, room for white text in the lower half.
+
+## Шумные градиенты и световые формы
+
+Подложки, которые несут экран вместо фото: Spectral Gradient, Whalechip, Katartizo, Septem, Cura Sentimento, айдентика бухгалтерской компании design.atum. Правила — приём 19 в `airy-landing/references/art-direction.md`: спокойное поле 60–80%, форма у края, 1–2 цвета, сильное зерно, один вид на сайт. Генерировать только когда они нужны странице — это не обязательный слой.
+
+Общий хвост для всей серии подложек (вместо STYLE BLOCK фото):
+
+```
+BACKDROP STYLE: abstract, no objects, no text, no logos; strong fine film grain over the whole image like a risograph or high-ISO film scan; very soft out-of-focus edges; limited palette; most of the frame is a calm near-flat field for text.
+```
+
+В промтах 12–16 `BACKDROP STYLE: …` означает: вклеить хвост выше целиком, дословно.
+
+### 11. Шумный градиент из угла
+> Create an abstract grainy gradient background, wide 16:9. A soft glowing shape of electric blue (#2a5bff) and pale ice blue (#bfe0ff) rises from the bottom right corner and dissolves into a deep near-black field (#060608) that fills the upper left two thirds of the frame. Smooth, blurry transitions with no hard edges. BACKDROP STYLE: abstract, no objects, no text, no logos; strong fine film grain over the whole image like a risograph or high-ISO film scan; very soft out-of-focus edges; limited palette; most of the frame is a calm near-flat field for text.
+
+Светлый вариант: «…dissolves into a soft off-white field (#f2f1ee)…» — для светлых сайтов (синий на белом, как визитки и постеры design.atum).
+
+### 12. Световой луч
+> Create an abstract background, wide 16:9. A single wide diagonal beam of warm light — burnt orange (#e8541e) at its core fading to deep red and then to black — crosses from the lower left towards the upper right, soft and hazy like light through fog. The rest of the frame is a near-black field (#0a0808). BACKDROP STYLE: …
+
+### 13. Волна-силуэт
+> Create an abstract background, square 1:1. Three soft blurry peaks of flame-like light rise from the bottom edge, glowing from deep indigo at the base through red and orange to pale yellow at the tips, against a flat dusty lavender field (#8f86b8) that fills the upper half. Heat-haze softness, no sharp lines. BACKDROP STYLE: …
+
+Вариант «звук / ритм»: «a row of thin vertical spikes of acid lime (#9be31c) light hanging from the top edge like a sound wave, fading into black».
+
+### 14. Пиксельный градиент
+> Create an abstract background, vertical 3:4. A blurry glowing shape of acid lime (#c6f432) and deep green light on a black field, rendered as a coarse mosaic of large square pixels about 1/40 of the frame width, each pixel a flat colour, like an extremely low-resolution image enlarged. The shape occupies the upper right; the lower left is almost black. BACKDROP STYLE: …
+
+### 15. Рифлёное стекло
+> Create an abstract photograph, vertical 3:4. A glowing gradient of electric blue (#1f4bff) light seen through a sheet of vertically reeded (fluted) glass: dozens of narrow vertical ribs each refract and stretch the light into sharp repeating streaks, with bright highlights on the rib edges and deep blue-black between them. Dark navy at the bottom, bright blue at the top. Studio macro photograph, crisp ribs, BACKDROP STYLE: …
+
+### 16. Шёлковые складки
+> Create an abstract 3D render, vertical 3:4. Long flowing folds of satin fabric in deep teal (#0f7a6c) fan out from the upper right corner and sweep down into darkness, soft specular highlights running along each fold, the lower left falls into pure black. Smooth, elegant, single colour. BACKDROP STYLE: …
+
+### 17. Переливающиеся ленты
+> Create an abstract 3D render, vertical 3:4. Two thick loops of transparent glass tubing twist through the frame on a pure black background, with strong chromatic dispersion — thin rainbow edges of orange, magenta and blue along every curve, bright white highlights, dark refracted interiors. The loops fill the right side; the left third stays black. No text, no logos.
+
+Как собирать серию подложек: первую удачную приложить референсом и менять только положение формы и формат — «Same style, colour and grain as the attached image; move the glow to the top left corner, vertical 4:5».
 
 ---
 
