@@ -1,5 +1,7 @@
 # Блоки
 
+> **Сначала `art-direction.md`.** Hero и «вау»-секции в стиле доски (кадр в панели, гигант лесенкой, стекло, фото-карточки, светлый лист, финал-панель) собраны в `assets/starter.html` и разобраны в `art-direction.md`. Здесь — утилитарные секции (шапка, логотипы, фича, бенто, строки, цифры, цитата, галерея, шаги, тарифы, FAQ, подвал) в спокойной базе: берите их и перекрашивайте под выбранное направление — фото вместо серых плашек, микро-слой `.hud-row` над секцией, `.cta-pair` вместо обычной кнопки.
+
 Каталог секций, из которых собирается страница. У каждого блока — когда брать, у кого подсмотрено, готовый HTML и CSS. Все стили опираются на `assets/tokens.css`: `.wrap`, `.section`, `.t-*`, `.btn`, `.media`.
 
 Правило сборки: **на странице 8–12 секций и минимум 5 разных семейств компоновки.** Одно семейство (например, «сетка карточек») — не больше двух раз.
@@ -145,7 +147,7 @@ addEventListener('scroll', () => nav.classList.toggle('is-scrolled', scrollY > 8
 ```css
 .hero-s { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center;
           gap: clamp(2rem, 4vw, 5rem); min-height: min(88svh, 920px);
-          padding-inline-start: max(var(--gutter), (100% - var(--frame)) / 2); }   /* текст по полю, медиа до края */
+          padding-inline-start: max(var(--gutter), (100% - var(--max)) / 2); }   /* текст по полю, медиа до края */
 .hero-s__text { display: grid; gap: var(--space-5); padding-block: var(--space-8); }
 .hero-s__media { align-self: stretch; border-radius: var(--r-lg) 0 0 var(--r-lg); min-height: 420px; }
 .hero-s__form { display: flex; gap: var(--space-2); max-width: 30rem; margin-top: var(--space-2); }
@@ -486,7 +488,7 @@ Hero — большая скруглённая панель с полями 8–
 .gal__head { display: flex; justify-content: space-between; align-items: end; gap: var(--space-5); margin-bottom: var(--space-7); }
 .gal { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(260px, 28vw, 440px); gap: var(--space-4);
        overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
-       padding-inline: max(var(--gutter), (100% - var(--frame)) / 2); scroll-padding-inline: max(var(--gutter), (100% - var(--frame)) / 2); }
+       padding-inline: max(var(--gutter), (100% - var(--max)) / 2); scroll-padding-inline: max(var(--gutter), (100% - var(--max)) / 2); }
 .gal::-webkit-scrollbar { display: none; }
 .gal__item { scroll-snap-align: start; display: grid; gap: var(--space-2); }
 .gal__item .media { margin-bottom: var(--space-2); }
