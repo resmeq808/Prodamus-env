@@ -6,7 +6,7 @@
    1. База (цвет, шкала, сетка, кнопки) — нормы по замерам 266 сайтов,
       references/research.md. На ней стоят блоки из references/blocks.md.
    2. Арт-дирекшн (тема «Кинематограф», светлый лист, микро-слой,
-      гигантский заголовок, стекло, зерно, кнопка-пара) — приёмы доски,
+      гигантский заголовок, цифры-выноски, стена слов, зерно, кнопка-пара) — приёмы доски,
       references/art-direction.md. На них стоит assets/starter.html.
 
    Тема включается атрибутом: <body data-theme="cinema">, светлый лист —
@@ -41,6 +41,7 @@
   --font:      "Inter Tight", "Inter", "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-text: "Inter", "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+  --font-narrow: "Sofia Sans Extra Condensed", "Oswald", "Inter Tight", sans-serif;  /* узкий капс: стена слов, цифры */
 
   /* Жидкая шкала, значения указаны для 390px → 1440px.
      Медиана hero выборки — 60px (SaaS 64), коридор 48–76; заголовок секции — 38, крупный — 50. */
@@ -61,7 +62,7 @@
   --lh-body:    1.5;    /* медиана 1.44–1.5 */
   --lh-tight:   1.4;
 
-  --tr-display: -.045em;
+  --tr-display: -.03em;
   --tr-hero:    -.025em; /* p25 выборки; для кириллицы можно -.02em */
   --tr-h2:      -.02em;
   --tr-h3:      -.012em;
@@ -265,12 +266,12 @@ a:hover { text-decoration-color: currentColor; }
 .hud-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; padding-block: 1rem; border-top: 1px solid var(--line); }
 
 /* Гигантский заголовок лесенкой */
-.giant { font: 500 var(--fs-giant)/.9 var(--font); letter-spacing: -.045em; white-space: nowrap; }
+.giant { font: 500 var(--fs-giant)/.92 var(--font); letter-spacing: -.025em; white-space: nowrap; }
 .giant > span { display: block; }
 .giant .step-2 { padding-left: clamp(0rem, 14vw, 17rem); }
 .giant .step-3 { padding-left: clamp(0rem, 4vw, 5rem); }
 .giant em, .h2-xl em { font-style: normal; color: var(--accent); }
-.h2-xl { font: 500 var(--fs-h2-xl)/.95 var(--font); letter-spacing: -.05em; text-wrap: balance; }
+.h2-xl { font: 500 var(--fs-h2-xl)/.98 var(--font); letter-spacing: -.03em; text-wrap: balance; }
 .dim { color: var(--ink-3); }
 @media (max-width: 760px) { .giant { white-space: normal; } .giant .step-2, .giant .step-3 { padding-left: 0; } }
 
@@ -281,7 +282,24 @@ a:hover { text-decoration-color: currentColor; }
 .faces img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg); margin-left: -8px; }
 .faces img:first-child { margin-left: 0; }
 
-/* Стекло поверх кадра */
+/* Цифры прямо на кадре с выноской — вместо плашек */
+.fact { position: relative; display: grid; gap: .375rem; padding-left: 4.25rem; text-shadow: 0 1px 18px rgb(0 0 0 / .45); }
+.fact::before { content: ""; position: absolute; left: 0; top: 1.75rem; width: 3.25rem; height: 1px; background: var(--line-2); }
+.fact::after { content: ""; position: absolute; left: -3px; top: calc(1.75rem - 3px); width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.fact b { font: 500 clamp(2.25rem, 1.4rem + 1.8vw, 3.5rem)/1 var(--font); letter-spacing: -.03em; }
+.fact b sup, .num-plus sup { font-size: .42em; color: var(--accent); vertical-align: .95em; margin-left: .06em; }
+.fact span { font-size: .8125rem; line-height: 1.4; color: var(--ink-2); max-width: 20ch; }
+
+/* Стена слов: список узким капсом (нужен шрифт --font-narrow) */
+.row { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; padding-block: clamp(.5rem, 1vw, 1rem); border-bottom: 1px solid var(--line); }
+.row:nth-child(even) { grid-template-columns: auto 1fr; }
+.row:nth-child(even) .row__word { order: 2; text-align: right; }
+.row__word { font: 800 clamp(3.75rem, 1rem + 10vw, 11.5rem)/.82 var(--font-narrow, var(--font)); text-transform: uppercase; }
+.row__word sup { font: 500 var(--fs-hud)/1 var(--font-text); letter-spacing: .06em; color: var(--accent); vertical-align: 3.2em; margin-left: .5rem; }
+.row__note { max-width: 24ch; font-size: .875rem; line-height: 1.45; color: var(--ink-2); padding-bottom: .75rem; }
+@media (max-width: 900px) { .row, .row:nth-child(even) { grid-template-columns: 1fr; gap: .5rem; } .row:nth-child(even) .row__word { order: 0; text-align: left; } }
+
+/* Стекло — только навигация и маленькие теги, не контентные плашки */
 .glass { background: var(--glass); border: 1px solid var(--glass-line); border-radius: var(--r-card);
   backdrop-filter: blur(20px) saturate(1.5); -webkit-backdrop-filter: blur(20px) saturate(1.5); }
 
