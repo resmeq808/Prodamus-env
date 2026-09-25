@@ -44,17 +44,25 @@
 }
 
 /* ===================================================
-   2. СЕТКА КАРТОЧЕК НА GAP (Отступ 20px)
+   2. СЕТКА КАРТОЧЕК (Отступ 20px)
+   Тильда раскладывает карточки по рядам .t1070__row по 3 штуки.
+   Ряды «растворяем» (display: contents), и все карточки встают
+   в одну общую сетку контейнера — без дыр при 2 колонках.
    =================================================== */
-.uc-casesgrid .t1070__row {
-    display: flex !important;
-    flex-wrap: wrap !important;
+.uc-casesgrid .t-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 20px !important;
-    margin-bottom: 20px !important;
 }
 
-.uc-casesgrid .t1070__row:last-child {
-    margin-bottom: 0 !important;
+/* Clearfix Тильды иначе станет лишними ячейками сетки */
+.uc-casesgrid .t-container::before,
+.uc-casesgrid .t-container::after {
+    display: none !important;
+}
+
+.uc-casesgrid .t1070__row {
+    display: contents !important;
 }
 
 .uc-casesgrid .t1070__separator {
@@ -62,21 +70,23 @@
 }
 
 .uc-casesgrid .t1070__col {
+    float: none !important;
     margin: 0 !important;
     padding: 0 !important;
+    width: auto !important;
     max-width: none !important;
-    width: calc((100% - 40px) / 3) !important;
+    min-width: 0 !important;
 }
 
 @media screen and (max-width: 959px) {
-    .uc-casesgrid .t1070__col {
-        width: calc((100% - 20px) / 2) !important;
+    .uc-casesgrid .t-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
 }
 
 @media screen and (max-width: 639px) {
-    .uc-casesgrid .t1070__col {
-        width: 100% !important;
+    .uc-casesgrid .t-container {
+        grid-template-columns: minmax(0, 1fr) !important;
     }
 }
 
@@ -119,14 +129,14 @@
 .uc-casesgrid .t1070__imgwrapper {
     grid-column: 1 / 2 !important;
     grid-row: 1 / 2 !important;
-    align-self: stretch !important;
+    align-self: center !important;
     position: relative !important;
     z-index: 2 !important;
     margin: 0 !important;
     padding: 0 !important;
     width: var(--uc-img-size) !important;
-    height: auto !important;
-    min-height: var(--uc-img-size) !important;
+    height: var(--uc-img-size) !important;
+    min-height: 0 !important;
     max-width: none !important;
     border-radius: var(--uc-head-radius) !important;
     overflow: hidden !important;
@@ -177,6 +187,18 @@
 /* На случай, если Тильда обернула текст в <strong>/<b> */
 .uc-casesgrid .t-card__descr * {
     font-weight: 500 !important;
+}
+
+/* 960–1199: карточки узкие — картинку прячем, должность на всю ширину подложки */
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .uc-casesgrid .t1070__imgwrapper {
+        display: none !important;
+    }
+
+    .uc-casesgrid .t-card__descr {
+        min-height: 0 !important;
+        padding: 12px var(--uc-head-gap) !important;
+    }
 }
 
 /* -------------------------------------
