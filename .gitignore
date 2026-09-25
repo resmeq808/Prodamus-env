@@ -3,3 +3,5 @@
 **/review/checks.json
 dist/
 examples/*/raw/
+**/review/**/shots/
+**/review/**/checks.json
