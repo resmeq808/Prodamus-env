@@ -20,7 +20,7 @@
   --line: rgb(238 241 247 / .1); --aurora: #8ff7c4; --violet: #a98bff;
   --font: "Geologica", "Inter", system-ui, sans-serif;
   --pad: clamp(.75rem, 1.2vw, 1rem);
-  --r: 18px;
+  --r: 6px;
   color-scheme: dark;
 }
 *, *::before, *::after { box-sizing: border-box; }
@@ -42,23 +42,24 @@ a { color: inherit; text-decoration: none; }
 .logo { display: inline-flex; align-items: center; gap: .625rem; font: 500 1.125rem/1 var(--font); letter-spacing: -.01em; margin-right: 1rem; }
 .logo svg { width: 22px; height: 22px; }
 .tabs { display: flex; gap: .25rem; }
-.tabs a { padding: .625rem 1rem; border-radius: 12px; font-size: .875rem; color: var(--ink-2); transition: background-color .15s, color .15s; }
+.tabs a { padding: .625rem 1rem; border-radius: 4px; font-size: .875rem; color: var(--ink-2); transition: background-color .15s, color .15s; }
 .tabs a:hover { background: var(--card-2); color: var(--ink); }
 .tabs a[aria-current] { background: var(--ink); color: var(--bg); }
 .bar__right { margin-left: auto; display: flex; align-items: center; gap: 1.25rem; }
 .now { text-align: right; line-height: 1.25; }
 .now b { display: block; font-weight: 500; font-size: .875rem; }
-.cta { display: inline-flex; align-items: center; gap: .75rem; height: 44px; padding: 0 .5rem 0 1.125rem; border-radius: 12px; background: var(--aurora); color: #06120c; font-weight: 500; font-size: .875rem; transition: filter .15s; }
+.cta { display: inline-flex; align-items: center; gap: .75rem; height: 44px; padding: 0 1.125rem; border-radius: 4px; background: var(--aurora); color: #06120c; font-weight: 500; font-size: .875rem; transition: filter .15s; }
 .cta:hover { filter: brightness(1.08); }
-.cta span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: #06120c; color: var(--aurora); }
+.cta span { transition: transform .2s; } .cta:hover span { transform: translateX(3px); }
+.cta--lg { height: 52px; font-size: 1rem; padding-inline: 1.375rem; }
 
 /* ── Основная зона ───────────────────────────────────────────── */
 .deck { display: grid; grid-template-columns: minmax(0, 1fr) clamp(320px, 27vw, 400px); gap: var(--pad); min-height: 0; }
 .stage { position: relative; isolation: isolate; overflow: hidden; border-radius: var(--r); display: grid; align-content: space-between; padding: clamp(1.25rem, 2.2vw, 2.25rem); min-height: 560px; }
-.stage > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+.stage > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; filter: contrast(1.12) saturate(1.25); }
 .stage::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(6 9 18 / .35), transparent 30% 50%, rgb(6 9 18 / .88)); }
 .stage__top { display: flex; justify-content: space-between; gap: 1rem; }
-.chip { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .75rem; border-radius: 999px; background: rgb(6 9 18 / .55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: .8125rem; }
+.chip { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .75rem; border-radius: 4px; background: rgb(6 9 18 / .55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: .8125rem; }
 .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--aurora); box-shadow: 0 0 12px var(--aurora); }
 h1 { font: 300 clamp(2.75rem, 1rem + 4.6vw, 6.25rem)/.98 var(--font); letter-spacing: -.035em; max-width: 12ch; }
 h1 b { font-weight: 500; color: var(--aurora); }
@@ -70,15 +71,15 @@ h1 b { font-weight: 500; color: var(--aurora); }
 .card { position: relative; display: grid; align-content: space-between; gap: 1rem; padding: 1.125rem 1.25rem; border-radius: var(--r); background: var(--card); transition: background-color .15s; overflow: hidden; }
 a.card:hover { background: var(--card-2); }
 .card__head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-.card__head .arr { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 10px; background: var(--card-2); transition: transform .2s; }
+.card__head .arr { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 4px; background: var(--card-2); transition: transform .2s; }
 a.card:hover .arr { transform: rotate(-45deg); }
 .big { font: 300 clamp(2.5rem, 1.6rem + 1.8vw, 3.5rem)/1 var(--font); letter-spacing: -.03em; }
 .big small { font-size: .4em; letter-spacing: 0; color: var(--ink-2); margin-left: .25em; }
 .meter { height: 6px; border-radius: 6px; background: var(--card-2); overflow: hidden; }
 .meter i { display: block; height: 100%; width: var(--v); border-radius: 6px; background: linear-gradient(90deg, var(--violet), var(--aurora)); }
 .card__row { display: flex; justify-content: space-between; gap: 1rem; font-size: .8125rem; color: var(--ink-3); }
-.card--thumb { grid-template-columns: minmax(0, 1fr) 84px; align-items: end; }
-.card--thumb img { width: 84px; height: 84px; border-radius: 12px; object-fit: cover; }
+.card--thumb { grid-template-columns: minmax(0, 1fr) 42%; align-items: stretch; padding-right: .625rem; }
+.card--thumb img { width: 100%; height: 100%; min-height: 120px; border-radius: 4px; object-fit: cover; }
 .card--thumb .card__body { display: grid; gap: .5rem; }
 .card--book { background: var(--ink); color: var(--bg); }
 a.card--book:hover { background: #fff; }
@@ -96,6 +97,7 @@ a.card--book:hover { background: #fff; }
   .now { display: none; } .cta { padding-left: .875rem; }
   .stack { grid-template-columns: 1fr; }
   .stage__foot { grid-template-columns: 1fr; }
+  .chip { white-space: nowrap; font-size: .75rem; } .stage__top .chip:last-child { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -107,7 +109,7 @@ a.card--book:hover { background: #fff; }
     <nav class="tabs" aria-label="Разделы"><a href="#" aria-current="page">Сейчас</a><a href="#">Номера</a><a href="#">Сияние</a><a href="#">Киты</a><a href="#">Как добраться</a></nav>
     <div class="bar__right">
       <p class="now"><b class="tnum" data-clock>—</b><span class="lbl" data-date>Териберка</span></p>
-      <a class="cta" href="#">Забронировать <span aria-hidden="true">→</span></a>
+      <a class="cta" href="#">Выбрать даты <span aria-hidden="true">→</span></a>
     </div>
   </header>
 
@@ -122,6 +124,7 @@ a.card--book:hover { background: #fff; }
         <h1>Сияние видно <b>из&nbsp;окна номера</b></h1>
         <div class="stage__foot">
           <p>«Норманн»&nbsp;— двенадцать номеров на&nbsp;берегу Баренцева моря в&nbsp;Териберке. Будим ночью, если небо загорится.</p>
+          <a class="cta cta--lg" href="#">Выбрать даты <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -150,7 +153,7 @@ a.card--book:hover { background: #fff; }
       </a>
       <a class="card card--book" href="#">
         <div class="card__head"><span class="lbl">Свободно на&nbsp;выходные</span><span class="arr" aria-hidden="true">→</span></div>
-        <b>3 номера из&nbsp;12 · от&nbsp;14&nbsp;000&nbsp;₽ за&nbsp;ночь</b>
+        <b>3 номера из&nbsp;12 · от&nbsp;14&nbsp;000&nbsp;₽ за&nbsp;ночь&nbsp;— выбрать даты</b>
       </a>
     </aside>
   </main>

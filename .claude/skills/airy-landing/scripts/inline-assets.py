@@ -51,6 +51,7 @@ def main():
     html = re.sub(r'<link[^>]+rel="preload"[^>]+as="image"[^>]*>\s*', "", html)
     html = re.sub(r'\b(src|href|poster|data-[\w-]+)="([^"]+)"', attr, html)   # data-* — картинки для hover и слайдеров
     html = re.sub(r'url\((["\']?)([^)"\']+)\1\)', css, html)
+    os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     open(out, "w", encoding="utf-8").write(html)
     size = os.path.getsize(out) / 1024
     print(f"готово: {out} — {size:.0f} КБ, встроено файлов: {len(cache)}")
