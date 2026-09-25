@@ -90,11 +90,24 @@ function audit() {
     }
     // контраст на однотонном фоне
     let bg = null; const er = el.getBoundingClientRect();
-    for (let a = el; a; a = a.parentElement) {
+    // фиксированная шапка: фон — то, что лежит под ней, а не фон body;
+    // полупрозрачная подложка самой шапки (a > .6) считается её фоном
+    let fixedRoot = null;
+    for (let a = el; a; a = a.parentElement) { const pos = getComputedStyle(a).position; if (pos === 'fixed' || pos === 'sticky') { fixedRoot = a; break; } }
+    let start = el;
+    if (fixedRoot) {
+      const hasOwnBg = (() => { for (let a = el; a && a !== fixedRoot.parentElement; a = a.parentElement) { const c = rgb(getComputedStyle(a).backgroundColor); if ((c && c.a > .6) || getComputedStyle(a).backgroundImage !== 'none') return true; } return false; })();
+      if (!hasOwnBg) {
+        const under = document.elementsFromPoint(er.left + er.width / 2, er.top + er.height / 2).find(n => !fixedRoot.contains(n));
+        if (under && /^(IMG|VIDEO|CANVAS)$/.test(under.tagName)) bg = 'image';
+        else if (under) start = under;
+      }
+    }
+    for (let a = start; a && !bg; a = a.parentElement) {
       if (getComputedStyle(a).backgroundImage !== 'none') { bg = 'image'; break; }
       const media = [...a.children].find(ch => /^(IMG|VIDEO|PICTURE|CANVAS)$/.test(ch.tagName) && ch !== el && !ch.contains(el) && (() => { const r = ch.getBoundingClientRect(); return r.left <= er.left + 2 && r.right >= er.right - 2 && r.top <= er.top + 2 && r.bottom >= er.bottom - 2; })());
       if (media) { bg = 'image'; break; }
-      const c = rgb(getComputedStyle(a).backgroundColor); if (c && c.a > .9) { bg = c; break; } }
+      const c = rgb(getComputedStyle(a).backgroundColor); if (c && c.a > (fixedRoot && fixedRoot.contains(a) ? .6 : .9)) { bg = c; break; } }
     const fg = rgb(cs.color);
     if (bg && bg !== 'image' && fg) { const k = ratio({ ...fg }, bg) * (fg.a < 1 ? fg.a : 1) + (fg.a < 1 ? 0 : 0); const need = fs >= 24 || (fs >= 18.5 && +cs.fontWeight >= 600) ? 3 : 4.5;
       const mix = { r: fg.r * fg.a + bg.r * (1 - fg.a), g: fg.g * fg.a + bg.g * (1 - fg.a), b: fg.b * fg.a + bg.b * (1 - fg.a) }; const kk = ratio(mix, bg);

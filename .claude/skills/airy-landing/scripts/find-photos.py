@@ -62,10 +62,23 @@ def main():
             it = meta[str(num)]
             ext = os.path.splitext(urllib.parse.urlparse(it["url"]).path)[1] or ".jpg"
             p = os.path.join(dest, f"photo-{num:03d}{ext}")
+            i = 2
+            while os.path.exists(p):   # не затирать кадры из другого поиска с тем же номером
+                p = os.path.join(dest, f"photo-{num:03d}-{i}{ext}"); i += 1
             ref = "https://stocksnap.io/" if "stocksnap" in it["url"] else None
+            # Не подменять url на «большие» версии: у rawpixel image_1300 — с водяным знаком.
             open(p, "wb").write(get(it["url"], binary=True, referer=ref))
             credits.append(f"{os.path.basename(p)} — {it.get('creator') or 'автор не указан'}, {it['source']}, {it['license'].upper()} — {it.get('page')}")
-            print("скачано:", p, f"({it['width']}×{it['height']}, {it['license']})")
+            real = ""
+            try:
+                from PIL import Image as _I
+                w, h = _I.open(p).size
+                real = f"{w}×{h}"
+                if max(w, h) < 1600:
+                    real += " — мало для hero на всю ширину, ищите с --sources wordpress"
+            except Exception:
+                pass
+            print("скачано:", p, f"({real or '?'}; оригинал {it['width']}×{it['height']}, {it['license']})")
         open(os.path.join(dest, "CREDITS.txt"), "a").write("\n".join(credits) + "\n")
         print("атрибуция:", os.path.join(dest, "CREDITS.txt"))
         return
