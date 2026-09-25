@@ -1,0 +1,234 @@
+<style>
+/* ===================================================
+   1. КОНТЕЙНЕР: ИМИТАЦИЯ АВТОСКЕЙЛА И СТАТИКА
+   =================================================== */
+.uc-casesgrid .t-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto !important;
+    max-width: none !important;
+}
+
+/* 320px - 479px */
+.uc-casesgrid .t-container { width: 87.5vw !important; }
+
+/* 480px - 639px */
+@media screen and (min-width: 480px) and (max-width: 639px) {
+    .uc-casesgrid .t-container { width: 91.66vw !important; }
+}
+
+/* 640px - 959px */
+@media screen and (min-width: 640px) and (max-width: 959px) {
+    .uc-casesgrid .t-container { width: 93.75vw !important; }
+}
+
+/* 960px - 1199px */
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .uc-casesgrid .t-container { width: 95.83vw !important; }
+}
+
+/* 1200px */
+@media screen and (min-width: 1200px) {
+    .uc-casesgrid .t-container {
+        width: 100% !important;
+        max-width: 1160px !important;
+    }
+}
+
+/* 1440px */
+@media screen and (min-width: 1440px) {
+    .uc-casesgrid .t-container {
+        width: 100% !important;
+        max-width: 1240px !important;
+    }
+}
+
+/* ===================================================
+   2. СЕТКА КАРТОЧЕК НА GAP (Отступ 20px)
+   =================================================== */
+.uc-casesgrid .t1070__row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.uc-casesgrid .t1070__row:last-child {
+    margin-bottom: 0 !important;
+}
+
+.uc-casesgrid .t1070__separator {
+    display: none !important;
+}
+
+.uc-casesgrid .t1070__col {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: calc((100% - 40px) / 3) !important;
+}
+
+@media screen and (max-width: 959px) {
+    .uc-casesgrid .t1070__col {
+        width: calc((100% - 20px) / 2) !important;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .uc-casesgrid .t1070__col {
+        width: 100% !important;
+    }
+}
+
+/* ===================================================
+   3. БАЗОВЫЙ ВИЗУАЛ КАРТОЧКИ (GRID)
+   Строки: 1 — шапка (фото + должность), 2 — описание, 3 — кнопка
+   =================================================== */
+.uc-casesgrid {
+    --uc-img-size: 100px;       /* сторона картинки в шапке */
+    --uc-head-radius: 16px;     /* скругление картинки и подложки */
+    --uc-head-bg: #F0F0F0;      /* цвет подложки шапки */
+    --uc-head-gap: 16px;        /* отступ текста от картинки и от краёв подложки */
+}
+
+@media screen and (max-width: 479px) {
+    .uc-casesgrid {
+        --uc-img-size: 80px;
+    }
+}
+
+.uc-casesgrid .t1070__content {
+    background-color: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: left !important;
+
+    display: grid !important;
+    grid-template-columns: var(--uc-img-size) 1fr !important;
+    grid-template-rows: auto 1fr auto !important;
+    column-gap: 0 !important;
+    row-gap: 0 !important;
+    min-height: 0 !important;
+}
+
+/* -------------------------------------
+   ШАПКА: КАРТИНКА (лежит поверх левого края подложки)
+   ------------------------------------- */
+.uc-casesgrid .t1070__imgwrapper {
+    grid-column: 1 / 2 !important;
+    grid-row: 1 / 2 !important;
+    align-self: stretch !important;
+    position: relative !important;
+    z-index: 2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: var(--uc-img-size) !important;
+    height: auto !important;
+    min-height: var(--uc-img-size) !important;
+    max-width: none !important;
+    border-radius: var(--uc-head-radius) !important;
+    overflow: hidden !important;
+}
+
+.uc-casesgrid .t1070__bgimg,
+.uc-casesgrid .t1070__imgwrapper img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border-radius: var(--uc-head-radius) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    object-fit: cover !important;
+}
+
+/* -------------------------------------
+   ШАПКА: ИМЯ — скрыто
+   ------------------------------------- */
+.uc-casesgrid .t-card__title {
+    display: none !important;
+}
+
+/* -------------------------------------
+   ШАПКА: ДОЛЖНОСТЬ — подложка на всю ширину, текст справа от картинки
+   ------------------------------------- */
+.uc-casesgrid .t-card__descr {
+    grid-column: 1 / 3 !important;
+    grid-row: 1 / 2 !important;
+    z-index: 1 !important;
+    margin: 0 !important;
+    height: auto !important;
+    min-height: var(--uc-img-size) !important;
+    box-sizing: border-box !important;
+    padding: 12px var(--uc-head-gap) 12px calc(var(--uc-img-size) + var(--uc-head-gap)) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    background-color: var(--uc-head-bg) !important;
+    border-radius: var(--uc-head-radius) !important;
+    font-weight: 500 !important;
+}
+
+/* На случай, если Тильда обернула текст в <strong>/<b> */
+.uc-casesgrid .t-card__descr * {
+    font-weight: 500 !important;
+}
+
+/* -------------------------------------
+   ОПИСАНИЕ КЕЙСА (ЦЕНТР)
+   ------------------------------------- */
+.uc-casesgrid .t1070__price-wrap {
+    grid-column: 1 / 3 !important;
+    grid-row: 2 / 3 !important;
+    margin: 0 !important;
+    margin-top: 20px !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.uc-casesgrid .t1070__price_current,
+.uc-casesgrid .t1070__price_old {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+.uc-casesgrid .t1070__price_current {
+    border-left: 4px solid #C4F05A !important;
+    padding-left: 16px !important;
+}
+
+.uc-casesgrid .t1070__price_old {
+    text-decoration: none !important;
+}
+
+/* -------------------------------------
+   КНОПКА
+   ------------------------------------- */
+.uc-casesgrid .t1070__content .t-btn {
+    grid-column: 1 / 3 !important;
+    grid-row: 3 / 4 !important;
+    margin: 0 !important;
+    margin-top: 40px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+/* Оптимизация карточки для mobile */
+@media screen and (max-width: 639px) {
+    .uc-casesgrid .t1070__content {
+        padding: 20px !important;
+    }
+}
+</style>
