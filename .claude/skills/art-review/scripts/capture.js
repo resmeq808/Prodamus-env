@@ -93,7 +93,7 @@ function audit() {
     // фиксированная шапка: фон — то, что лежит под ней, а не фон body;
     // полупрозрачная подложка самой шапки (a > .6) считается её фоном
     let fixedRoot = null;
-    for (let a = el; a; a = a.parentElement) { const pos = getComputedStyle(a).position; if (pos === 'fixed' || pos === 'sticky') { fixedRoot = a; break; } }
+    for (let a = el; a; a = a.parentElement) { const pos = getComputedStyle(a).position; if (pos === 'fixed') { fixedRoot = a; break; } }
     let start = el;
     if (fixedRoot) {
       const hasOwnBg = (() => { for (let a = el; a && a !== fixedRoot.parentElement; a = a.parentElement) { const c = rgb(getComputedStyle(a).backgroundColor); if ((c && c.a > .6) || getComputedStyle(a).backgroundImage !== 'none') return true; } return false; })();

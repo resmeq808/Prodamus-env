@@ -7,7 +7,7 @@
 HTML, картинок не будет. Для показа и пересылки отдавайте standalone-файл,
 для продакшена — обычную версию с папкой img/ (так браузер кэширует картинки).
 
-Встраиваются src="…", poster="…" и url(…)
+Встраиваются src="…", poster="…", data-*="…" и url(…)
 в CSS, если путь относительный и файл существует. Шрифты с CDN не трогаются.
 """
 import base64, mimetypes, os, re, sys
@@ -49,7 +49,7 @@ def main():
 
     # preload картинки не нужен: она уже внутри файла, а base64 удвоил бы вес
     html = re.sub(r'<link[^>]+rel="preload"[^>]+as="image"[^>]*>\s*', "", html)
-    html = re.sub(r'\b(src|href|poster)="([^"]+)"', attr, html)
+    html = re.sub(r'\b(src|href|poster|data-[\w-]+)="([^"]+)"', attr, html)   # data-* — картинки для hover и слайдеров
     html = re.sub(r'url\((["\']?)([^)"\']+)\1\)', css, html)
     open(out, "w", encoding="utf-8").write(html)
     size = os.path.getsize(out) / 1024
